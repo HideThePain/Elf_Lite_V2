@@ -1,0 +1,16 @@
+﻿namespace = make_no_elfess
+make_no_elfess.0001 = {
+	type = character_event
+	title = make_no_elfess.0001.title
+	desc = make_no_elfess.0001.desc
+	theme = feast_activity
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	option = {
+		add_prestige_no_experience = 760
+		name = make_no_elfess.0001.a
+		remove_decision_cooldown = make_present_elfess_decision
+	}
+}

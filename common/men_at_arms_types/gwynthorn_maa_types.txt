@@ -1,0 +1,160 @@
+﻿gwynthorn_warriors = {
+    type = heavy_infantry
+    stack = 100
+
+    damage = 60
+    toughness = 55
+    pursuit = 10
+    screen = 20
+
+    terrain_bonus = {
+        forest = { damage = 20 toughness = 15 }
+        taiga = { damage = 20 toughness = 15 }
+        jungle = { damage = 20 toughness = 15 }
+
+        plains = { toughness = 5 }
+        farmlands = { toughness = 10 }
+        hills = { toughness = 15 }
+        mountains = { toughness = 10 }
+
+        wetlands = { toughness = -10 screen = -10 }
+        floodplains = { toughness = -10 screen = -10 }
+        desert = { toughness = -10 damage = -10 }
+        desert_mountains = { toughness = -15 damage = -10 }
+
+        drylands = { toughness = 5 }
+        steppe = { toughness = 5 }
+        oasis = { toughness = 5 }
+    }
+
+    winter_bonus = {
+        normal_winter = { toughness = 10 screen = 10 }
+        harsh_winter = { toughness = 15 screen = 15 }
+    }
+
+    counters = {
+        archers = 2
+        skirmishers = 1
+        light_cavalry = 0.75
+        heavy_cavalry = 0.5
+    }
+
+    can_recruit = {
+        has_trait = royal_elf_gwynthorn
+    }
+
+    buy_cost = { gold = heavy_infantry_recruitment_cost }
+    low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+    high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+    provision_cost = @provisions_cost_infantry_expensive
+
+    ai_quality = { value = @cultural_spark_maa_extra_ai_score }
+    icon = gwynthorn_warriors
+}
+
+
+gwynthorn_horse_archers = {
+    type = archer_cavalry
+    stack = 100
+
+    damage = 60
+    toughness = 30
+    pursuit = 60
+    screen = 15
+
+    terrain_bonus = {
+        forest = { damage = 30 pursuit = 10 screen = 15 }
+        taiga = { damage = 30 pursuit = 10 screen = 15 }
+        jungle = { damage = 30 pursuit = 10 screen = 15 }
+
+        steppe = { damage = 25 pursuit = 5 screen = 5 }
+        plains = { damage = 20 pursuit = 5 screen = 5 }
+        drylands = { damage = 20 pursuit = 5 screen = 5 }
+        farmlands = { damage = 10 screen = 5 }
+        
+        hills = { damage = 5 toughness = 5 }
+        floodplains = { toughness = 0 screen = 0 }
+        wetlands = { damage = -5 pursuit = 5 screen = 5 }
+        oasis = { toughness = 5 }
+
+        mountains = { damage = -20 pursuit = -20 }
+        desert_mountains = { damage = -20 pursuit = -20 }
+        desert = { toughness = -10 damage = -10 pursuit = -10 }
+    }
+
+    winter_bonus = {
+        normal_winter = { toughness = 10 pursuit = -10 }
+        harsh_winter = { toughness = 15 pursuit = -20 screen = -10 }
+    }
+
+    counters = {
+        skirmishers = 1
+        archers = 1.5
+        heavy_infantry = 1
+        pikemen = 0.5
+        light_cavalry = 0.75
+    }
+
+    can_recruit = {
+        has_trait = royal_elf_gwynthorn
+    }
+
+    buy_cost = { gold = elf_horse_archers_recruitment_cost }
+    low_maintenance_cost = { gold = elf_horse_archers_low_maint_cost }
+    high_maintenance_cost = { gold = elf_horse_archers_high_maint_cost }
+    provision_cost = @provisions_cost_cavalry_cheap
+
+    ai_quality = { value = @cultural_spark_maa_extra_ai_score }
+    icon = gwynthorn_horse_archers
+}
+
+gwynthorn_noble_infantry = {
+    type = pikemen
+    stack = 100
+
+    damage = 40
+    toughness = 65
+    pursuit = 0
+    screen = 50
+
+    terrain_bonus = {
+        forest = { toughness = 20 screen = 20 }
+        taiga = { toughness = 20 screen = 20 }
+        jungle = { toughness = 20 screen = 20 }
+
+        plains = { toughness = 5 }
+        farmlands = { toughness = 10 screen = 10 }
+        hills = { toughness = 15 }
+        mountains = { toughness = 15 }
+        wetlands = { toughness = -10 screen = -10 }
+        floodplains = { toughness = -10 screen = -10 }
+        desert = { toughness = -10 damage = -10 }
+        desert_mountains = { toughness = -15 damage = -10 }
+        drylands = { toughness = 5 }
+        steppe = { toughness = 5 }
+        oasis = { toughness = 5 }
+    }
+
+    winter_bonus = {
+        normal_winter = { toughness = 10 screen = 10 }
+        harsh_winter = { toughness = 15 screen = 15 }
+    }
+
+    counters = {
+        light_cavalry = 2
+        heavy_cavalry = 2
+        skirmishers = 1
+    }
+
+    can_recruit = {
+        has_trait = royal_elf_gwynthorn
+    }
+
+    buy_cost = { gold = warband_vanguard_recruitment_cost }
+    low_maintenance_cost = { gold = warband_vanguard_low_maint_cost }
+    high_maintenance_cost = { gold = warband_vanguard_high_maint_cost }
+    provision_cost = @provisions_cost_infantry_cheap
+
+    ai_quality = { value = @cultural_spark_maa_extra_ai_score }
+    icon = gwynthorn_noble_infantry
+}

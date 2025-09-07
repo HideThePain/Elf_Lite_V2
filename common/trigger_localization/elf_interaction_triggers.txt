@@ -1,0 +1,36 @@
+﻿is_an_elf = {
+	third = CHARACTER_IS_AN_ELF
+	global = IS_AN_ELF
+}
+
+is_not_an_elf = {
+	global = IS_NOT_AN_ELF
+}
+
+not_spark_talented = {
+	first_not = NOT_SPARK_TALENTED
+	third_not = NOT_SPARK_TALENTED
+	global_not = NOT_SPARK_TALENTED
+	# global = ALREADY_ENTRANCED
+}
+
+already_entranced = {
+	first_not = ALREADY_ENTRANCED
+	third_not = ALREADY_ENTRANCED
+	global_not = ALREADY_ENTRANCED
+	# global = ALREADY_ENTRANCED
+}
+
+under_construction = {
+	first_not = UNDER_CONSTRUCTION
+	third_not = UNDER_CONSTRUCTION
+	global_not = UNDER_CONSTRUCTION
+	# global = ALREADY_ENTRANCED
+}
+
+already_have_pet = {
+	global = ALREADY_HAS_PET
+	first_not = ALREADY_HAS_PET
+	third_not = ALREADY_HAS_PET
+	global_not = ALREADY_HAS_PET
+}

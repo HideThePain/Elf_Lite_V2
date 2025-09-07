@@ -1,0 +1,157 @@
+﻿warriors_of_the_daelurin = {
+    type = heavy_infantry
+    stack = 100
+
+    damage = 75
+    toughness = 40
+    pursuit = 5
+    screen = 25
+
+    terrain_bonus = {
+        mountains = { toughness = 25 damage = 15 }
+        hills = { toughness = 15 }
+        forest = { toughness = 20 damage = 15 pursuit = 10 screen = 15 }
+        taiga = { toughness = 20 damage = 15 pursuit = 10 screen = 15 }
+        jungle = { toughness = 20 damage = 15 pursuit = 10 screen = 15 }
+        desert = { toughness = -5 damage = -10 }
+        wetlands = { toughness = 10 screen = 10 }
+        plains = { toughness = 5 }
+        drylands = { toughness = 5 }
+        steppe = { toughness = 10 }
+        floodplains = { toughness = 10 }
+        oasis = { toughness = 5 }
+        farmlands = { toughness = 10 damage = 5 screen = 5 }
+    }
+
+    winter_bonus = {
+        normal_winter = { toughness = 10 screen = 10 }
+        harsh_winter = { toughness = 15 screen = 15 damage = 5 }
+    }
+
+    counters = {
+        heavy_infantry = 1
+        pikemen = 1.5
+        light_cavalry = 0.5
+        archers = 1
+        skirmishers = 1
+    }
+
+    can_recruit = {
+        has_trait = royal_elf_daelurin
+    }
+
+    buy_cost = { gold = heavy_infantry_recruitment_cost }
+    low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+    high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+    provision_cost = @provisions_cost_infantry_expensive
+
+    ai_quality = { value = @cultural_spark_maa_extra_ai_score }
+    icon = warriors_of_the_daelurin
+}
+
+daelurin_wolf_riders = {
+    type = light_cavalry
+    stack = 100
+
+    damage = 60
+    toughness = 35
+    pursuit = 75
+    screen = 20
+
+    terrain_bonus = {
+        forest = { damage = 20 pursuit = 35 screen = 15 }
+        taiga = { damage = 20 pursuit = 35 screen = 15 }
+        jungle = { damage = 20 pursuit = 35 screen = 15 }
+
+        mountains = { toughness = 10 damage = 10 pursuit = 15 screen = 10 }
+        hills = { pursuit = 10 screen = 10 }
+        plains = { pursuit = 10 screen = 10 }
+        farmlands = { pursuit = 20 screen = 15 damage = 5 }
+        steppe = { pursuit = 20 screen = 20 }
+        drylands = { pursuit = 10 screen = 10 }
+        oasis = { pursuit = 15 screen = 15 }
+        wetlands = { pursuit = 15 screen = 10 }
+        floodplains = { pursuit = 15 screen = 15 }
+
+        desert = { toughness = -10 damage = -15 pursuit = -20 screen = -20 }
+        desert_mountains = { toughness = -15 damage = -20 pursuit = -25 screen = -25 }
+    }
+
+    winter_bonus = {
+        normal_winter = { toughness = 5 screen = 5 }
+        harsh_winter = { toughness = 10 screen = 10 }
+    }
+
+    counters = {
+        archers = 1
+        light_cavalry = 1.5
+        heavy_cavalry = 0.5
+        skirmishers = 2
+    }
+
+    can_recruit = {
+        has_trait = royal_elf_daelurin
+    }
+
+    buy_cost = { gold = elf_horse_archers_recruitment_cost }
+    low_maintenance_cost = { gold = elf_horse_archers_low_maint_cost }
+    high_maintenance_cost = { gold = elf_horse_archers_high_maint_cost }
+    provision_cost = @provisions_cost_cavalry_cheap
+
+    ai_quality = { value = @cultural_spark_maa_extra_ai_score }
+    icon = daelurin_wolf_riders
+}
+
+daelurin_highlanders = {
+    type = skirmishers
+    stack = 100
+
+    damage = 33          # reduced from 45
+    toughness = 22       # reduced from 30
+    pursuit = 25         # reduced from 35
+    screen = 12          # reduced from 15
+
+    terrain_bonus = {
+        forest = { toughness = 18 damage = 10 pursuit = 5 }
+        taiga = { toughness = 18 damage = 10 pursuit = 5 }
+        jungle = { toughness = 18 damage = 10 pursuit = 5 }
+
+        hills = { toughness = 12 damage = 5 }
+        mountains = { toughness = 18 damage = 8 }
+
+        wetlands = { toughness = 6 screen = 5 }
+        floodplains = { toughness = 6 screen = 5 }
+        farmlands = { toughness = 6 damage = 3 }
+        oasis = { toughness = 3 }
+        plains = { toughness = 3 }
+        drylands = { toughness = 3 }
+        steppe = { toughness = 3 }
+
+        desert = { toughness = -12 damage = -8 }
+        desert_mountains = { toughness = -20 damage = -12 }
+    }
+
+    winter_bonus = {
+        normal_winter = { toughness = 5 screen = 5 }
+        harsh_winter = { toughness = 8 screen = 8 damage = -4 }
+    }
+
+    counters = {
+        archers = 1
+        light_cavalry = 1
+        skirmishers = 1.5
+        heavy_infantry = 0.5
+    }
+
+    can_recruit = {
+        has_trait = royal_elf_daelurin
+    }
+
+    buy_cost = { gold = warband_ravagers_recruitment_cost }
+    low_maintenance_cost = { gold = warband_ravagers_low_maint_cost }
+    high_maintenance_cost = { gold = warband_ravagers_high_maint_cost }
+    provision_cost = @provisions_cost_special_expensive
+
+    ai_quality = { value = @cultural_spark_maa_extra_ai_score }
+    icon = daelurin_highlanders
+}

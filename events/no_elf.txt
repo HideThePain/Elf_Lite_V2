@@ -1,0 +1,16 @@
+﻿namespace = no_elf
+no_elf.0001 = {
+	type = character_event
+	title = no_elf.0001.title
+	desc = no_elf.0001.desc
+	theme = feast_activity
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	option = {
+		add_prestige_no_experience = 750
+		name = no_elf.0001.a
+        remove_decision_cooldown = invite_an_elf_decision
+	}
+}

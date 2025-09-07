@@ -1,0 +1,85 @@
+﻿elf_trait_level = {
+	value = 0
+	if = {
+		limit = {
+			is_elf_blood = yes
+		}
+		add = {
+			value = 1
+		}
+	}
+	else_if = {
+		limit = {
+			is_elf = yes
+		}
+		add = {
+			value = 2
+		}
+	}
+	else_if = {
+		limit = {
+			is_high_elf = yes
+		}
+		add = {
+			value = 3
+		}
+	}
+}
+
+difference_in_elf_level = {
+	value = 0
+	add = scope:higher_elf.elf_trait_level
+	subtract = scope:lower_elf.elf_trait_level
+}
+
+# == ELF TRAIT VALUES ==
+
+learning_bonus_elf_blood = 1
+learning_bonus_elf = 3
+learning_bonus_high_elf = 5
+
+prowess_bonus_elf_blood = 1
+prowess_bonus_elf = 3
+prowess_bonus_high_elf = 5
+
+attraction_opinion_bonus_elf_blood = 3
+attraction_opinion_bonus_elf = 5
+attraction_opinion_bonus_high_elf = 7
+
+average_life_in_years = 65
+
+life_expectancy_bonus_elf_blood = 15
+life_expectancy_bonus_elf = 30
+life_expectancy_bonus_high_elf = 50
+
+life_expectancy_elf_blood = {
+	value = 0
+	add = average_life_in_years
+	add = life_expectancy_bonus_elf_blood
+}
+life_expectancy_elf = {
+	value = 0
+	add = average_life_in_years
+	add = life_expectancy_bonus_elf
+}
+life_expectancy_high_elf = {
+	value = 0
+	add = average_life_in_years
+	add = life_expectancy_bonus_high_elf
+}
+
+health_bonus_elf_blood = 0.05
+health_bonus_elf = 0.2
+health_bonus_high_elf = 0.35
+
+fertility_penalty_elf_blood = -0.20
+fertility_penalty_elf = -0.3
+fertility_penalty_high_elf = -0.3
+
+years_of_fertility_bonus_elf_blood = 10
+years_of_fertility_bonus_elf = 20
+years_of_fertility_bonus_high_elf = 30
+
+inbreeding_chance_bonus_elf_blood = -0.50
+inbreeding_chance_bonus_elf = -0.75
+inbreeding_chance_bonus_high_elf = -1

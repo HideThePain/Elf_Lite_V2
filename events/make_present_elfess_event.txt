@@ -1,0 +1,84 @@
+﻿namespace = make_present_elfess
+make_present_elfess.0001 = {
+    type = character_event
+    title = make_present_elfess.0001.title
+    desc = make_present_elfess.0001.desc
+    theme = realm
+    override_background = {
+        reference = tavern
+    }
+    left_portrait = {
+        character = scope:target1
+        animation = personality_content
+    }
+    immediate = {
+        generate_elfess_character_effect_superior_normal = yes
+    }
+    option = {
+        name = make_present_elfess.0001.a
+        add_courtier = scope:target1
+    }
+}
+
+make_present_elfess.0002 = {
+    type = character_event
+    title = make_present_elfess.0002.title
+    desc = make_present_elfess.0002.desc
+    theme = realm
+    override_background = {
+        reference = tavern
+    }
+    left_portrait = {
+        character = scope:target1
+        animation = personality_content
+    }
+    immediate = {
+        generate_elfess_character_effect_superior_portal = yes
+    }
+    option = {
+        name = make_present_elfess.0002.a
+        add_courtier = scope:target1
+    }
+}
+
+make_present_elfess.0003 = {
+    type = character_event
+    title = make_present_elfess.0003.title
+    desc = make_present_elfess.0003.desc
+    theme = realm
+    override_background = {
+        reference = tavern
+    }
+    left_portrait = {
+        character = scope:target1
+        animation = personality_content
+    }
+    immediate = {
+        generate_elfess_character_effect_heart_normal = yes
+    }
+    option = {
+        name = make_present_elfess.0003.a
+        add_courtier = scope:target1
+    }
+}
+
+make_present_elfess.0004 = {
+    type = character_event
+    title = make_present_elfess.0004.title
+    desc = make_present_elfess.0004.desc
+    theme = realm
+    override_background = {
+        reference = tavern
+    }
+    left_portrait = {
+        character = scope:target1
+        animation = personality_content
+    }
+    immediate = {
+        generate_elfess_character_effect_heart_portal = yes
+    }
+    option = {
+        name = make_present_elfess.0004.a
+        add_courtier = scope:target1
+    }
+}

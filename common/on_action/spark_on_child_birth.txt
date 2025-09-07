@@ -1,0 +1,141 @@
+﻿on_birth_child = {
+	# effect = {
+		
+	# }
+	on_actions = {
+		on_birth_elf_trait
+	}
+}
+
+on_birth_elf_trait = {
+	trigger = {
+		# start here, add a filter to only elf children
+		# then do other on_actions too
+		OR = {
+			scope:mother = {
+				is_any_elf_type = yes
+			}
+			scope:real_father = {
+				is_any_elf_type = yes
+			}
+		}
+	}
+	effect = {
+		debug_log = "IN ELF TRAITS ASSIGNMENT!!!!"
+		
+		# Cleans up any natural genetic traits
+		remove_all_elf_traits_effect = yes
+
+		set_variable = { 
+			name = elf_trait_score
+			value = total_parent_elf_value
+		}
+
+		if = { # Both Parents Human
+			limit = {
+				var:elf_trait_score = 0
+			}
+			# debug_log = "elf trait 0"
+			# Do nothing (Human)
+		}
+		else_if = { # Below Elf Blood
+			limit = {
+				var:elf_trait_score > 0
+				var:elf_trait_score < 2
+			}
+			# debug_log = "elf trait 1"
+			random_list = {
+				50 = {
+					debug_log = "elf trait 1: yes"
+					add_trait = elf_blood_mortal
+				}
+				50 = {
+					debug_log = "elf trait 1: no"
+					# Do nothing (Human)
+				}
+			}
+		}
+		else_if = { # Both Parents Elf Blood
+			limit = {
+				var:elf_trait_score = 2
+			}
+			# debug_log = "elf trait 2"
+			random_list = {
+				10 = {
+					# Ascencion!
+					debug_log = "elf trait 2: yes"
+					add_trait = elf_mortal
+				}
+				90 = {
+					debug_log = "elf trait 2: no"
+					add_trait = elf_blood_mortal
+				}
+			}
+		}
+		else_if = { # Between Elf Blood and Elf
+			limit = {
+				var:elf_trait_score > 2
+				var:elf_trait_score < 4
+			}
+			# debug_log = "elf trait 3"
+			random_list = {
+				50 = {
+					debug_log = "elf trait 3: yes"
+					add_trait = elf_blood_mortal
+				}
+				50 = {
+					debug_log = "elf trait 3: No"
+					add_trait = elf_mortal
+				}
+			}
+		}
+		else_if = { # Both Parents Elf
+			limit = {
+				var:elf_trait_score = 4
+			}
+			# debug_log = "elf trait 4"
+			random_list = {
+				10 = {
+					# Ascencion!
+					debug_log = "elf trait 4: yes"
+					add_trait = high_elf_mortal
+				}
+				90 = {
+					debug_log = "elf trait 4: no"
+					add_trait = elf_mortal
+				}
+			}
+		}
+		else_if = { # Between Elf and High Elf
+			limit = {
+				var:elf_trait_score > 4
+				var:elf_trait_score < 6
+			}
+			# debug_log = "elf trait 5"
+			random_list = {
+				50 = {
+					debug_log = "elf trait 5: yes"
+					add_trait = elf_mortal
+				}
+				50 = {
+					debug_log = "elf trait 5: no"
+					add_trait = high_elf_mortal
+				}
+			}
+		}
+		else_if = { # Both Parents High Elf
+			limit = {
+				var:elf_trait_score = 6
+			}
+			# debug_log = "elf trait 6"
+			random_list = {
+				100 = {
+					debug_log = "elf trait 6: yes"
+					add_trait = high_elf_mortal
+				}
+			}
+		}
+
+        remove_variable = elf_trait_score
+	}
+}

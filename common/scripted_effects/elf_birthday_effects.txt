@@ -1,0 +1,251 @@
+﻿transition_to_elf_adult_effect = {
+	add_elf_immortality_effect = yes
+	set_adult_immortal_age = yes
+}
+
+add_elf_immortality_effect = {
+	debug_log = "swapping to adult elf trait"
+	if = {
+		limit = {
+			has_trait = elf_blood_mortal
+		}
+		remove_trait = elf_blood_mortal
+		add_trait = elf_blood
+	}
+	if = {
+		limit = {
+			has_trait = elf_mortal
+		}
+		remove_trait = elf_mortal
+		add_trait = elf
+	}
+	if = {
+		limit = {
+			has_trait = high_elf_mortal
+		}
+		remove_trait = high_elf_mortal
+		add_trait = high_elf
+	}
+}
+
+remove_elf_immortality_effect = {
+	debug_log = "removing elf immortality"
+	if = {
+		limit = {
+			has_trait = elf_blood
+		}
+		remove_trait = elf_blood
+		add_trait = elf_blood_mortal
+	}
+	if = {
+		limit = {
+			has_trait = elf
+		}
+		remove_trait = elf
+		add_trait = elf_mortal
+	}
+	if = {
+		limit = {
+			has_trait = high_elf
+		}
+		remove_trait = high_elf
+		add_trait = high_elf_mortal
+	}
+}
+
+set_adult_immortal_age = {
+	debug_log = "setting immortal age 20"
+	set_immortal_age = 20
+}
+
+set_older_adult_immortal_age = {
+	debug_log = "setting immortal age 30"
+	set_immortal_age = 30
+}
+
+set_middle_age_immortal_age = {
+	debug_log = "setting immortal age 40"
+	set_immortal_age = 40
+}
+
+set_older_middle_age_immortal_age = {
+	debug_log = "setting immortal age 50"
+	set_immortal_age = 50
+}
+
+set_elder_immortal_age = {
+	debug_log = "setting immortal age 60"
+	set_immortal_age = 60
+}
+
+set_appropriate_elf_immortality_age = {
+	if = { # Elf Blood
+		limit = {
+			has_trait = elf_blood
+		}
+		if = {
+			limit = {
+				age >= 20
+				age < 30
+			}
+			set_adult_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 30
+				age < 45
+			}
+			set_older_adult_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 45
+				age < 55
+			}
+			set_middle_age_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 55
+				age < 60
+			}
+			set_older_middle_age_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 60
+				age < 80
+			}
+			set_elder_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 80
+
+			}
+			remove_elf_immortality_effect = yes
+		}
+	}
+	if = { # Elf
+		limit = {
+			has_trait = elf
+		}
+		if = {
+			limit = {
+				age >= 20
+				age < 35
+			}
+			set_adult_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 35
+				age < 50
+			}
+			set_older_adult_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 50
+				age < 65
+			}
+			set_middle_age_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 65
+				age < 80
+			}
+			set_older_middle_age_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 80
+				age < 95
+			}
+			set_elder_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 95
+
+			}
+			remove_elf_immortality_effect = yes
+		}
+	}
+	if = { # High Elf
+		limit = {
+			has_trait = high_elf
+		}
+		if = {
+			limit = {
+				age >= 20
+				age < 45
+			}
+			set_adult_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 45
+				age < 65
+			}
+			set_older_adult_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 65
+				age < 75
+			}
+			set_middle_age_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 75
+				age < 90
+			}
+			set_older_middle_age_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 90
+				age < 115
+			}
+			set_elder_immortal_age = yes
+		}
+		else_if = {
+			limit = {
+				age >= 115
+
+			}
+			remove_elf_immortality_effect = yes
+		}
+	}
+}
+
+people_of_the_bow_birthday_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_trait = tourney_participant
+			}	
+		}
+
+		add_trait = tourney_participant
+	}
+
+	if = {
+		limit = {
+			has_trait_xp = {
+				trait = tourney_participant
+				track = bow
+				value < 30
+			}
+		}
+
+		add_trait_xp = {
+			trait = tourney_participant
+			track = bow
+			value = 30
+		}
+	}
+}

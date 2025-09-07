@@ -1,0 +1,919 @@
+﻿
+create_portal_spark_capacitor_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	create_artifact = {	
+		name = portal_spark_capacitor
+		description = portal_spark_capacitor_desc
+		template = portal_unequippable_component_template
+		type = miscellaneous
+		visuals = spark_capacitor
+		modifier = portal_component_modifier
+		rarity = illustrious
+		decaying = no
+		history = {
+			type = history_portal_components
+		}
+		save_scope_as = newly_created_artifact
+	}
+	scope:newly_created_artifact={
+		set_variable = is_portal_capacitor
+		set_variable = is_special_elf_artifact
+		# set_variable=singularity
+		# set_variable=singularity_sleeping
+	}
+}
+
+create_portal_navigation_relay_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	create_artifact = {	
+		name = portal_navigation_relay
+		description = portal_navigation_relay_desc
+		template = portal_unequippable_component_template
+		type = miscellaneous
+		visuals = portal_navigation_relay
+		modifier = portal_component_modifier
+		rarity = illustrious
+		decaying = no
+		history = {
+			type = history_portal_components
+		}
+		save_scope_as = newly_created_artifact
+	}
+	scope:newly_created_artifact={
+		set_variable = is_navigation_relay
+		set_variable = is_special_elf_artifact
+		# set_variable=magic1
+		# set_variable=singularity
+		# set_variable=singularity_sleeping
+	}
+}
+
+create_direwolf_rug_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	create_artifact = {	
+		name = direwolf_rug
+		description = direwolf_rug_desc
+		template = portal_unequippable_component_template
+		type = miscellaneous
+		visuals = direwolf_rug
+		modifier = direwolf_rug_modifier
+		rarity = illustrious
+		decaying = no
+		history = {
+			type = history_portal_components
+		}
+		save_scope_as = newly_created_artifact
+	}
+}
+
+create_direwolf_head_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	create_artifact = {	
+		name = direwolf_head
+		description = direwolf_head_desc
+		template = portal_unequippable_component_template
+		type = animal_hide_big
+		visuals = direwolf_head
+		modifier = direwolf_head_modifier
+		rarity = illustrious
+		decaying = no
+		history = {
+			type = history_portal_components
+		}
+		save_scope_as = newly_created_artifact
+	}
+}
+
+create_sigil_of_the_realm_lord_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	save_scope_value_as = {
+		name = quality
+		value = 100
+	}
+	save_scope_value_as = {
+		name = wealth
+		value = 100
+	}
+
+	create_artifact = {	
+		name = sigil_of_the_realm_lord
+		description = sigil_of_the_realm_lord_desc
+		template = portal_unequippable_component_template
+		type = regalia
+		visuals = sigil_of_realm_lord
+		modifier = sigil_of_the_realm_lord_modifier
+		rarity = illustrious
+		decaying = no
+		history = {
+			type = history_ancient_elf
+		}
+		#set_variable=magic1
+		wealth = scope:wealth
+		quality = scope:quality
+		save_scope_as = newly_created_artifact
+	}
+	scope:newly_created_artifact={
+		set_variable=is_sigil_of_the_realm_lord
+		set_variable = is_special_elf_artifact
+
+		# set_variable=magic1
+	}		
+}
+
+create_portal_schematics_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	create_artifact = {	
+		name = portal_schematics
+		description = portal_schematics_desc
+		template = portal_unequippable_component_template
+		type = miscellaneous
+		visuals = fp2_armillary_sphere
+		modifier = portal_schematics_modifier
+		rarity = illustrious
+		decaying = no
+		history = {
+			type = history_portal_components
+		}
+		save_scope_as = newly_created_artifact
+		#set_variable=magic1
+	}
+	scope:newly_created_artifact={
+		# set_variable=magic1
+		# set_variable=singularity
+		# set_variable=singularity_sleeping
+	}
+}
+
+create_spark_crystal_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	create_artifact = {	
+		name = spark_crystal
+		description = spark_crystal_desc
+		template = portal_unequippable_component_template
+		type = miscellaneous
+		visuals = spark_crystal
+		modifier = spark_crystal_modifier
+		rarity = famed
+		decaying = no
+		history = {
+			type = history_portal_components
+		}
+		save_scope_as = newly_created_elf_artifact
+	}
+	scope:newly_created_elf_artifact = {
+		set_variable = is_spark_crystal
+	}
+
+	if = {
+		limit = { exists = scope:newly_created_elf_artifact }
+		scope:activity = {
+			add_to_variable_list = {
+				name = artifact_rewards
+				target = scope:newly_created_elf_artifact
+			}
+		}
+	}
+}
+
+create_lembas_satchel_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	create_artifact = {	
+		name = lembas_satchel
+		description = lembas_satchel_desc
+		template = elf_equipment_template
+		type = miscellaneous
+		visuals = lembas_satchel
+		modifier = lembas_satchel_modifier
+		rarity = famed
+		decaying = no
+		history = {
+			type = history_portal_components
+		}
+		save_scope_as = lembas_satchel
+		#set_variable=magic1
+	}
+	scope:lembas_satchel = {
+		set_variable = lembas_satchel
+		set_variable = is_special_elf_artifact
+
+	}
+}
+
+
+create_vanas_foeglass_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	scope:owner = {
+		create_artifact = {	
+			name = vanas_foeglass
+			description = vanas_foeglass_desc
+			template = elf_equipment_template
+			type = miscellaneous
+			visuals = vanas_foeglass
+			modifier = vanas_foeglass_modifier
+			rarity = illustrious
+			decaying = no
+			history = {
+				type = history_portal_components
+			}
+			save_scope_as = vanas_foeglass
+			#set_variable=magic1
+		}
+		scope:vanas_foeglass = {
+			set_variable = is_special_elf_artifact
+		}
+	}
+}
+
+create_nefertitis_armband_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	scope:owner = {
+		create_artifact = {	
+			name = nefertitis_armband
+			description = nefertitis_armband_desc
+			# template = elf_equipment_template
+			type = miscellaneous
+			visuals = nefertitis_armband
+			modifier = nefertitis_armband_modifier
+			rarity = illustrious
+			decaying = no
+			history = {
+				type = created_before_history
+			}
+			save_scope_as = nefertitis_armband
+		}
+		scope:nefertitis_armband = {
+			set_variable = nefertitis_armband
+			set_variable = {
+				name = charges
+				value = 0
+			}
+			set_variable = is_special_elf_artifact
+		}
+	}
+}
+
+# From Old Readme:
+# ### Items
+
+# - Create new mythical rarity with unique background color
+
+# - Void Saphire
+#   - Talisman
+#   - used to start void quest line, interacts with Grand Portal
+#   - +% movement speed (pseudo teleportation?)
+# - Ancient Blueprint
+#   - decypher to unlock special castle building
+# - Seat of The High Patriarch
+#   - made of a rare dimensional material
+#   - raises dread, dread loss reduced, all immediate vassals gain loyal trait, their ai personality reduces boldness
+# - Peitho's Bracelet
+#   - +% fertility
+#   - +% attraction opinion
+#   - +% seduction scheme power
+#   - +% seduction scheme success
+#   - Ability to generate collars on lovers who must obey you
+#     - special interaction for vassals
+#     - negotiate special vassal contract
+# - Vorpal Blade
+#   - When paired with void Dragon, very special interaction
+#     - form new order of knights?
+#   - auto win special duel move
+# - (Meteorite) Sylvan Runescale
+#   - long quest line to reforge
+#   - made from a meteorite
+#   - Wont die in combat
+# - Heart of the Forest
+#   - large two finger emerald ring
+	# - Elessar (Elfstone) ^^^^
+#   - heal any character
+#   - lifespan
+#   - fertility through the roof
+#   - reincarnation ritual?
+# - Bloodstone Scepter
+#   - large sacrifice required to fully power it
+#     - massive development drop of county
+#   - gain ultimate blood magic power
+#     - force any vassals/or all at once to swear blood contracts, works on elfs not just humans like normal and you can have unlimited
+#     - gain and grant any beauty or strength trait or fecund (maybe true blooded trait)
+#     - cause huge health penalty to character
+#     - empower knights
+#       - Knight effectiveness +%
+# - Catalyst of the Sorceress
+#   - Opal Bracelet
+#   - Massive piety gain
+#   - gain ultimate spirit magic powers
+#     - train archons
+#       - conduits that you overcharge
+#     - insta-win regency struggle or any other contests of will
+#     - MASSIVE advantage gain when leading army - beam
+
+# LOTR
+# The Helm of Hador: A notable heirloom of the House of Hador in "The Silmarillion," this helm is renowned for its beauty and craftsmanship.
+# Angainor: This chain, made by the Valar Aulë, was used to bind the first Dark Lord, Melkor (Morgoth), during his captivity in Valinor.
+# Aeglos /Aiglos: Also known as the "Snowmane," Aiglos was the spear of Gil-galad, the last High King of the Noldor.
+# Anglachel/Anguirel: two black meteorite swords
+# The Axe of Tuor was the great axe used by Tuor during the Fall of Gondolin. It was also said to sound like eagles wings rushing as it was swung
+# Aranrúth (King's Ire), was a sword that belonged to Elu Thingol, King of Doriath, and High King of the Sindar. It later became the sword of the Kings of Númenor but was eventually lost with Ar-Pharazôn, who was interred on the shores of Aman.
+# Belthronding, an enchanted bow of black yew wood, and Dailir, an unerring, ever-returning arrow, both belonged to Beleg Cúthalion.
+# The Bow of Bregor was an heirloom of the House of Bëor in the First Age. Owned by Barahir and Beren, the bow passed to their descendants the Kings of Númenor and was lost in the Downfall.
+# Grond: In the First Age, Grond was the great mace of Morgoth Bauglír, the first Dark Lord
+# Ringil was the sword of Fingolfin, High King of the Ñoldor. It bit with chilling cold and glittered with blue ice. Fingolfin wielded it to great effect against Morgoth, wounding him seven times. However, he was slain by the Black Enemy, who broke his neck with his foot.
+# The Dragon-helm of Dor-lómin: turns back blows and arrows
+
+# - gear containing spirit that literally protects ones back
+#   - stops murder attempt
+
+# All gems can be combined into crown
+
+# bowl artifact or goblet that immunes to poison
+# something that changes sexuality
+# banners/wall sheilds of the great houses, maybe could earn boons by returning
+# Magi and/or empowered rally to you faster and/or are improved somehow
+
+expedition_create_minor_treasure_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	hidden_effect = {
+		# Ideas
+		## Normal Drops
+		# - Elven Blade
+		# - Elven Bow
+		# - Elven Spear
+		# - Elven Armor
+		# - Elven Cloak (Armor)
+		# - Elven Tiara
+		# - Elven Ring
+		# - Elven Necklace
+		# - Elven Amulet
+		# - Elven Sceptor (Regalia)
+		# - Elven Gloves/Gauntlets (Trinket)
+
+		## Unique Drops
+		# - Elven Blade of the Firstborn (oldest of siblings gets large bonus)
+
+		random_list = {
+			100 = { # Create Boots
+				modifier = { # Already have one of the same
+					factor = 0.5
+					any_character_artifact = {
+						artifact_type = animal_skull
+						exists = var:animal_type
+						var:animal_type = scope:activity.var:animal_type
+					}
+				}
+				create_artifact_wall_skull_effect = {
+					OWNER = root
+					HUNTER = scope:animal_slayer
+					LEGENDARY = no
+					ANIMAL = scope:activity.var:animal_type
+				}
+			}
+			100 = { # Create Hide
+				trigger = {
+					has_royal_court = yes
+					exists = scope:activity.var:animal_type
+					scope:activity = {
+						NOR = {
+							exists = scope:activity.var:pelt_damaged
+							has_activity_option = { category = special_type option = hunt_type_falconry }
+						}
+					}
+				}
+				modifier = { # Already have one
+					factor = 0.5
+					trigger_if = {
+						limit = {
+							hunt_hide_big_trigger = { VARIABLE = scope:activity.var:animal_type }
+						}
+						any_character_artifact = {
+							artifact_type = animal_hide_big
+							exists = var:animal_type
+							var:animal_type = scope:activity.var:animal_type
+						}
+					}
+					trigger_else = {
+						any_character_artifact = {
+							artifact_type = animal_hide
+							exists = var:animal_type
+							var:animal_type = scope:activity.var:animal_type
+						}
+					}
+				}
+				create_artifact_animal_hide_effect = {
+					OWNER = root
+					HUNTER = scope:animal_slayer
+					LEGENDARY = no
+					ANIMAL = scope:activity.var:animal_type
+				}
+			}
+			5 = { # Create Trinket
+				trigger = {
+					scope:activity = { # Must be hare if Falconry
+						trigger_if = {
+							limit = {
+								has_activity_option = { category = special_type option = hunt_type_falconry }
+							}
+							var:animal_type = flag:hare
+						}
+						NAND = {
+							hunt_activity_deer_game_trigger = { VAR = var:animal_type }
+							exists = scope:activity.var:female_quarry
+						}
+						NOT = {
+							has_activity_option = { category = special_type option = hunt_type_falconry }
+						}
+					}
+				}
+				create_artifact_animal_trinket_effect = {
+					OWNER = root
+					HUNTER = scope:animal_slayer
+					LEGENDARY = no
+					ANIMAL = scope:activity.var:animal_type
+				}
+			}
+			5 = { # Create Feather
+				trigger = {
+					scope:activity = {
+						has_activity_option = { category = special_type option = hunt_type_falconry }
+					}
+					NOT = { scope:activity.var:animal_type = flag:hare }
+				}
+				create_artifact_bird_feather_effect = {
+					OWNER = root
+					HUNTER = root
+					ANIMAL = scope:activity.var:animal_type
+				}
+			}
+		}
+		if = {
+			limit = { exists = scope:newly_created_artifact }
+			scope:activity = {
+				add_to_variable_list = {
+					name = artifact_rewards
+					target = scope:newly_created_artifact
+				}
+			}
+		}
+	}
+}
+
+add_elf_weapon_modifier = {
+	if = {
+		limit = {
+			scope:artifact_type = flag:axe
+		}
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = elf_weapon_axe_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = elf_weapon_axe_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = elf_weapon_axe_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = elf_weapon_axe_modifier_4
+		}
+	}
+	if = {
+		limit = {
+			scope:artifact_type = flag:hammer
+		}
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = elf_weapon_hammer_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = elf_weapon_hammer_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = elf_weapon_hammer_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = elf_weapon_hammer_modifier_4
+		}
+	}
+	if = {
+		limit = {
+			scope:artifact_type = flag:sword
+		}
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = elf_weapon_sword_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = elf_weapon_sword_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = elf_weapon_sword_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = elf_weapon_sword_modifier_4
+		}
+	}
+}
+
+add_elf_armor_modifier = {
+	if = {
+		limit = {
+			OR = {
+				scope:artifact_type = flag:armor_plate
+				scope:artifact_type = flag:armor_laminar
+				scope:artifact_type = flag:armor_mail
+			}
+		}
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = elf_armor_plate_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = elf_armor_plate_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = elf_armor_plate_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = elf_armor_plate_modifier_4
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				scope:artifact_type = flag:armor_scale
+				scope:artifact_type = flag:armor_brigandine
+				scope:artifact_type = flag:armor_lamellar
+			}
+		}
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = elf_armor_gambeson_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = elf_armor_gambeson_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = elf_armor_gambeson_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = elf_armor_gambeson_modifier_4
+		}
+	}
+	if = {
+		limit = {
+			scope:artifact_type = flag:cloak
+		}
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = elf_armor_cloak_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = elf_armor_cloak_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = elf_armor_cloak_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = elf_armor_cloak_modifier_4
+		}
+	}
+}
+
+add_archetype_modifier = {
+	if = {
+		limit = {
+			exists = scope:artifact_archetype
+			scope:artifact_archetype = flag:ravager
+		}
+
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = archetype_ravager_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = archetype_ravager_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = archetype_ravager_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = archetype_ravager_modifier_4
+		}
+	}
+			
+	if = {
+		limit = {
+			exists = scope:artifact_archetype
+			scope:artifact_archetype = flag:roadmen
+		}
+
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = archetype_roadmen_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = archetype_roadmen_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = archetype_roadmen_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = archetype_roadmen_modifier_4
+		}
+	}
+
+	if = {
+		limit = {
+			exists = scope:artifact_archetype
+			scope:artifact_archetype = flag:paladin
+		}
+
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = archetype_paladin_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = archetype_paladin_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = archetype_paladin_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = archetype_paladin_modifier_4
+		}
+	}
+
+	if = {
+		limit = {
+			exists = scope:artifact_archetype
+			scope:artifact_archetype = flag:captain
+		}
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = archetype_captain_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = archetype_captain_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = archetype_captain_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = archetype_captain_modifier_4
+		}
+	}
+
+	if = {
+		limit = {
+			exists = scope:artifact_archetype
+			scope:artifact_archetype = flag:noble
+		}
+
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = archetype_noble_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = archetype_noble_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = archetype_noble_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = archetype_noble_modifier_4
+		}
+	}
+
+	if = {
+		limit = {
+			exists = scope:artifact_archetype
+			scope:artifact_archetype = flag:aeluran
+		}
+
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = archetype_aeluran_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = archetype_aeluran_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = archetype_aeluran_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = archetype_aeluran_modifier_4
+		}
+	}
+}
+
+
+# get_archetype_descriptions_effect = {
+# 	set_artifact_feature_group = elf_artifact_archetype_title
+# }
+
+
+add_elf_jewelry_modifier = {
+	if = {
+		limit = {
+			scope:artifact_type = flag:brooch
+		}
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = elf_jewelry_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = elf_jewelry_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = elf_jewelry_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = elf_jewelry_modifier_4
+		}
+	}
+}
+
+add_elf_boots_modifier = {
+	if = {
+		limit = {
+			scope:artifact_type = flag:boots
+		}
+		if = {
+			limit = {
+				scope:quality <= 20
+			}
+			add_artifact_modifier = elf_boots_modifier_1
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 40
+			}
+			add_artifact_modifier = elf_boots_modifier_2
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 60
+			}
+			add_artifact_modifier = elf_boots_modifier_3
+		}
+		else_if = {
+			limit = {
+				scope:quality <= 80
+			}
+			add_artifact_modifier = elf_boots_modifier_4
+		}
+	}
+}

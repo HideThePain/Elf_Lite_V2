@@ -1,0 +1,26 @@
+﻿namespace = summon_elfs
+summon_elfs.0001 = {
+    hidden = yes
+
+    immediate = {
+        debug_log = "Summon The Elfs!"
+        every_living_character = {
+            limit = {
+                is_any_real_elf_type = yes
+                is_courtier = no
+                is_ruler = no
+                OR = {
+                    has_trait = royal_elf_trait_lormelis
+                    has_trait = royal_elf_trait_daelurin
+                    has_trait = royal_elf_trait_serelion
+                    has_trait = royal_elf_trait_thundarael
+                    has_trait = royal_elf_trait_valerith
+                    has_trait = royal_elf_trait_gwynthorn
+                }
+            }
+            root = {
+                add_courtier = prev
+            }
+        }
+    }
+}

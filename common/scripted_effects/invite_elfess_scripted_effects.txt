@@ -1,0 +1,929 @@
+﻿generate_elfess_character_effect_superior_normal = {
+    create_character = {
+        gender = female
+        save_scope_as = target1
+        age = 16
+        location = root.location
+        dynasty = generate
+        random_traits = yes
+        faith = root.faith
+        culture = root.culture
+
+        #SKILL RATINGS
+        #average_skill_rating = 8 #Tracks what we see as "typical". For use in duels, etc.
+
+        #low_skill_rating = 5
+        #mediocre_skill_rating = 8
+        #medium_skill_rating = 10
+        #decent_skill_rating = 12
+        #high_skill_rating = 15
+        #very_high_skill_rating = 18
+        #extremely_high_skill_rating = 20
+        #monumentally_high_skill_rating = 25
+
+        diplomacy = {
+            min_template_average_skill
+            max_template_average_skill
+        }
+        prowess = {
+            min_template_average_skill
+            max_template_average_skill
+        }
+        martial = {
+            min_template_average_skill
+            max_template_average_skill
+        }
+        stewardship = {
+            min_template_average_skill
+            max_template_average_skill
+        }
+        intrigue = {
+            min_template_average_skill
+            max_template_average_skill
+        }
+        learning = {
+            min_template_average_skill
+            max_template_average_skill
+        }
+
+        # Skill Setup
+        #elfess_character_skill_setup_effect_superior_normal = yes
+
+        after_creation = {
+            # After Creation Modifications
+            elfess_character_after_creation_effect_superior_normal = yes
+        }
+    }
+
+    hidden_effect = {
+        scope:target1 = {
+            # Cleanup and Traits Removal
+            elfess_character_genetic_cleanup_effect = yes
+
+            # Other Setup
+            elfess_character_other_setup_effect = yes
+        }
+    }
+}
+
+# Skill Setup Effect
+elfess_character_skill_setup_effect_superior_normal = {
+    diplomacy = {
+        min_template_average_skill
+        max_template_average_skill
+    }
+    prowess = {
+        min_template_average_skill
+        max_template_average_skill
+    }
+    martial = {
+        min_template_average_skill
+        max_template_average_skill
+    }
+    stewardship = {
+        min_template_average_skill
+        max_template_average_skill
+    }
+    intrigue = {
+        min_template_average_skill
+        max_template_average_skill
+    }
+    learning = {
+        min_template_average_skill
+        max_template_average_skill
+    }
+}
+
+# After Creation Modifications
+elfess_character_after_creation_effect_superior_normal = {
+    #elfess_random_education_effect_superior_normal = yes
+    elfess_random_traits_effect_superior_normal = yes
+    elfess_random_traits_effect_superior_normal = yes
+    elfess_random_magic_talent_effect_superior_normal = yes
+    elfess_race_flag_effect_superior_normal = yes
+}
+
+# Random Education Traits
+elfess_random_education_effect_superior_normal = {
+    if = {
+        limit = {
+            NOT = {
+                has_character_flag = creation_done
+            }
+        }
+        random_list = {
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_1 }
+                add_trait = education_nht_prowess_1
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_2 }
+                add_trait = education_nht_prowess_2
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_3 }
+                add_trait = education_nht_prowess_3
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_1 }
+                add_trait = education_nht_leadership_1
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_2 }
+                add_trait = education_nht_leadership_2
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_3 }
+                add_trait = education_nht_leadership_3
+            }
+            3 = { add_trait = education_martial_1 }
+            3 = { add_trait = education_martial_2 }
+            3 = { add_trait = education_martial_3 }
+            3 = { add_trait = education_learning_1 }
+            3 = { add_trait = education_learning_2 }
+            3 = { add_trait = education_learning_3 }
+            3 = { add_trait = education_intrigue_1 }
+            3 = { add_trait = education_intrigue_2 }
+            3 = { add_trait = education_intrigue_3 }
+            3 = { add_trait = education_diplomacy_1 }
+            3 = { add_trait = education_diplomacy_2 }
+            3 = { add_trait = education_diplomacy_3 }
+            3 = { add_trait = education_stewardship_1 }
+            3 = { add_trait = education_stewardship_2 }
+            3 = { add_trait = education_stewardship_3 }
+        }
+        add_character_flag = creation_done
+    }
+}
+
+# Random Magic Talent
+elfess_random_magic_talent_effect_superior_normal = {
+    if = {
+        limit = {
+            NOT = {
+                has_trait = royal_elf_thundarael
+            }
+        }
+        random_list = {
+            3 = { add_trait = magic_talent_1 }
+            3 = { add_trait = magic_talent_2 }
+        }
+    }
+    else = {
+        add_trait = magic_talent_2
+    }
+}
+
+# Random Positive Traits
+elfess_random_traits_effect_superior_normal = {
+    random_list = {
+        3 = { trigger = { NOT = { has_trait = beauty_good_2 } } add_trait = beauty_good_2 }
+        3 = { trigger = { NOT = { has_trait = intellect_good_2 } } add_trait = intellect_good_2 }
+        3 = { trigger = { NOT = { has_trait = giant } } add_trait = giant }
+        3 = { trigger = { NOT = { has_trait = albino } } add_trait = albino }
+        3 = { trigger = { NOT = { has_trait = physique_good_2 } } add_trait = physique_good_2 }
+        3 = { trigger = { NOT = { has_trait = strong } } add_trait = strong }
+        3 = {
+            trigger = {
+                NOR = {
+                    has_trait = shrewd
+                    AND = {
+                        learning >= 15
+                        culture = { has_cultural_parameter = advanced_shrewd }
+                    }
+                }
+            }
+            add_trait = shrewd
+        }
+        3 = { trigger = { NOT = { has_trait = athletic } } add_trait = athletic }
+        3 = { trigger = { NOT = { has_trait = pure_blooded } } add_trait = pure_blooded }
+        3 = { trigger = { NOT = { has_trait = fecund } } add_trait = fecund }
+        3 = { trigger = { NOT = { has_trait = royal_elf_valerith } } add_trait = royal_elf_valerith }
+        3 = { trigger = { NOT = { has_trait = royal_elf_serelion } } add_trait = royal_elf_serelion }
+        3 = { trigger = { NOT = { has_trait = royal_elf_gwynthorn } } add_trait = royal_elf_gwynthorn }
+        3 = { trigger = { NOT = { has_trait = royal_elf_thundarael } } add_trait = royal_elf_thundarael }
+        3 = { trigger = { NOT = { has_trait = royal_elf_daelurin } } add_trait = royal_elf_daelurin }
+        3 = { trigger = { NOT = { has_trait = royal_elf_lormelis } } add_trait = royal_elf_lormelis }
+    }
+}
+
+# Random Race Flags
+elfess_race_flag_effect_superior_normal = {
+    random_list = {
+        80 = {
+            add_trait = elf_mortal
+        }
+        20 = {
+            add_trait = high_elf_mortal
+        }
+    }
+}
+
+# Genetic Cleanup
+elfess_character_genetic_cleanup_effect = {
+    remove_trait = scaly
+    remove_trait = clubfooted
+    remove_trait = dwarf
+    remove_trait = hunchbacked
+    remove_trait = spindly
+    remove_trait = infertile
+    remove_trait = wheezing
+    remove_trait = bleeder
+    remove_trait = depressed_genetic
+    remove_trait = depressed_1
+    remove_trait = lunatic_genetic
+    remove_trait = lunatic_1
+    remove_trait = possessed_genetic
+    remove_trait = possessed_1
+    remove_trait = lisping
+    remove_trait = stuttering
+    remove_trait = beauty_bad_1
+    remove_trait = beauty_bad_2
+    remove_trait = beauty_bad_3
+    remove_trait = intellect_bad_1
+    remove_trait = intellect_bad_2
+    remove_trait = intellect_bad_3
+    remove_trait = physique_bad_1
+    remove_trait = physique_bad_2
+    remove_trait = physique_bad_3
+}
+
+# Other Setup
+elfess_character_other_setup_effect = {
+    set_appropriate_elf_immortality_age = yes
+    add_character_flag = { flag = no_headgear years = 1 }
+    dynasty = { add_dynasty_prestige = 2000 }
+
+    if = {
+        limit = {
+            age = 16
+            is_any_elf_type = yes
+            culture = { has_cultural_parameter = people_of_the_bow_archer_bonus }
+        }
+        if = {
+            limit = { NOT = { has_trait = tourney_participant } }
+            add_trait = tourney_participant
+        }
+        if = {
+            limit = {
+                has_trait_xp = {
+                    trait = tourney_participant
+                    track = bow
+                    value < 30
+                }
+            }
+            add_trait_xp = {
+                trait = tourney_participant
+                track = bow
+                value = 30
+            }
+        }
+    }
+}
+
+
+generate_elfess_character_effect_superior_portal = {
+    create_character = {
+        gender = female
+        save_scope_as = target1
+        age = 16
+        location = root.location
+        dynasty = generate
+        random_traits = yes
+        faith = root.faith
+        culture = root.culture
+
+        diplomacy = {
+            min_template_decent_skill
+            max_template_decent_skill
+        }
+        prowess = {
+            min_template_decent_skill
+            max_template_decent_skill
+        }
+        martial = {
+            min_template_decent_skill
+            max_template_decent_skill
+        }
+        stewardship = {
+            min_template_decent_skill
+            max_template_decent_skill
+        }
+        intrigue = {
+            min_template_decent_skill
+            max_template_decent_skill
+        }
+        learning = {
+            min_template_decent_skill
+            max_template_decent_skill
+        }
+
+        # Skill Setup
+        #elfess_character_skill_setup_effect_superior_portal = yes
+
+        after_creation = {
+            # After Creation Modifications
+            elfess_character_after_creation_effect_superior_portal = yes
+        }
+    }
+
+    hidden_effect = {
+        scope:target1 = {
+            # Cleanup and Traits Removal
+            elfess_character_genetic_cleanup_effect = yes
+
+            # Other Setup
+            elfess_character_other_setup_effect = yes
+        }
+    }
+}
+
+# Skill Setup Effect
+elfess_character_skill_setup_effect_superior_portal = {
+    diplomacy = {
+        min_template_decent_skill
+        max_template_decent_skill
+    }
+    prowess = {
+        min_template_decent_skill
+        max_template_decent_skill
+    }
+    martial = {
+        min_template_decent_skill
+        max_template_decent_skill
+    }
+    stewardship = {
+        min_template_decent_skill
+        max_template_decent_skill
+    }
+    intrigue = {
+        min_template_decent_skill
+        max_template_decent_skill
+    }
+    learning = {
+        min_template_decent_skill
+        max_template_decent_skill
+    }
+}
+
+# After Creation Modifications
+elfess_character_after_creation_effect_superior_portal = {
+    #elfess_random_education_effect_superior_portal = yes
+    elfess_random_traits_effect_superior_portal = yes
+    elfess_random_traits_effect_superior_portal = yes
+    elfess_random_traits_effect_superior_portal = yes
+    elfess_royal_house_traits_effect_superior_portal = yes
+    elfess_random_magic_talent_effect_superior_portal = yes
+    elfess_race_flag_effect_superior_portal = yes
+}
+
+# Random Education Traits
+elfess_random_education_effect_superior_portal = {
+    if = {
+        limit = {
+            NOT = {
+                has_character_flag = creation_done
+            }
+        }
+        random_list = {
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_2 }
+                add_trait = education_nht_prowess_2
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_3 }
+                add_trait = education_nht_prowess_3
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_4 }
+                add_trait = education_nht_prowess_4
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_2 }
+                add_trait = education_nht_leadership_2
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_3 }
+                add_trait = education_nht_leadership_3
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_4 }
+                add_trait = education_nht_leadership_4
+            }
+            3 = { add_trait = education_martial_2 }
+            3 = { add_trait = education_martial_3 }
+            3 = { add_trait = education_martial_4 }
+            3 = { add_trait = education_learning_2 }
+            3 = { add_trait = education_learning_3 }
+            3 = { add_trait = education_learning_4 }
+            3 = { add_trait = education_intrigue_2 }
+            3 = { add_trait = education_intrigue_3 }
+            3 = { add_trait = education_intrigue_4 }
+            3 = { add_trait = education_diplomacy_2 }
+            3 = { add_trait = education_diplomacy_3 }
+            3 = { add_trait = education_diplomacy_4 }
+            3 = { add_trait = education_stewardship_2 }
+            3 = { add_trait = education_stewardship_3 }
+            3 = { add_trait = education_stewardship_4 }
+        }
+        add_character_flag = creation_done
+    }
+}
+
+# Random Magic Talent
+elfess_random_magic_talent_effect_superior_portal = {
+    if = {
+        limit = {
+            NOT = {
+                has_trait = royal_elf_thundarael
+            }
+        }
+        random_list = {
+            3 = { add_trait = magic_talent_2 }
+            3 = { add_trait = magic_talent_3 }
+        }
+    }
+    else = {
+        add_trait = magic_talent_3
+    }
+}
+
+# Random Positive Traits
+elfess_random_traits_effect_superior_portal = {
+    random_list = {
+        3 = { trigger = { NOT = { has_trait = beauty_good_3 } } add_trait = beauty_good_3 }
+        3 = { trigger = { NOT = { has_trait = intellect_good_3 } } add_trait = intellect_good_3 }
+        3 = { trigger = { NOT = { has_trait = giant } } add_trait = giant }
+        3 = { trigger = { NOT = { has_trait = albino } } add_trait = albino }
+        3 = { trigger = { NOT = { has_trait = physique_good_3 } } add_trait = physique_good_3 }
+        3 = { trigger = { NOT = { has_trait = strong } } add_trait = strong }
+        3 = {
+            trigger = {
+                NOR = {
+                    has_trait = shrewd
+                    AND = {
+                        learning >= 15
+                        culture = { has_cultural_parameter = advanced_shrewd }
+                    }
+                }
+            }
+            add_trait = shrewd
+        }
+        3 = { trigger = { NOT = { has_trait = athletic } } add_trait = athletic }
+        3 = { trigger = { NOT = { has_trait = pure_blooded } } add_trait = pure_blooded }
+        3 = { trigger = { NOT = { has_trait = fecund } } add_trait = fecund }
+        3 = { trigger = { NOT = { has_trait = royal_elf_valerith } } add_trait = royal_elf_valerith }
+        3 = { trigger = { NOT = { has_trait = royal_elf_serelion } } add_trait = royal_elf_serelion }
+        3 = { trigger = { NOT = { has_trait = royal_elf_gwynthorn } } add_trait = royal_elf_gwynthorn }
+        3 = { trigger = { NOT = { has_trait = royal_elf_thundarael } } add_trait = royal_elf_thundarael }
+        3 = { trigger = { NOT = { has_trait = royal_elf_daelurin } } add_trait = royal_elf_daelurin }
+        3 = { trigger = { NOT = { has_trait = royal_elf_lormelis } } add_trait = royal_elf_lormelis }
+    }
+}
+
+# Random House Bloodlines
+elfess_royal_house_traits_effect_superior_portal = {
+    random_list = {
+        3 = { trigger = { NOT = { has_trait = royal_elf_valerith } } add_trait = royal_elf_valerith }
+        3 = { trigger = { NOT = { has_trait = royal_elf_serelion } } add_trait = royal_elf_serelion }
+        3 = { trigger = { NOT = { has_trait = royal_elf_gwynthorn } } add_trait = royal_elf_gwynthorn }
+        3 = { trigger = { NOT = { has_trait = royal_elf_thundarael } } add_trait = royal_elf_thundarael }
+        3 = { trigger = { NOT = { has_trait = royal_elf_daelurin } } add_trait = royal_elf_daelurin }
+        3 = { trigger = { NOT = { has_trait = royal_elf_lormelis } } add_trait = royal_elf_lormelis }
+    }
+}
+
+# Random Race Flags
+elfess_race_flag_effect_superior_portal = {
+    random_list = {
+        20 = {
+            add_trait = elf_mortal
+        }
+        80 = {
+            add_trait = high_elf_mortal
+        }
+    }
+}
+
+generate_elfess_character_effect_heart_normal = {
+    create_character = {
+        gender = female
+        save_scope_as = target1
+        age = 16
+        location = root.location
+        dynasty = generate
+        random_traits = yes
+        faith = root.faith
+        culture = root.culture
+
+        diplomacy = {
+            min_template_high_skill
+            max_template_high_skill
+        }
+        prowess = {
+            min_template_high_skill
+            max_template_high_skill
+        }
+        martial = {
+            min_template_high_skill
+            max_template_high_skill
+        }
+        stewardship = {
+            min_template_high_skill
+            max_template_high_skill
+        }
+        intrigue = {
+            min_template_high_skill
+            max_template_high_skill
+        }
+        learning = {
+            min_template_high_skill
+            max_template_high_skill
+        }
+
+        # Skill Setup
+        #elfess_character_skill_setup_effect_heart_normal = yes
+
+        after_creation = {
+            # After Creation Modifications
+            elfess_character_after_creation_effect_heart_normal = yes
+        }
+    }
+
+    hidden_effect = {
+        scope:target1 = {
+            # Cleanup and Traits Removal
+            elfess_character_genetic_cleanup_effect = yes
+
+            # Other Setup
+            elfess_character_other_setup_effect = yes
+        }
+    }
+}
+
+# Skill Setup Effect
+elfess_character_skill_setup_effect_heart_normal = {
+    diplomacy = {
+        min_template_high_skill
+        max_template_high_skill
+    }
+    prowess = {
+        min_template_high_skill
+        max_template_high_skill
+    }
+    martial = {
+        min_template_high_skill
+        max_template_high_skill
+    }
+    stewardship = {
+        min_template_high_skill
+        max_template_high_skill
+    }
+    intrigue = {
+        min_template_high_skill
+        max_template_high_skill
+    }
+    learning = {
+        min_template_high_skill
+        max_template_high_skill
+    }
+}
+
+# After Creation Modifications
+elfess_character_after_creation_effect_heart_normal = {
+    #elfess_random_education_effect_heart_normal = yes
+    elfess_random_traits_effect_heart_normal = yes
+    elfess_random_traits_effect_heart_normal = yes
+    elfess_random_traits_effect_heart_normal = yes
+    elfess_random_magic_talent_effect_heart_normal = yes
+    elfess_race_flag_effect_heart_normal = yes
+}
+
+# Random Education Traits
+elfess_random_education_effect_heart_normal = {
+    if = {
+        limit = {
+            NOT = {
+                has_character_flag = creation_done
+            }
+        }
+        random_list = {
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_2 }
+                add_trait = education_nht_prowess_2
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_3 }
+                add_trait = education_nht_prowess_3
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_4 }
+                add_trait = education_nht_prowess_4
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_2 }
+                add_trait = education_nht_leadership_2
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_3 }
+                add_trait = education_nht_leadership_3
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_4 }
+                add_trait = education_nht_leadership_4
+            }
+            3 = { add_trait = education_martial_2 }
+            3 = { add_trait = education_martial_3 }
+            3 = { add_trait = education_martial_4 }
+            3 = { add_trait = education_learning_2 }
+            3 = { add_trait = education_learning_3 }
+            3 = { add_trait = education_learning_4 }
+            3 = { add_trait = education_intrigue_2 }
+            3 = { add_trait = education_intrigue_3 }
+            3 = { add_trait = education_intrigue_4 }
+            3 = { add_trait = education_diplomacy_2 }
+            3 = { add_trait = education_diplomacy_3 }
+            3 = { add_trait = education_diplomacy_4 }
+            3 = { add_trait = education_stewardship_2 }
+            3 = { add_trait = education_stewardship_3 }
+            3 = { add_trait = education_stewardship_4 }
+        }
+        add_character_flag = creation_done
+    }
+}
+
+# Random Magic Talent
+elfess_random_magic_talent_effect_heart_normal = {
+    if = {
+        limit = {
+            NOT = {
+                has_trait = royal_elf_thundarael
+            }
+        }
+        random_list = {
+            3 = { add_trait = magic_talent_1 }
+            3 = { add_trait = magic_talent_2 }
+        }
+    }
+    else = {
+        add_trait = magic_talent_2
+    }
+}
+
+# Random Positive Traits
+elfess_random_traits_effect_heart_normal = {
+    random_list = {
+        3 = { trigger = { NOT = { has_trait = beauty_good_1 } } add_trait = beauty_good_1 }
+        3 = { trigger = { NOT = { has_trait = intellect_good_1 } } add_trait = intellect_good_1 }
+        3 = { trigger = { NOT = { has_trait = giant } } add_trait = giant }
+        3 = { trigger = { NOT = { has_trait = albino } } add_trait = albino }
+        3 = { trigger = { NOT = { has_trait = physique_good_1 } } add_trait = physique_good_1 }
+        3 = { trigger = { NOT = { has_trait = strong } } add_trait = strong }
+        3 = {
+            trigger = {
+                NOR = {
+                    has_trait = shrewd
+                    AND = {
+                        learning >= 15
+                        culture = { has_cultural_parameter = advanced_shrewd }
+                    }
+                }
+            }
+            add_trait = shrewd
+        }
+        3 = { trigger = { NOT = { has_trait = athletic } } add_trait = athletic }
+        3 = { trigger = { NOT = { has_trait = pure_blooded } } add_trait = pure_blooded }
+        3 = { trigger = { NOT = { has_trait = fecund } } add_trait = fecund }
+    }
+}
+
+elfess_race_flag_effect_heart_normal = {
+    random_list = {
+        60 = {
+            random_list = {
+                80 = {
+                    add_trait = elf_blood_mortal
+                }
+                20 = {
+                    add_trait = elf_mortal
+                }
+            }
+        }
+        40 = {
+            debug_log = "Human"
+            add_trait = loyal
+        }
+    }
+
+}
+
+generate_elfess_character_effect_heart_portal = {
+    create_character = {
+        gender = female
+        save_scope_as = target1
+        age = 16
+        location = root.location
+        dynasty = generate
+        random_traits = yes
+        faith = root.faith
+        culture = root.culture
+
+        # Skill Setup
+        #elfess_character_skill_setup_effect_heart_portal = yes
+
+        diplomacy = {
+            min_template_very_high_skill
+            max_template_very_high_skill
+        }
+        prowess = {
+            min_template_very_high_skill
+            max_template_very_high_skill
+        }
+        martial = {
+            min_template_very_high_skill
+            max_template_very_high_skill
+        }
+        stewardship = {
+            min_template_very_high_skill
+            max_template_very_high_skill
+        }
+        intrigue = {
+            min_template_very_high_skill
+            max_template_very_high_skill
+        }
+        learning = {
+            min_template_very_high_skill
+            max_template_very_high_skill
+        }
+
+        after_creation = {
+            # After Creation Modifications
+            elfess_character_after_creation_effect_heart_portal = yes
+        }
+    }
+
+    hidden_effect = {
+        scope:target1 = {
+            # Cleanup and Traits Removal
+            elfess_character_genetic_cleanup_effect = yes
+
+            # Other Setup
+            elfess_character_other_setup_effect = yes
+        }
+    }
+}
+
+# Skill Setup Effect
+elfess_character_skill_setup_effect_heart_portal = {
+    diplomacy = {
+        min_template_very_high_skill
+        max_template_very_high_skill
+    }
+    prowess = {
+        min_template_very_high_skill
+        max_template_very_high_skill
+    }
+    martial = {
+        min_template_very_high_skill
+        max_template_very_high_skill
+    }
+    stewardship = {
+        min_template_very_high_skill
+        max_template_very_high_skill
+    }
+    intrigue = {
+        min_template_very_high_skill
+        max_template_very_high_skill
+    }
+    learning = {
+        min_template_very_high_skill
+        max_template_very_high_skill
+    }
+}
+
+# After Creation Modifications
+elfess_character_after_creation_effect_heart_portal = {
+    #elfess_random_education_effect_heart_portal = yes
+    elfess_random_traits_effect_heart_portal = yes
+    elfess_random_traits_effect_heart_portal = yes
+    elfess_random_traits_effect_heart_portal = yes
+    elfess_random_traits_effect_heart_portal = yes
+    elfess_random_magic_talent_effect_heart_portal = yes
+    elfess_race_flag_effect_heart_portal = yes
+}
+
+# Random Education Traits
+elfess_random_education_effect_heart_portal = {
+    if = {
+        limit = {
+            NOT = {
+                has_character_flag = creation_done
+            }
+        }
+        random_list = {
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_3 }
+                add_trait = education_nht_prowess_3
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_4 }
+                add_trait = education_nht_prowess_4
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_prowess_5 }
+                add_trait = education_nht_prowess_5
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_3 }
+                add_trait = education_nht_leadership_3
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_4 }
+                add_trait = education_nht_leadership_4
+            }
+            3 = {
+                trigger = { exists = trait:education_nht_leadership_5 }
+                add_trait = education_nht_leadership_5
+            }
+            3 = { add_trait = education_martial_3 }
+            3 = { add_trait = education_martial_4 }
+            3 = { add_trait = education_martial_5 }
+            3 = { add_trait = education_learning_3 }
+            3 = { add_trait = education_learning_4 }
+            3 = { add_trait = education_learning_5 }
+            3 = { add_trait = education_intrigue_3 }
+            3 = { add_trait = education_intrigue_4 }
+            3 = { add_trait = education_intrigue_5 }
+            3 = { add_trait = education_diplomacy_3 }
+            3 = { add_trait = education_diplomacy_4 }
+            3 = { add_trait = education_diplomacy_5 }
+            3 = { add_trait = education_stewardship_3 }
+            3 = { add_trait = education_stewardship_4 }
+            3 = { add_trait = education_stewardship_5 }
+        }
+        add_character_flag = creation_done
+    }
+}
+
+# Random Magic Talent
+elfess_random_magic_talent_effect_heart_portal = {
+    if = {
+        limit = {
+            NOT = {
+                has_trait = royal_elf_thundarael
+            }
+        }
+        random_list = {
+            3 = { add_trait = magic_talent_2 }
+            3 = { add_trait = magic_talent_3 }
+        }
+    }
+    else = {
+        add_trait = magic_talent_3
+    }
+}
+
+
+# Random Positive Traits
+elfess_random_traits_effect_heart_portal = {
+    random_list = {
+        3 = { trigger = { NOT = { has_trait = beauty_good_2 } } add_trait = beauty_good_2 }
+        3 = { trigger = { NOT = { has_trait = intellect_good_2 } } add_trait = intellect_good_2 }
+        3 = { trigger = { NOT = { has_trait = giant } } add_trait = giant }
+        3 = { trigger = { NOT = { has_trait = albino } } add_trait = albino }
+        3 = { trigger = { NOT = { has_trait = physique_good_2 } } add_trait = physique_good_2 }
+        3 = { trigger = { NOT = { has_trait = strong } } add_trait = strong }
+        3 = {
+            trigger = {
+                NOR = {
+                    has_trait = shrewd
+                    AND = {
+                        learning >= 15
+                        culture = { has_cultural_parameter = advanced_shrewd }
+                    }
+                }
+            }
+            add_trait = shrewd
+        }
+        3 = { trigger = { NOT = { has_trait = athletic } } add_trait = athletic }
+        3 = { trigger = { NOT = { has_trait = pure_blooded } } add_trait = pure_blooded }
+        3 = { trigger = { NOT = { has_trait = fecund } } add_trait = fecund }
+        3 = { trigger = { NOT = { has_trait = royal_elf_valerith } } add_trait = royal_elf_valerith }
+        3 = { trigger = { NOT = { has_trait = royal_elf_serelion } } add_trait = royal_elf_serelion }
+        3 = { trigger = { NOT = { has_trait = royal_elf_gwynthorn } } add_trait = royal_elf_gwynthorn }
+        3 = { trigger = { NOT = { has_trait = royal_elf_thundarael } } add_trait = royal_elf_thundarael }
+        3 = { trigger = { NOT = { has_trait = royal_elf_daelurin } } add_trait = royal_elf_daelurin }
+        3 = { trigger = { NOT = { has_trait = royal_elf_lormelis } } add_trait = royal_elf_lormelis }
+    }
+}
+
+elfess_race_flag_effect_heart_portal = {
+    random_list = {
+        20 = {
+            add_trait = elf_blood_mortal
+        }
+        80 = {
+            add_trait = elf_mortal
+        }
+    }
+}

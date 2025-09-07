@@ -1,0 +1,90 @@
+﻿make_present_elfess_decision = {
+
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+    }
+
+    decision_group_type = elf
+    desc = make_present_elfess_decision_desc
+    selection_tooltip = make_present_elfess_decision_tooltip
+
+    is_shown = {
+        is_ruler = yes
+        is_any_elf_type = yes
+    }
+    cooldown = {
+        days = 30
+    }
+    cost = {
+        prestige = 750
+    }
+    effect = {
+        custom_tooltip = make_elfess_effect_1
+        if = {
+            limit = {
+                culture = {
+                    has_cultural_tradition = tradition_elf_superiority
+                }
+            }
+            hidden_effect = {
+                random_list = {
+                    50 = {
+                        debug_log = "Elfess Option 1"
+                        trigger_event = {
+                            id = make_present_elfess.0001
+                            days = 7
+                        }
+                    }
+                    50 = {
+                        debug_log = "Elfess Option 2"
+                        trigger_event = {
+                            id = make_present_elfess.0002
+                            days = 7
+                        }
+                    }
+                }
+
+            }
+        }
+        else_if = {
+            limit = {
+                culture = {
+                    has_cultural_tradition = tradition_open_hearted
+                }
+            }
+            random_list = {
+                50 = {
+                    debug_log = "Elfess Option 3"
+                    trigger_event = {
+                        id = make_present_elfess.0003
+                        days = 7
+                    }
+                }
+                50 = {
+                    debug_log = "Elfess Option 4"
+                    trigger_event = {
+                        id = make_present_elfess.0004
+                        days = 7
+                    }
+                }
+            }
+        }
+        else = {
+            debug_log = "No Elfess 1"
+            trigger_event = {
+                id = make_no_elfess.0001
+                days = 7
+            }
+        }
+    }
+    # ai_check_interval = 240
+    # ai_potential = {
+    # 	highest_held_title_tier >= tier_duchy
+    # }
+    # ai_will_do = {
+    # 	base = 50
+    # }
+    ai_potential = {
+        always = no
+    }
+}

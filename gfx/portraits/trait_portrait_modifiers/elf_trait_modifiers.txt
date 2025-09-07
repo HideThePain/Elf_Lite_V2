@@ -1,0 +1,315 @@
+﻿# elf_tier_1 = {
+# 	elf_slow_aging = {
+# 		traits = {
+# 			elf_blood
+# 		}
+# 		dna_modifiers = {
+# 			morph = {
+# 				mode = modify_multiply
+# 				gene = gene_age
+# 				value = 1.0
+# 				template = old_beauty_1
+# 			}
+# 		}
+# 	}
+
+# 	elf_ageless = {
+# 		traits = {
+# 			elf
+# 			high_elf
+# 		}
+# 		dna_modifiers = {
+# 			morph = {
+# 				mode = modify_multiply
+# 				gene = gene_age
+# 				value = 1.0
+# 				template = no_aging
+# 			}
+# 		}
+# 	}
+# }
+
+elf_ruler_designer_ears = {
+    elf_1_transform = {
+        traits = {
+            elf
+            high_elf
+        }
+        dna_modifiers = {
+            human = {
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_1
+                    template = elf_ears_1
+                    value = 0.5
+                }
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_2
+                    template = elf_ears_2
+                    value = 0.5
+                }
+            }
+        }
+    }
+    elf_2_transform = {
+        traits = {
+            elf
+            high_elf
+        }
+        dna_modifiers = {
+            human = {
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_1
+                    template = elf_ears_1
+                    value = 0.75
+                }
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_2
+                    template = elf_ears_2
+                    value = 0.75
+                }
+            }
+        }
+    }
+    elf_3_transform = {
+        traits = {
+            elf
+            high_elf
+        }
+        dna_modifiers = {
+            human = {
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_1
+                    template = elf_ears_1
+                    value = 1
+                }
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_2
+                    template = elf_ears_2
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+visual_traits_elves = {
+    high_elf_transform = {
+        traits = {
+            high_elf
+        }
+        trigger = {
+            trigger_if = {
+                limit = {
+                    exists = root
+                }
+                root = {
+                    age > 25
+                }
+            }
+        }
+        dna_modifiers = {
+            human = {
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_1
+                    template = elf_ears_1
+                    value = 1.0
+                }
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_2
+                    template = elf_ears_2
+                    value = 1.0
+                }
+            }
+        }
+    }
+    elf_transform = {
+        traits = {
+            elf
+        }
+        trigger = {
+            trigger_if = {
+                limit = {
+                    exists = root
+                }
+                root = {
+                    age > 25
+                }
+            }
+        }
+        dna_modifiers = {
+            human = {
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_1
+                    template = elf_ears_1
+                    value = 0.75
+                }
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_2
+                    template = elf_ears_2
+                    value = 0.75
+                }
+            }
+        }
+    }
+    elf_blood_transform = {
+        traits = {
+            elf_blood
+            elf_blood_mortal
+        }
+        dna_modifiers = {
+            human = {
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_1
+                    template = elf_ears_1
+                    value = 0.5
+                }
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_2
+                    template = elf_ears_1
+                    value = 0.5
+                }
+            }
+        }
+    }
+    high_elf_ears_pre_adult = {
+        traits = {
+            high_elf_mortal
+        }
+        dna_modifiers = {
+            human = {
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_1
+                    template = elf_ears_1
+                    value = 1.0
+                }
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_2
+                    template = elf_ears_2
+                    value = 1.0
+                }
+            }
+        }
+    }
+    elf_ears_pre_adult = {
+        traits = {
+            elf_mortal
+        }
+        dna_modifiers = {
+            human = {
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_1
+                    template = elf_ears_1
+                    value = 0.75
+                }
+                morph = {
+                    mode = replace
+                    gene = race_gene_elf_ears_2
+                    template = elf_ears_2
+                    value = 0.75
+                }
+            }
+        }
+    }
+}
+
+visual_traits_royal_elves = {
+	usage = game
+
+	royal_elf_valerith = {
+		royal_elf_valerith = {
+			traits = { royal_elf_valerith }
+			dna_modifiers = {
+				human = {
+					color = {
+						gene = hair_color
+						mode = replace
+						
+						x = 0.0
+						y = 0.012
+					}
+				}
+			}
+		}
+	}
+	
+	royal_elf_serelion = {
+		royal_elf_serelion = {
+			traits = { royal_elf_serelion }
+			dna_modifiers = {
+				human = {
+					color = {
+						gene = eye_color
+						mode = replace
+							
+						x = 0.0
+						y = 0.76
+					}
+				}
+			}
+		}
+	}
+
+	royal_elf_thundarael = {
+		royal_elf_thundarael = {
+			traits = { royal_elf_thundarael }
+			dna_modifiers = {
+				human = {
+					color = {
+						gene = skin_color
+						mode = replace
+						
+						x = 0.001
+						y = 0.001
+					}
+				}
+			}
+		}
+	}
+
+	royal_elf_daelurin = {
+		royal_elf_daelurin = {
+			traits = { royal_elf_daelurin }
+			dna_modifiers = {
+				human = {
+					morph = {
+						mode = modify_multiply
+						gene = gene_height
+						template = giant_height
+						value = 0
+					}
+				}
+			}
+		}
+	}
+    royal_elf_lormelis = {
+		royal_elf_lormelis = {
+			traits = { royal_elf_lormelis }
+			dna_modifiers = {
+				human = {
+					color = {
+						gene = eye_color
+						mode = replace
+							
+						x = 0.0
+						y = 1.23
+					}
+				}
+			}
+		}
+	}
+}

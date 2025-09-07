@@ -1,0 +1,219 @@
+﻿lormelis_sirens_of_war = {
+    type = archers
+    stack = 100
+
+    damage = 36
+    toughness = 40
+    pursuit = 12
+    screen = 20
+
+    terrain_bonus = {
+        forest = { damage = 12 toughness = 18 pursuit = 14 screen = 18 }
+        jungle = { damage = 12 toughness = 18 pursuit = 14 screen = 18 }
+        taiga = { damage = 12 toughness = 18 pursuit = 14 screen = 18 }
+
+        hills = { toughness = 8 }
+        plains = { pursuit = 18 damage = 8 }
+        farmlands = { toughness = 9 damage = 4 screen = 4 }
+        wetlands = { toughness = 9 screen = 14 pursuit = 14 }
+        floodplains = { toughness = 9 screen = 14 pursuit = 14 }
+        drylands = { pursuit = 9 }
+        steppe = { toughness = 1 }
+        
+        oasis = { toughness = 9 screen = 9 }
+        desert = { toughness = -8 }
+        desert_mountains = { toughness = -14 }
+        mountains = { toughness = 8 }
+    }
+
+    winter_bonus = {
+        normal_winter = { pursuit = -4 toughness = 4 }
+        harsh_winter = { pursuit = -8 toughness = 6 screen = 6 damage = -4 }
+    }
+
+    counters = {
+        skirmishers = 1.1
+        light_cavalry = 1
+        archers = 1.1
+        heavy_infantry = 0.6
+    }
+
+    can_recruit = {
+        has_trait = royal_elf_lormelis
+    }
+
+    buy_cost = { gold = elf_bowmen_recruitment_cost }
+    low_maintenance_cost = { gold = elf_bowmen_low_maint_cost }
+    high_maintenance_cost = { gold = elf_bowmen_high_maint_cost }
+    provision_cost = @provisions_cost_special_moderate
+
+    ai_quality = { value = @cultural_spark_maa_extra_ai_score }
+    icon = lormelis_sirens_of_war
+}
+
+
+lormelis_tideborn_raiders = {
+    type = skirmishers
+    stack = 100
+
+    damage = 38         # slightly higher damage than highlanders, reflecting skirmisher/ranged hit power
+    toughness = 15      # lower toughness, emphasizing mobility and pursuit
+    pursuit = 50        # high pursuit for hit-and-run in open terrain
+    screen = 10
+
+    terrain_bonus = {
+        forest = { pursuit = 10 damage = 6 }
+        taiga = { pursuit = 10 damage = 6 }
+        jungle = { pursuit = 10 damage = 6 }
+
+        hills = { toughness = 4 }
+        mountains = { toughness = 4 }
+
+        wetlands = { pursuit = 12 screen = 12 }
+        floodplains = { toughness = 8 }
+        farmlands = { toughness = 8 damage = 4 screen = 4 }
+        oasis = { toughness = 8 }
+
+        plains = { pursuit = 18 damage = 8 }
+        drylands = { pursuit = 10 }
+        steppe = { toughness = 4 }
+
+        desert = { toughness = -8 }
+        desert_mountains = { toughness = -15 }
+    }
+
+    winter_bonus = {
+        normal_winter = { pursuit = -4 toughness = 3 }
+        harsh_winter = { pursuit = -8 toughness = 5 screen = 5 damage = -3 }
+    }
+
+    counters = {
+        archers = 1.5
+        skirmishers = 1
+        light_cavalry = 1.5
+    }
+
+    can_recruit = {
+        has_trait = royal_elf_lormelis
+    }
+
+    buy_cost = { gold = warband_ravagers_recruitment_cost }
+    low_maintenance_cost = { gold = warband_ravagers_low_maint_cost }
+    high_maintenance_cost = { gold = warband_ravagers_high_maint_cost }
+    provision_cost = @provisions_cost_special_expensive
+
+    ai_quality = { value = @cultural_spark_maa_extra_ai_score }
+    icon = lormelis_tideborn_raiders
+}
+
+lormelis_atlantean_leviathans = {
+    type = heavy_infantry
+    stack = 50
+
+    damage = 125
+    toughness = 80
+    pursuit = 10
+    screen = 20
+
+    terrain_bonus = {
+        forest = { toughness = 15 damage = 10 }
+        taiga = { toughness = 15 damage = 10 }
+        jungle = { toughness = 15 damage = 10 }
+
+        plains = { toughness = 5 damage = 5 }
+        farmlands = { toughness = 15 damage = 10 screen = 5 }
+        hills = { toughness = 10 }
+        mountains = { toughness = 15 }
+
+        wetlands = { toughness = 10 damage = 5 screen = 5 }
+        floodplains = { toughness = 10 damage = 5 }
+        oasis = { toughness = 10 damage = 5 }
+
+        desert = { toughness = -10 damage = -10 }
+        desert_mountains = { toughness = -15 damage = -10 }
+
+        drylands = { toughness = 5 }
+        steppe = { toughness = 5 }
+    }
+
+    winter_bonus = {
+        normal_winter = { toughness = -10 screen = -10 damage = -10 }
+        harsh_winter = { toughness = -15 screen = -15 damage = -15 pursuit = -10 }
+    }
+
+    counters = {
+        heavy_infantry = 1
+        archers = 1
+        pikemen = 0.5
+        skirmishers = 0.5
+    }
+
+    can_recruit = {
+        has_trait = royal_elf_lormelis
+    }
+
+    buy_cost = { gold = heavy_infantry_recruitment_cost }
+    low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+    high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+    provision_cost = @provisions_cost_infantry_bankrupting
+
+    ai_quality = { value = @cultural_spark_maa_extra_ai_score }
+    icon = lormelis_atlantean_leviathans
+}
+
+abyssal_guardians = {
+	type = pikemen
+	icon = abyssal_guardians
+	
+	stack = 100
+	damage = 40
+	toughness = 50
+	pursuit = 10
+	screen = 35
+
+	terrain_bonus = {
+		forest = { damage = 8 toughness = 8 }
+		taiga = { damage = 8 toughness = 8 }
+		jungle = { damage = 8 toughness = 8 }
+
+		wetlands = { damage = 15 toughness = 15 }
+		floodplains = { damage = 10 toughness = 10 }
+		farmlands = { damage = 5 toughness = 5 }
+		plains = { damage = 5 screen = 5 }
+		steppe = { damage = -5 toughness = -5 }
+		hills = { damage = -5 toughness = -10 }
+		
+		mountains = { damage = -10 toughness = -15 }
+		desert = { damage = -15 toughness = -15 }
+		desert_mountains = { damage = -20 toughness = -20 }
+		drylands = { damage = -10 toughness = -10 }
+		oasis = { damage = -5 toughness = -5 }
+	}
+
+	winter_bonus = {
+		normal_winter = { toughness = 8 screen = 6 }
+		harsh_winter = { toughness = 12 screen = 8 damage = -2 }
+	}
+
+	counters = {
+		light_cavalry = 2
+		heavy_cavalry = 1.5
+		archer_cavalry = 1.5
+		camel_cavalry = 1.2
+		elephant_cavalry = 1
+	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_abyssal_guardians }
+	}
+
+	buy_cost = { gold = schiltron_recruitment_cost }
+	low_maintenance_cost = { gold = schiltron_low_maint_cost }
+	high_maintenance_cost = { gold = schiltron_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+
+	ai_quality = {
+		value = culture_ai_weight_pikemen
+		value = counter_synergy_ai_weight_pikemen
+	}
+}

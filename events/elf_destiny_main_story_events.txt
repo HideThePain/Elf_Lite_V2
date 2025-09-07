@@ -1,0 +1,573 @@
+﻿namespace = elf_destiny_main_story_events
+
+## What is an Archeologist? ###
+elf_destiny_main_story_events.001 = {
+    type = character_event
+
+    title = elf_destiny_main_story_events.001.t
+    desc = elf_destiny_main_story_events.001.desc
+    theme = stewardship
+
+    left_portrait = {
+        character = root
+        animation = personality_greedy
+    }
+    immediate = {
+        play_music_cue = "mx_cue_positive_effect"
+    }
+
+    option = { # Very Well, I Will Fund this Expedition
+        name = elf_destiny_main_story_events.001.a
+        hidden_effect = {
+            add_to_global_variable_list = {
+                name = unavailable_unique_decisions
+                target = flag:find_realm_lord_sigil_decision
+            }
+        }
+        trigger_event = {
+            id = elf_destiny_main_story_events.005
+            days = 7
+        }
+    }
+    option = { # Nevermind
+        name = elf_destiny_main_story_events.001.b
+        trigger = { is_ai = no }
+        # hidden_effect = {
+        # 	remove_list_global_variable = {
+        # 		name = unavailable_unique_decisions
+        # 		target = flag:flag_what_is_an_archelogist_answered
+        # 	}
+        # }
+        # hidden_effect = { # Reinburse cost
+        # }
+    }
+}
+
+elf_destiny_main_story_events.005 = {
+    # Find Sigil Of The Realm Lord
+    # IF expedition.discovery_made = false
+    type = character_event
+
+    title = elf_destiny_main_story_events.005.t
+    desc = elf_destiny_main_story_events.005.desc
+    theme = dead_elf_king_with_sigil
+
+    left_portrait = {
+        character = root
+        animation = thinking
+    }
+
+    option = {
+        name = elf_destiny_main_story_events.005.ok
+        if = {
+            limit = {
+                NOT = { has_global_variable = 01_sigil_of_the_realm_lord_found }
+            }
+
+            create_sigil_of_the_realm_lord_effect = { OWNER = root }
+
+            if = {
+                limit = { exists = scope:newly_created_artifact }
+                scope:activity = {
+                    add_to_variable_list = {
+                        name = artifact_rewards
+                        target = scope:newly_created_artifact
+                    }
+                }
+            }
+
+            set_global_variable = {
+                name = 01_sigil_of_the_realm_lord_found
+                value = yes
+            }
+        }
+
+        trigger_event = elf_destiny_main_story_events.006
+    }
+}
+
+# Flash of light => you are transformed => press continue
+elf_destiny_main_story_events.006 = {
+    type = character_event
+
+    title = elf_destiny_main_story_events.006.t
+    desc = elf_destiny_main_story_events.006.desc
+    theme = dead_elf_king_with_light
+
+    left_portrait = {
+        character = root
+        animation = shock
+    }
+
+    artifact = {
+        target = scope:newly_created_artifact
+        position = lower_center_portrait
+    }
+
+    option = {
+        name = elf_destiny_main_story_events.006.ok
+
+        custom_tooltip = {
+            text = transformed_into_elf
+            root = {
+                if = {
+                    limit = {
+                        AND = {
+                            OR = {
+                                is_any_elf_type = no
+                                is_elf_blood = yes
+                            }
+                            age < 20
+                        }
+                    }
+                    add_trait = elf_mortal
+                    add_trait = magic_talent_3
+                    add_trait = beauty_good_3
+                    set_appropriate_elf_immortality_age = yes
+                }
+                else_if = {
+                    limit = {
+                        AND = {
+                            OR = {
+                                is_any_elf_type = no
+                                is_elf_blood = yes
+                            }
+                            age > 20
+                        }
+                    }
+                    add_trait = elf
+                    add_trait = magic_talent_3
+                    add_trait = beauty_good_3
+                    set_appropriate_elf_immortality_age = yes
+                }
+            }
+        }
+        trigger_event = elf_destiny_main_story_events.007
+    }
+}
+
+elf_destiny_main_story_events.007 = { # Convert To Elf Culture?
+    type = character_event
+
+    title = elf_destiny_main_story_events.007.t
+    desc = elf_destiny_main_story_events.007.desc
+
+    theme = dead_elf_king_with_light
+
+    left_portrait = {
+        character = root
+        animation = shock
+    }
+
+    option = {
+        name = elf_destiny_main_story_events.007.convert
+
+        convert_family_culture_and_notify_vassals_effect = {
+            CONVERTER = root
+            OLD_CULTURE = root.culture
+            NEW_CULTURE = culture:culture_elf
+        }
+
+        trigger_event = elf_destiny_main_story_events.008
+    }
+
+    option = {
+        name = elf_destiny_main_story_events.007.dontConvert
+
+        root = {
+            culture = {
+                add_innovation = innovation_elven_adaptability
+            }
+        }
+
+        trigger_event = elf_destiny_main_story_events.008
+    }
+}
+
+
+# Conclusion, head home
+elf_destiny_main_story_events.008 = {
+    type = character_event
+
+    title = elf_destiny_main_story_events.008.t
+    desc = elf_destiny_main_story_events.008.desc
+
+    theme = dead_elf_king
+
+    left_portrait = {
+        character = root
+        animation = disbelief
+    }
+
+    option = {
+        name = elf_destiny_main_story_events.008.ok
+        trigger_event = {
+            id = elf_destiny_main_story_events.004
+            days = 30
+        }
+    }
+}
+
+### Restore the Grand Portal ###
+elf_destiny_main_story_events.002 = { # Restore the Portal part 1
+    type = character_event
+    title = elf_destiny_main_story_events.002.t
+    desc = elf_destiny_main_story_events.002.desc
+
+    theme = broken_portal
+    root
+
+    artifact = {
+        target = scope:portal_capacitor
+        position = lower_left_portrait
+    }
+
+    artifact = {
+        target = scope:navigation_relay
+        position = lower_center_portrait
+    }
+
+    immediate = {
+        play_music_cue = "mx_cue_positive_effect"
+        save_scope_as = scoped_ruler
+
+        every_character_artifact = {
+            if = {
+                limit = {
+                    has_variable = is_portal_capacitor
+                }
+                save_scope_as = portal_capacitor
+            }
+            if = {
+                limit = {
+                    has_variable = is_navigation_relay
+                }
+                save_scope_as = navigation_relay
+            }
+        }
+    }
+
+    option = { # Restore the Portal
+        name = elf_destiny_main_story_events.002.a
+        trigger = {
+            # Must Have All Portal Components
+            # Must Have Studied Schematics
+            # Must Have the Seal and must have awakened it.
+        }
+
+        custom_tooltip = {
+            text = lose_portal_components
+            root = {
+                every_character_artifact = {
+                    limit = {
+                        OR = {
+                            has_variable = is_portal_capacitor
+                            has_variable = is_navigation_relay
+                        }
+                    }
+                    destroy_artifact = this
+                }
+            }
+        }
+
+        ## We could instead launch a "construction scheme" or something that takes 5 years to complete.
+        ## You would be attacked by rebels and have to defend the site.
+        ## Then the below effects would trigger
+
+        ## Restore Portal ##
+        if = {
+            limit = {
+                has_global_variable = grand_portal_transported
+            }
+            root = {
+                every_realm_province = {
+                    limit = {
+                        has_building = holy_site_spark_grand_portal_01
+                    }
+                    barony = {
+                        restore_the_grand_portal_scripted_effect = yes
+                    }
+                }
+                # capital_province.barony = {
+                # 	restore_the_grand_portal_scripted_effect = yes
+                # }
+
+                # root.capital_county.title_capital_county ?= {
+                # 	move_the_grand_portal_ruins_here_effect = yes
+                # }
+            }
+        }
+        else = {
+            global_var:portal_location_barony = {
+                restore_the_grand_portal_scripted_effect = yes
+            }
+
+            ## Be Granted The Feyswood as your Domain ##
+            if = { # c_cykma
+                limit = {
+                    NOT = { title:c_cykma.holder = { this = root } }
+                }
+                create_title_and_vassal_change = {
+                    type = returned
+                    save_scope_as = change
+                    add_claim_on_loss = no
+                }
+                title:c_cykma = {
+                    change_title_holder = {
+                        holder = root
+                        change = scope:change
+                    }
+                }
+                resolve_title_and_vassal_change = scope:change
+
+            }
+            if = { # c_martyuba
+                limit = {
+                    NOT = { title:c_martyuba.holder = { this = root } }
+                }
+                create_title_and_vassal_change = {
+                    type = returned
+                    save_scope_as = change
+                    add_claim_on_loss = no
+                }
+                title:c_martyuba = {
+                    change_title_holder = {
+                        holder = root
+                        change = scope:change
+                    }
+                }
+                resolve_title_and_vassal_change = scope:change
+            }
+            if = { # d_martyuba
+                limit = {
+                    NOT = { title:d_martyuba.holder = { this = root } }
+                }
+                create_title_and_vassal_change = {
+                    type = returned
+                    save_scope_as = change
+                    add_claim_on_loss = no
+                }
+                title:d_martyuba = {
+                    change_title_holder = {
+                        holder = root
+                        change = scope:change
+                    }
+                }
+                resolve_title_and_vassal_change = scope:change
+            }
+        }
+
+        set_global_variable = {
+            name = grand_portal_restored
+            value = yes
+        }
+
+        ## Thanks For Playing Event
+        trigger_event = elf_destiny_main_story_events.0021
+
+        # Portal is restored! notification
+        # hidden_effect = {
+        # 	every_player = { # Notify
+        # 		limit = {
+        # 			is_vassal_of = root
+        # 			NOT = { this = root }
+        # 		}
+        # 		trigger_event = elf_destiny_main_story_events.002
+        # 	}
+        # }
+    }
+    option = { # Restore the Portal but do nothing
+        name = elf_destiny_main_story_events.002.c
+        trigger = {
+            # Must Have All Portal Components
+            # Must Have Studied Schematics
+            # Must Have the Seal and must have awakened it.
+        }
+
+        custom_tooltip = {
+            text = lose_portal_components
+            root = {
+                every_character_artifact = {
+                    limit = {
+                        OR = {
+                            has_variable = is_portal_capacitor
+                            has_variable = is_navigation_relay
+                        }
+                    }
+                    destroy_artifact = this
+                }
+            }
+        }
+
+        ## We could instead launch a "construction scheme" or something that takes 5 years to complete.
+        ## You would be attacked by rebels and have to defend the site.
+        ## Then the below effects would trigger
+
+        ## Restore Portal ##
+        if = {
+            limit = {
+                has_global_variable = grand_portal_transported
+            }
+            root = {
+                every_realm_province = {
+                    limit = {
+                        has_building = holy_site_spark_grand_portal_01
+                    }
+                    barony = {
+                        restore_the_grand_portal_scripted_effect = yes
+                    }
+                }
+                # capital_province.barony = {
+                # 	restore_the_grand_portal_scripted_effect = yes
+                # }
+
+                # root.capital_county.title_capital_county ?= {
+                # 	move_the_grand_portal_ruins_here_effect = yes
+                # }
+            }
+        }
+        else = {
+            global_var:portal_location_barony = {
+                restore_the_grand_portal_scripted_effect = yes
+            }
+            # Chill where you are
+        }
+
+        set_global_variable = {
+            name = grand_portal_restored
+            value = yes
+        }
+
+        ## Thanks For Playing Event
+        trigger_event = elf_destiny_main_story_events.0022
+
+        # Portal is restored! notification
+        # hidden_effect = {
+        # 	every_player = { # Notify
+        # 		limit = {
+        # 			is_vassal_of = root
+        # 			NOT = { this = root }
+        # 		}
+        # 		trigger_event = elf_destiny_main_story_events.002
+        # 	}
+        # }
+    }
+    option = { # Nevermind
+        name = elf_destiny_main_story_events.002.b
+        trigger = { is_ai = no }
+        hidden_effect = {
+            remove_list_global_variable = {
+                name = unavailable_unique_decisions
+                target = flag:flag_grand_portal_restored
+            }
+        }
+        hidden_effect = { # Reinburse cost.
+            # add_gold = 3000
+            add_gold = 1000
+        }
+    }
+}
+
+elf_destiny_main_story_events.0021 = { # Restore the Portal part 2
+    type = character_event
+    title = elf_destiny_main_story_events.0021.t
+    desc = elf_destiny_main_story_events.0021.desc
+    theme = restored_portal
+
+    root
+
+    immediate = {
+        play_music_cue = "mx_cue_positive_effect"
+        save_scope_as = scoped_ruler
+    }
+
+    option = { # Receive Blessing Choice
+        name = elf_destiny_main_story_events.0021.ok_move_capital
+        trigger = {
+            NOT = {
+                has_global_variable = grand_portal_transported
+            }
+        }
+        set_realm_capital = title:c_martyuba
+        trigger_event = elf_destiny_main_story_events.0023
+    }
+
+    option = { # Receive Blessing Choice
+        name = elf_destiny_main_story_events.0021.ok
+        trigger_event = elf_destiny_main_story_events.0023
+    }
+}
+
+# Dream Sequence where you choose good vs evil human relations
+elf_destiny_main_story_events.004 = {
+    hidden = yes
+    scope = none
+
+    immediate = {
+        debug_log = "elf_destiny_main_story_events.004"
+
+        every_player = {
+            limit = {
+                is_ai = no
+                is_travelling = no
+            }
+
+            save_scope_as = player
+
+            scope:player = {
+                trigger_event = elf_destiny_main_story_events.0041
+            }
+        }
+    }
+}
+
+elf_destiny_main_story_events.0041 = {
+    type = character_event
+    title = elf_destiny_main_story_events.004.title
+    desc = elf_destiny_main_story_events.004.desc
+
+    trigger = {
+        is_ai = no
+        is_travelling = no
+        has_global_variable = 01_sigil_of_the_realm_lord_found
+        is_any_elf_type = yes
+        NOT = {
+            has_global_variable = 03_choice_of_dreams_made
+        }
+    }
+
+    theme = divine_spark
+    root
+
+    right_portrait = {
+        character = root
+        animation = disbelief
+    }
+
+    immediate = {
+        play_music_cue = "mx_cue_positive_effect"
+    }
+
+    option = { # Good
+        name = elf_destiny_main_story_events.004.good
+        root.culture = {
+            add_culture_tradition = tradition_open_hearted
+        }
+
+        set_global_variable = {
+            name = 03_choice_of_dreams_made
+            value = yes
+        }
+    }
+    option = { # Evil
+        name = elf_destiny_main_story_events.004.evil
+        root.culture = {
+            add_culture_tradition = tradition_elf_superiority
+        }
+
+        set_global_variable = {
+            name = 03_choice_of_dreams_made
+            value = yes
+        }
+    }
+}

@@ -1,0 +1,84 @@
+﻿namespace = invite_an_elf
+invite_an_elf.0001 = {
+    type = character_event
+    title = invite_an_elf.0001.title
+    desc = invite_an_elf.0001.desc
+    theme = realm
+    override_background = {
+        reference = tavern
+    }
+    left_portrait = {
+        character = scope:target1
+        animation = personality_content
+    }
+    immediate = {
+        generate_elf_character_effect_superior_normal = yes
+    }
+    option = {
+        name = invite_an_elf.0001.a
+        add_courtier = scope:target1
+    }
+}
+
+invite_an_elf.0002 = {
+    type = character_event
+    title = invite_an_elf.0002.title
+    desc = invite_an_elf.0002.desc
+    theme = realm
+    override_background = {
+        reference = tavern
+    }
+    left_portrait = {
+        character = scope:target1
+        animation = personality_content
+    }
+    immediate = {
+        generate_elf_character_effect_superior_portal = yes
+    }
+    option = {
+        name = invite_an_elf.0002.a
+        add_courtier = scope:target1
+    }
+}
+
+invite_an_elf.0003 = {
+    type = character_event
+    title = invite_an_elf.0003.title
+    desc = invite_an_elf.0003.desc
+    theme = realm
+    override_background = {
+        reference = tavern
+    }
+    left_portrait = {
+        character = scope:target1
+        animation = personality_content
+    }
+    immediate = {
+        generate_elf_character_effect_heart_normal = yes
+    }
+    option = {
+        name = invite_an_elf.0003.a
+        add_courtier = scope:target1
+    }
+}
+
+invite_an_elf.0004 = {
+    type = character_event
+    title = invite_an_elf.0004.title
+    desc = invite_an_elf.0004.desc
+    theme = realm
+    override_background = {
+        reference = tavern
+    }
+    left_portrait = {
+        character = scope:target1
+        animation = personality_content
+    }
+    immediate = {
+        generate_elf_character_effect_heart_portal = yes
+    }
+    option = {
+        name = invite_an_elf.0004.a
+        add_courtier = scope:target1
+    }
+}

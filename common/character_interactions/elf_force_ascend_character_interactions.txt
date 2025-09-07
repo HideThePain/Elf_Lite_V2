@@ -1,0 +1,47 @@
+﻿## Can be used to reboot matchmaking after pausing it
+elf_force_ascend_interaction = {
+    category = interaction_category_religion
+    interface_priority = 60
+    icon = icon_aeluran_sister
+
+    desc = elf_force_ascend_interaction_desc
+    use_diplomatic_range = no
+    common_interaction = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+        }
+        scope:recipient = {
+            is_high_elf = no
+        }
+    }
+
+    cooldown = { months = 1 }
+
+    on_accept = {
+        scope:actor = {
+            trigger_event = elf_force_ascend.001
+        }
+        scope:recipient = {
+            save_scope_as = elf_ascended
+        }
+    }
+
+    cost = {
+        scope:elf_ascended = {
+            piety = {
+                add = ritual_solo_cost
+            }
+        }
+    }
+
+    auto_accept = yes
+
+    # ai_potential = {
+    # 	is_ai = no
+    # }
+    ai_will_do = {
+        base = 0
+    }
+}

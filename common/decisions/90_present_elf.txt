@@ -1,0 +1,93 @@
+﻿invite_an_elf_decision = {
+
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+    }
+
+    decision_group_type = elf
+    desc = invite_an_elf_decision_desc
+    selection_tooltip = invite_an_elf_decision_tooltip
+
+    is_shown = {
+        is_ruler = yes
+        is_any_elf_type = yes
+    }
+    cooldown = {
+        days = 30
+    }
+    cost = {
+        prestige = 750
+    }
+    effect = {
+        custom_tooltip = elf_effect_1
+        if = {
+            limit = {
+                culture = {
+                    has_cultural_tradition = tradition_elf_superiority
+                }
+            }
+            hidden_effect = {
+                random_list = {
+                    50 = {
+                        debug_log = "Elf Option 1"
+                        trigger_event = {
+                            id = invite_an_elf.0001
+                            days = 7
+                        }
+                    }
+                    50 = {
+                        debug_log = "Elf Option 2"
+                        trigger_event = {
+                            id = invite_an_elf.0002
+                            days = 7
+                        }
+                    }
+                }
+            }
+
+        }
+        else_if = {
+            limit = {
+                culture = {
+                    has_cultural_tradition = tradition_open_hearted
+                }
+            }
+            hidden_effect = {
+                random_list = {
+                    50 = {
+                        debug_log = "Elf Option 3"
+                        trigger_event = {
+                            id = invite_an_elf.0003
+                            days = 7
+                        }
+                    }
+                    50 = {
+                        debug_log = "Elf Option 4"
+                        trigger_event = {
+                            id = invite_an_elf.0004
+                            days = 7
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            debug_log = "No Elf 1"
+            trigger_event = {
+                id = no_elf.0001
+                days = 7
+            }
+        }
+    }
+    # ai_check_interval = 240
+    # ai_potential = {
+    # 	highest_held_title_tier >= tier_duchy
+    # }
+    # ai_will_do = {
+    # 	base = 50
+    # }
+    ai_potential = {
+        always = no
+    }
+}
+

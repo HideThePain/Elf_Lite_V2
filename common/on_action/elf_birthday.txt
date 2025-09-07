@@ -1,0 +1,217 @@
+﻿on_birthday = {
+	on_actions = {
+		handle_elf_immortality
+		award_people_of_the_bow_bonus
+	}
+}
+
+handle_elf_immortality = {
+	first_valid_on_action = {
+		handle_age_of_immortality_reached
+		handle_older_adult_elf_reached
+		handle_middle_age_elf_reached
+		handle_older_middle_age_elf_reached
+		handle_elder_age_elf_reached
+		handle_elf_end_of_life_reached
+	}
+}
+
+handle_age_of_immortality_reached = {
+	trigger = { 
+		age = 20
+		is_any_elf_mortal_type = yes
+	}
+
+	effect = {
+		transition_to_elf_adult_effect = yes
+	}
+}
+
+handle_older_adult_elf_reached = {
+	trigger = {
+		OR = {
+			AND = {
+				is_elf_blood = yes
+				age = 30
+			}
+			AND = {
+				is_elf = yes
+				age = 35
+			}
+			AND = {
+				is_high_elf = yes
+				age = 45
+			}
+			AND = {
+				is_true_elf = yes
+				age = 60
+			}
+			AND = {
+				is_fae = yes
+				age = 90
+			}
+			AND = {
+				is_fae_radiant = yes
+				age = 105
+			}
+		}
+	}
+
+	effect = {
+		set_older_adult_immortal_age = yes
+	}
+}
+
+handle_middle_age_elf_reached = {
+	trigger = {
+		OR = {
+			AND = {
+				is_elf_blood = yes
+				age = 45
+			}
+			AND = {
+				is_elf = yes
+				age = 50
+			}
+			AND = {
+				is_high_elf = yes
+				age = 65
+			}
+			AND = {
+				is_true_elf = yes
+				age = 90
+			}
+			AND = {
+				is_fae = yes
+				age = 130
+			}
+			AND = {
+				is_fae_radiant = yes
+				age = 150
+			}
+		}
+	}
+
+	effect = {
+		set_middle_age_immortal_age = yes
+	}
+}
+
+handle_older_middle_age_elf_reached = {
+	trigger = {
+		OR = {
+			AND = {
+				is_elf_blood = yes
+				age = 55
+			}
+			AND = {
+				is_elf = yes
+				age = 65
+			}
+			AND = {
+				is_high_elf = yes
+				age = 75
+			}
+			AND = {
+				is_true_elf = yes
+				age = 115
+			}
+			AND = {
+				is_fae = yes
+				age = 160
+			}
+			AND = {
+				is_fae_radiant = yes
+				age = 200
+			}
+		}
+	}
+
+	effect = {
+		set_older_middle_age_immortal_age = yes
+	}
+}
+
+handle_elder_age_elf_reached = {
+	trigger = {
+		OR = {
+			AND = {
+				is_elf_blood = yes
+				age = 60
+			}
+			AND = {
+				is_elf = yes
+				age = 80
+			}
+			AND = {
+				is_high_elf = yes
+				age = 90
+			}
+			AND = {
+				is_true_elf = yes
+				age = 140
+			}
+			AND = {
+				is_fae = yes
+				age = 200
+			}
+			AND = {
+				is_fae_radiant = yes
+				age = 260
+			}
+		}
+	}
+
+	effect = {
+		set_elder_immortal_age = yes
+	}
+}
+
+handle_elf_end_of_life_reached = {
+	trigger = {
+		OR = {
+			AND = {
+				is_elf_blood = yes
+				age = life_expectancy_elf_blood
+			}
+			AND = {
+				is_elf = yes
+				age = life_expectancy_elf
+			}
+			AND = {
+				is_high_elf = yes
+				age = life_expectancy_high_elf
+			}
+			AND = {
+				is_true_elf = yes
+				age = life_expectancy_true_elf
+			}
+			AND = {
+				is_fae = yes
+				age = life_expectancy_fae
+			}
+			AND = {
+				is_fae_radiant = yes
+				age = life_expectancy_fae_radiant
+			}
+		}
+	}
+
+	effect = {
+		remove_elf_immortality_effect = yes
+	}
+}
+
+award_people_of_the_bow_bonus = {
+	trigger = { 
+		age = 16
+		is_any_elf_type = yes
+		culture = {
+			has_cultural_parameter = people_of_the_bow_archer_bonus
+		}
+	}
+
+	effect = {
+		people_of_the_bow_birthday_effect = yes
+	}
+}

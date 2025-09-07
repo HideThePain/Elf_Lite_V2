@@ -1,0 +1,7 @@
+﻿has_possibly_undefined_trait = {
+    has_trait = $TRAIT$
+}
+
+has_mod_loaded = {
+    exists = global_var:$VAR$
+}

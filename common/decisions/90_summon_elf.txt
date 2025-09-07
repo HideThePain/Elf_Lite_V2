@@ -1,0 +1,38 @@
+﻿summon_all_elfs_decision = {
+
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+    }
+
+    decision_group_type = elf
+    desc = summon_all_elfs_decision_desc
+    selection_tooltip = summon_all_elfs_decision_tooltip
+
+
+    is_shown = {
+        is_ruler = yes
+        is_any_elf_type = yes
+    }
+    cooldown = {
+        days = 0
+    }
+    cost = {
+        prestige = 0
+    }
+    effect = {
+        custom_tooltip = summon_elf_effect_1
+		trigger_event = {
+			id = summon_elfs.0001
+		}
+    }
+    # ai_check_interval = 240
+    # ai_potential = {
+    # 	highest_held_title_tier >= tier_duchy
+    # }
+    # ai_will_do = {
+    # 	base = 50
+    # }
+    ai_potential = {
+        always = no
+    }
+}

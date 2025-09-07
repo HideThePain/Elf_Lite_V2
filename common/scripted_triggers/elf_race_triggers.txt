@@ -1,0 +1,242 @@
+﻿# is_spark_culture = {
+#     has_culture = culture:divine_spark
+# }
+
+# has_fecund_season = {
+#     has_cultural_tradition = tradition_republican_legacy
+# }
+
+# is_elf = {
+#     OR = {
+#         has_trait = elf_blood
+#         has_trait = elf
+#         has_trait = high_elf
+#         # has_trait = true_elf
+#         # has_trait = radiant_elf
+#         # has_trait = celestial_elf
+#         # has_trait = ascendant_elf
+#         # has_trait = seraphic_elf
+#         # has_trait = valar
+#     }  
+# }
+
+# has_the_rut_tradition = {
+#     culture = {
+#         has_cultural_tradition = tradition_the_rut
+#     }
+# }
+
+is_any_elf_type = {
+    OR = {
+        is_any_elf_immortal_type = yes
+        is_any_elf_mortal_type = yes
+    }
+}
+
+is_any_elf_immortal_type = {
+    OR = {
+        has_trait = elf_blood
+        has_trait = elf
+        has_trait = high_elf
+        has_trait = true_elf
+        has_trait = fae
+        has_trait = fae_radiant
+        has_trait = celestial
+        has_trait = seraphic_celestial
+        has_trait = eldar
+        has_trait = maiar
+        has_trait = valar
+        has_trait = aratar
+    }
+}
+
+is_any_elf_mortal_type = {
+    OR = {
+        has_trait = elf_blood_mortal
+        has_trait = elf_mortal
+        has_trait = high_elf_mortal
+        has_trait = true_elf_mortal
+        has_trait = fae_mortal
+        has_trait = fae_radiant_mortal
+        has_trait = celestial_mortal
+        has_trait = seraphic_celestial_mortal
+        has_trait = eldar_mortal
+        has_trait = maiar_mortal
+        has_trait = valar_mortal
+        has_trait = aratar_mortal
+    }
+}
+
+is_any_real_elf_type = {
+    OR = {
+        has_trait = elf
+        has_trait = high_elf
+        has_trait = true_elf
+        has_trait = fae
+        has_trait = fae_radiant
+        has_trait = celestial
+        has_trait = seraphic_celestial
+        has_trait = eldar
+        has_trait = maiar
+        has_trait = valar
+        has_trait = aratar
+        has_trait = elf_mortal
+        has_trait = high_elf_mortal
+        has_trait = true_elf_mortal
+        has_trait = fae_mortal
+        has_trait = fae_radiant_mortal
+        has_trait = celestial_mortal
+        has_trait = seraphic_celestial_mortal
+        has_trait = eldar_mortal
+        has_trait = maiar_mortal
+        has_trait = valar_mortal
+        has_trait = aratar_mortal
+    }
+}
+
+# is_below_top_elf_type = {
+#     AND = {
+#         is_any_elf_type = yes
+#         NOT = {
+#             has_trait = aratar
+#         }
+#         NOT = {
+#             has_trait = aratar_mortal
+#         }
+#     }
+# }
+
+is_below_top_elf_type = {
+    AND = {
+        is_any_elf_type = yes
+        NOT = {
+            has_trait = high_elf
+        }
+        NOT = {
+            has_trait = high_elf_mortal
+        }
+    }
+}
+
+is_at_elf_thereshold = {
+    OR = {
+        has_trait = high_elf
+        has_trait = fae_radiant
+        has_trait = eldar
+    }
+}
+
+is_at_first_elf_threshold = {
+    has_trait = high_elf
+}
+is_at_second_elf_threshold = {
+    has_trait = fae_radiant
+}
+is_at_third_elf_threshold = {
+    has_trait = eldar
+}
+
+is_any_elf_type_desc = {
+    custom_description = {
+        text = is_an_elf
+        subject = this
+        OR = {
+            has_trait = elf_blood
+            has_trait = elf
+            has_trait = high_elf
+            has_trait = true_elf
+            has_trait = fae
+            has_trait = fae_radiant
+            has_trait = celestial
+            has_trait = seraphic_celestial
+            has_trait = eldar
+            has_trait = maiar
+            has_trait = valar
+            has_trait = aratar
+        }
+    }
+}
+
+is_elf_blood = {
+    OR = {
+        has_trait = elf_blood
+        has_trait = elf_blood_mortal
+    }
+}
+
+is_elf = {
+    OR = {
+        has_trait = elf
+        has_trait = elf_mortal
+    }
+}
+
+is_high_elf = {
+    OR = {
+        has_trait = high_elf
+        has_trait = high_elf_mortal
+    }
+}
+
+is_true_elf = {
+    OR = {
+        has_trait = true_elf
+        has_trait = true_elf_mortal
+    }
+}
+
+is_fae = {
+    OR = {
+        has_trait = fae
+        has_trait = fae_mortal
+    }
+}
+
+is_fae_radiant = {
+    OR = {
+        has_trait = fae_radiant
+        has_trait = fae_radiant_mortal
+    }
+}
+
+is_celestial = {
+    OR = {
+        has_trait = celestial
+        has_trait = celestial_mortal
+    }
+}
+
+is_seraphic_celestial = {
+    OR = {
+        has_trait = seraphic_celestial
+        has_trait = seraphic_celestial_mortal
+    }
+}
+
+is_eldar = {
+    OR = {
+        has_trait = eldar
+        has_trait = eldar_mortal
+    }
+}
+
+is_maiar = {
+    OR = {
+        has_trait = maiar
+        has_trait = maiar_mortal
+    }
+}
+
+is_valar = {
+    OR = {
+        has_trait = valar
+        has_trait = valar_mortal
+    }
+}
+
+is_aratar = {
+    OR = {
+        has_trait = aratar
+        has_trait = aratar_mortal
+    }
+}

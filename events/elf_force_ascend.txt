@@ -1,0 +1,37 @@
+namespace = elf_force_ascend
+
+elf_force_ascend.001 = { # Ascension Ritual
+	type = character_event
+	title = elf_force_ascend.001.title
+    desc = elf_force_ascend.001.desc
+	
+	theme = divine_spark
+
+    left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	right_portrait = {
+		character = scope:elf_ascended
+		animation = personality_zealous
+	}
+
+	override_effect_2d = {
+		reference = legend_glow
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+
+		scope:elf_ascended = {
+			elf_trait_ascension = yes
+		}
+	}
+
+	option = { # ascend
+		name = {
+			text = elf_force_ascend.001.ascend
+		}
+	}
+}
