@@ -1,9 +1,9 @@
-version="1.2"
+version="1.0.0"
 tags={
-	"Portraits"
+	"Decisions"
+	"Character Interactions"
 	"Alternative History"
-	"Gameplay"
 }
 name="Elf Destiny Lite V2"
-supported_version="1.16.*"
-remote_file_id="3293402942"
+supported_version="1.17.*"
+remote_file_id="3565952052"

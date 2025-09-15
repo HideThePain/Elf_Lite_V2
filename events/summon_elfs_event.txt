@@ -10,12 +10,12 @@ summon_elfs.0001 = {
                 is_courtier = no
                 is_ruler = no
                 OR = {
-                    has_trait = royal_elf_trait_lormelis
-                    has_trait = royal_elf_trait_daelurin
-                    has_trait = royal_elf_trait_serelion
-                    has_trait = royal_elf_trait_thundarael
-                    has_trait = royal_elf_trait_valerith
-                    has_trait = royal_elf_trait_gwynthorn
+                    has_trait = royal_elf_lormelis
+                    has_trait = royal_elf_daelurin
+                    has_trait = royal_elf_serelion
+                    has_trait = royal_elf_thundarael
+                    has_trait = royal_elf_valerith
+                    has_trait = royal_elf_gwynthorn
                 }
             }
             root = {

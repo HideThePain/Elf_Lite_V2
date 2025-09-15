@@ -1,4 +1,4 @@
-namespace = elf_force_ascend
+﻿namespace = elf_force_ascend
 
 elf_force_ascend.001 = { # Ascension Ritual
 	type = character_event
@@ -13,7 +13,7 @@ elf_force_ascend.001 = { # Ascension Ritual
 	}
 
 	right_portrait = {
-		character = scope:elf_ascended
+		character = scope:recipient
 		animation = personality_zealous
 	}
 
@@ -24,7 +24,7 @@ elf_force_ascend.001 = { # Ascension Ritual
 	immediate = {
 		play_music_cue = "mx_cue_positive_effect"
 
-		scope:elf_ascended = {
+		scope:recipient = {
 			elf_trait_ascension = yes
 		}
 	}

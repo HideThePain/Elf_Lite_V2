@@ -11,6 +11,7 @@ elf_force_ascend_interaction = {
     is_shown = {
         scope:actor = {
             is_ai = no
+            is_any_elf_type = yes
         }
         scope:recipient = {
             is_high_elf = no
@@ -23,14 +24,11 @@ elf_force_ascend_interaction = {
         scope:actor = {
             trigger_event = elf_force_ascend.001
         }
-        scope:recipient = {
-            save_scope_as = elf_ascended
-        }
     }
 
     cost = {
-        scope:elf_ascended = {
-            piety = {
+        piety = {
+            scope:recipient = {
                 add = ritual_solo_cost
             }
         }
