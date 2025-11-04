@@ -183,566 +183,566 @@ high_elf_mortal = {
 	}
 }
 
-## ===== Major Threshold =====
+# ## ===== Major Threshold =====
 
-true_elf_mortal = {
-	icon = true_elf.dds
-	shown_in_ruler_designer = no
-	shown_in_encyclopedia = no
+# true_elf_mortal = {
+# 	icon = true_elf.dds
+# 	shown_in_ruler_designer = no
+# 	shown_in_encyclopedia = no
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					debug_only = yes
-				}
-				desc = trait_true_elf_mortal_debug
-			}
+# 	name = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {
+# 					debug_only = yes
+# 				}
+# 				desc = trait_true_elf_mortal_debug
+# 			}
 
-			desc = trait_true_elf_mortal
-		}
-	}
+# 			desc = trait_true_elf_mortal
+# 		}
+# 	}
 
-	# ========== BONUSES ==========
-	# Stats
-	learning = learning_bonus_true_elf
-	prowess = prowess_bonus_true_elf
-	attraction_opinion = attraction_opinion_bonus_true_elf
+# 	# ========== BONUSES ==========
+# 	# Stats
+# 	learning = learning_bonus_true_elf
+# 	prowess = prowess_bonus_true_elf
+# 	attraction_opinion = attraction_opinion_bonus_true_elf
 
-	# Mortality
-	immortal = no
-	no_prowess_loss_from_age = yes
-	life_expectancy = life_expectancy_bonus_true_elf
-	health = health_bonus_true_elf
+# 	# Mortality
+# 	immortal = no
+# 	no_prowess_loss_from_age = yes
+# 	life_expectancy = life_expectancy_bonus_true_elf
+# 	health = health_bonus_true_elf
 	
-	# Reproduction
-	fertility = fertility_penalty_true_elf
-	years_of_fertility = years_of_fertility_bonus_true_elf
-	inbreeding_chance = inbreeding_chance_bonus_true_elf
+# 	# Reproduction
+# 	fertility = fertility_penalty_true_elf
+# 	years_of_fertility = years_of_fertility_bonus_true_elf
+# 	inbreeding_chance = inbreeding_chance_bonus_true_elf
 
-	# ========== GENETICS ==========
-	# Genetic
-	genetic = yes
-	good = yes
-	physical = yes
-	birth = 0
+# 	# ========== GENETICS ==========
+# 	# Genetic
+# 	genetic = yes
+# 	good = yes
+# 	physical = yes
+# 	birth = 0
 
-	# ========== TRAIT RELATIONS ==========
-	group = elf_tier_2_mortal
-	level = 1
+# 	# ========== TRAIT RELATIONS ==========
+# 	group = elf_tier_2_mortal
+# 	level = 1
 
-	opposites = {
-		fae
-		fae_radiant
-		elf_tier_1
-		elf_tier_2
-		elf_tier_3
-		elf_tier_4
-		elf_tier_1_mortal
-		elf_tier_3_mortal
-		elf_tier_4_mortal
-	}
+# 	opposites = {
+# 		fae
+# 		fae_radiant
+# 		elf_tier_1
+# 		elf_tier_2
+# 		elf_tier_3
+# 		elf_tier_4
+# 		elf_tier_1_mortal
+# 		elf_tier_3_mortal
+# 		elf_tier_4_mortal
+# 	}
 
-	compatibility = {
-	}
+# 	compatibility = {
+# 	}
 
-}
+# }
 
-fae_mortal = {
-	icon = fae.dds
-	shown_in_ruler_designer = no
-	shown_in_encyclopedia = no
+# fae_mortal = {
+# 	icon = fae.dds
+# 	shown_in_ruler_designer = no
+# 	shown_in_encyclopedia = no
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					debug_only = yes
-				}
-				desc = trait_fae_mortal_debug
-			}
+# 	name = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {
+# 					debug_only = yes
+# 				}
+# 				desc = trait_fae_mortal_debug
+# 			}
 
-			desc = trait_fae_mortal
-		}
-	}
+# 			desc = trait_fae_mortal
+# 		}
+# 	}
 
-	# ========== BONUSES ==========
-	# Stats
-	learning = learning_bonus_fae
-	prowess = prowess_bonus_fae
-	attraction_opinion = attraction_opinion_bonus_fae
+# 	# ========== BONUSES ==========
+# 	# Stats
+# 	learning = learning_bonus_fae
+# 	prowess = prowess_bonus_fae
+# 	attraction_opinion = attraction_opinion_bonus_fae
 
-	# Mortality
-	immortal = no
-	no_prowess_loss_from_age = yes
-	life_expectancy = life_expectancy_bonus_fae
-	health = health_bonus_fae
+# 	# Mortality
+# 	immortal = no
+# 	no_prowess_loss_from_age = yes
+# 	life_expectancy = life_expectancy_bonus_fae
+# 	health = health_bonus_fae
 
-	# Reproduction	
-	fertility = fertility_penalty_fae
-	years_of_fertility = years_of_fertility_bonus_fae
-	inbreeding_chance = inbreeding_chance_bonus_fae
+# 	# Reproduction	
+# 	fertility = fertility_penalty_fae
+# 	years_of_fertility = years_of_fertility_bonus_fae
+# 	inbreeding_chance = inbreeding_chance_bonus_fae
 
-	# ========== GENETICS ==========
-	# Genetic
-	genetic = yes
-	good = yes
-	physical = yes
-	birth = 0
+# 	# ========== GENETICS ==========
+# 	# Genetic
+# 	genetic = yes
+# 	good = yes
+# 	physical = yes
+# 	birth = 0
 
-	# ========== TRAIT RELATIONS ==========
-	group = elf_tier_2_mortal
-	level = 2
+# 	# ========== TRAIT RELATIONS ==========
+# 	group = elf_tier_2_mortal
+# 	level = 2
 
-	opposites = {
-		true_elf
-		fae_radiant
-		elf_tier_1
-		elf_tier_2
-		elf_tier_3
-		elf_tier_4
-		elf_tier_1_mortal
-		elf_tier_3_mortal
-		elf_tier_4_mortal
-	}
+# 	opposites = {
+# 		true_elf
+# 		fae_radiant
+# 		elf_tier_1
+# 		elf_tier_2
+# 		elf_tier_3
+# 		elf_tier_4
+# 		elf_tier_1_mortal
+# 		elf_tier_3_mortal
+# 		elf_tier_4_mortal
+# 	}
 
-	compatibility = {
-	}
-}
+# 	compatibility = {
+# 	}
+# }
 
-fae_radiant_mortal = {
-	icon = fae_radiant.dds
-	shown_in_ruler_designer = no
-	shown_in_encyclopedia = no
+# fae_radiant_mortal = {
+# 	icon = fae_radiant.dds
+# 	shown_in_ruler_designer = no
+# 	shown_in_encyclopedia = no
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					debug_only = yes
-				}
-				desc = trait_fae_radiant_mortal_debug
-			}
+# 	name = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {
+# 					debug_only = yes
+# 				}
+# 				desc = trait_fae_radiant_mortal_debug
+# 			}
 
-			desc = trait_fae_radiant_mortal
-		}
-	}
+# 			desc = trait_fae_radiant_mortal
+# 		}
+# 	}
 
-	# ========== BONUSES ==========
-	# Stats
-	learning = learning_bonus_fae_radiant
-	prowess = prowess_bonus_fae_radiant
-	attraction_opinion = attraction_opinion_bonus_fae_radiant
+# 	# ========== BONUSES ==========
+# 	# Stats
+# 	learning = learning_bonus_fae_radiant
+# 	prowess = prowess_bonus_fae_radiant
+# 	attraction_opinion = attraction_opinion_bonus_fae_radiant
 
-	# Mortality
-	immortal = no
-	no_prowess_loss_from_age = yes
-	life_expectancy = life_expectancy_bonus_fae_radiant
-	health = health_bonus_fae_radiant
+# 	# Mortality
+# 	immortal = no
+# 	no_prowess_loss_from_age = yes
+# 	life_expectancy = life_expectancy_bonus_fae_radiant
+# 	health = health_bonus_fae_radiant
 	
-	# Reproduction	
-	fertility = fertility_penalty_fae_radiant
-	years_of_fertility = years_of_fertility_bonus_fae_radiant
-	inbreeding_chance = inbreeding_chance_bonus_fae_radiant
+# 	# Reproduction	
+# 	fertility = fertility_penalty_fae_radiant
+# 	years_of_fertility = years_of_fertility_bonus_fae_radiant
+# 	inbreeding_chance = inbreeding_chance_bonus_fae_radiant
 
-	# ========== GENETICS ==========
-	# Genetic
-	genetic = yes
-	good = yes
-	physical = yes
-	birth = 0
+# 	# ========== GENETICS ==========
+# 	# Genetic
+# 	genetic = yes
+# 	good = yes
+# 	physical = yes
+# 	birth = 0
 
-	# ========== TRAIT RELATIONS ==========
-	group = elf_tier_2_mortal
-	level = 3
+# 	# ========== TRAIT RELATIONS ==========
+# 	group = elf_tier_2_mortal
+# 	level = 3
 
-	opposites = {
-		true_elf
-		fae
-		elf_tier_1
-		elf_tier_2
-		elf_tier_3
-		elf_tier_4
-		elf_tier_1_mortal
-		elf_tier_3_mortal
-		elf_tier_4_mortal
-	}
+# 	opposites = {
+# 		true_elf
+# 		fae
+# 		elf_tier_1
+# 		elf_tier_2
+# 		elf_tier_3
+# 		elf_tier_4
+# 		elf_tier_1_mortal
+# 		elf_tier_3_mortal
+# 		elf_tier_4_mortal
+# 	}
 
-	compatibility = {
-	}
-}
+# 	compatibility = {
+# 	}
+# }
 
-## ===== Major Threshold =====
-### Celestial Tiers
-celestial_mortal = {
-	icon = celestial.dds
-	shown_in_ruler_designer = no
-	shown_in_encyclopedia = no
+# ## ===== Major Threshold =====
+# ### Celestial Tiers
+# celestial_mortal = {
+# 	icon = celestial.dds
+# 	shown_in_ruler_designer = no
+# 	shown_in_encyclopedia = no
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					debug_only = yes
-				}
-				desc = trait_celestial_mortal_debug
-			}
+# 	name = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {
+# 					debug_only = yes
+# 				}
+# 				desc = trait_celestial_mortal_debug
+# 			}
 
-			desc = trait_celestial_mortal
-		}
-	}
+# 			desc = trait_celestial_mortal
+# 		}
+# 	}
 
-	# ========== BONUSES ==========
-	# Stats
-	learning = learning_bonus_celestial
-	prowess = prowess_bonus_celestial
-	attraction_opinion = attraction_opinion_bonus_celestial
+# 	# ========== BONUSES ==========
+# 	# Stats
+# 	learning = learning_bonus_celestial
+# 	prowess = prowess_bonus_celestial
+# 	attraction_opinion = attraction_opinion_bonus_celestial
 
-	# Mortality
-	immortal = no
-	no_prowess_loss_from_age = yes
-	life_expectancy = life_expectancy_bonus_celestial
-	health = health_bonus_celestial
+# 	# Mortality
+# 	immortal = no
+# 	no_prowess_loss_from_age = yes
+# 	life_expectancy = life_expectancy_bonus_celestial
+# 	health = health_bonus_celestial
 	
-	# Reproduction	
-	fertility = fertility_penalty_celestial
-	years_of_fertility = years_of_fertility_bonus_celestial
-	inbreeding_chance = inbreeding_chance_bonus_celestial
+# 	# Reproduction	
+# 	fertility = fertility_penalty_celestial
+# 	years_of_fertility = years_of_fertility_bonus_celestial
+# 	inbreeding_chance = inbreeding_chance_bonus_celestial
 
-	# ========== GENETICS ==========
-	# Genetic
-	genetic = yes
-	good = yes
-	physical = yes
-	birth = 0
+# 	# ========== GENETICS ==========
+# 	# Genetic
+# 	genetic = yes
+# 	good = yes
+# 	physical = yes
+# 	birth = 0
 
-	# ========== TRAIT RELATIONS ==========
-	group = elf_tier_3_mortal
-	level = 1
+# 	# ========== TRAIT RELATIONS ==========
+# 	group = elf_tier_3_mortal
+# 	level = 1
 
-	opposites = {
-		seraphic_celestial
-		eldar
-		elf_tier_1
-		elf_tier_2
-		elf_tier_3
-		elf_tier_4
-		elf_tier_1_mortal
-		elf_tier_2_mortal
-		elf_tier_4_mortal
-	}
+# 	opposites = {
+# 		seraphic_celestial
+# 		eldar
+# 		elf_tier_1
+# 		elf_tier_2
+# 		elf_tier_3
+# 		elf_tier_4
+# 		elf_tier_1_mortal
+# 		elf_tier_2_mortal
+# 		elf_tier_4_mortal
+# 	}
 
-	compatibility = {
-	}
-}
+# 	compatibility = {
+# 	}
+# }
 
-seraphic_celestial_mortal = {
-	icon = seraphic_celestial.dds
-	shown_in_ruler_designer = no
-	shown_in_encyclopedia = no
+# seraphic_celestial_mortal = {
+# 	icon = seraphic_celestial.dds
+# 	shown_in_ruler_designer = no
+# 	shown_in_encyclopedia = no
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					debug_only = yes
-				}
-				desc = trait_seraphic_celestial_mortal_debug
-			}
+# 	name = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {
+# 					debug_only = yes
+# 				}
+# 				desc = trait_seraphic_celestial_mortal_debug
+# 			}
 
-			desc = trait_seraphic_celestial_mortal
-		}
-	}
+# 			desc = trait_seraphic_celestial_mortal
+# 		}
+# 	}
 
-	# ========== BONUSES ==========
-	# Stats
-	learning = learning_bonus_seraphic_celestial
-	prowess = prowess_bonus_seraphic_celestial
-	attraction_opinion = attraction_opinion_bonus_seraphic_celestial
+# 	# ========== BONUSES ==========
+# 	# Stats
+# 	learning = learning_bonus_seraphic_celestial
+# 	prowess = prowess_bonus_seraphic_celestial
+# 	attraction_opinion = attraction_opinion_bonus_seraphic_celestial
 
-	# Mortality
-	immortal = no
-	no_prowess_loss_from_age = yes
-	life_expectancy = life_expectancy_bonus_seraphic_celestial
-	health = health_bonus_seraphic_celestial
+# 	# Mortality
+# 	immortal = no
+# 	no_prowess_loss_from_age = yes
+# 	life_expectancy = life_expectancy_bonus_seraphic_celestial
+# 	health = health_bonus_seraphic_celestial
 
-	# Reproduction	
-	fertility = fertility_penalty_seraphic_celestial
-	years_of_fertility = years_of_fertility_bonus_seraphic_celestial
-	inbreeding_chance = inbreeding_chance_bonus_seraphic_celestial
+# 	# Reproduction	
+# 	fertility = fertility_penalty_seraphic_celestial
+# 	years_of_fertility = years_of_fertility_bonus_seraphic_celestial
+# 	inbreeding_chance = inbreeding_chance_bonus_seraphic_celestial
 
-	# ========== GENETICS ==========
-	# Genetic
-	genetic = yes
-	good = yes
-	physical = yes
-	birth = 0
+# 	# ========== GENETICS ==========
+# 	# Genetic
+# 	genetic = yes
+# 	good = yes
+# 	physical = yes
+# 	birth = 0
 
-	# ========== TRAIT RELATIONS ==========
-	group = elf_tier_3_mortal
-	level = 2
+# 	# ========== TRAIT RELATIONS ==========
+# 	group = elf_tier_3_mortal
+# 	level = 2
 
-	opposites = {
-		celestial
-		eldar
-		elf_tier_1
-		elf_tier_2
-		elf_tier_3
-		elf_tier_4
-		elf_tier_1_mortal
-		elf_tier_2_mortal
-		elf_tier_4_mortal
-	}
+# 	opposites = {
+# 		celestial
+# 		eldar
+# 		elf_tier_1
+# 		elf_tier_2
+# 		elf_tier_3
+# 		elf_tier_4
+# 		elf_tier_1_mortal
+# 		elf_tier_2_mortal
+# 		elf_tier_4_mortal
+# 	}
 
-	compatibility = {
-	}
-}
+# 	compatibility = {
+# 	}
+# }
 
-eldar_mortal = {
-	icon = eldar.dds
-	shown_in_ruler_designer = no
-	shown_in_encyclopedia = no
+# eldar_mortal = {
+# 	icon = eldar.dds
+# 	shown_in_ruler_designer = no
+# 	shown_in_encyclopedia = no
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					debug_only = yes
-				}
-				desc = trait_eldar_mortal_debug
-			}
+# 	name = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {
+# 					debug_only = yes
+# 				}
+# 				desc = trait_eldar_mortal_debug
+# 			}
 
-			desc = trait_eldar_mortal
-		}
-	}
+# 			desc = trait_eldar_mortal
+# 		}
+# 	}
 
-	# ========== BONUSES ==========
-	# Stats
-	learning = learning_bonus_eldar
-	prowess = prowess_bonus_eldar
-	attraction_opinion = attraction_opinion_bonus_eldar
+# 	# ========== BONUSES ==========
+# 	# Stats
+# 	learning = learning_bonus_eldar
+# 	prowess = prowess_bonus_eldar
+# 	attraction_opinion = attraction_opinion_bonus_eldar
 
-	# Mortality
-	immortal = no
-	no_prowess_loss_from_age = yes
-	life_expectancy = life_expectancy_bonus_eldar
-	health = health_bonus_eldar
+# 	# Mortality
+# 	immortal = no
+# 	no_prowess_loss_from_age = yes
+# 	life_expectancy = life_expectancy_bonus_eldar
+# 	health = health_bonus_eldar
 
-	# Reproduction	
-	fertility = fertility_penalty_eldar
-	years_of_fertility = years_of_fertility_bonus_eldar
-	inbreeding_chance = inbreeding_chance_bonus_eldar
+# 	# Reproduction	
+# 	fertility = fertility_penalty_eldar
+# 	years_of_fertility = years_of_fertility_bonus_eldar
+# 	inbreeding_chance = inbreeding_chance_bonus_eldar
 
-	# ========== GENETICS ==========
-	# Genetic
-	genetic = yes
-	good = yes
-	physical = yes
-	birth = 0
+# 	# ========== GENETICS ==========
+# 	# Genetic
+# 	genetic = yes
+# 	good = yes
+# 	physical = yes
+# 	birth = 0
 
-	# ========== TRAIT RELATIONS ==========
-	group = elf_tier_3_mortal
-	level = 3
+# 	# ========== TRAIT RELATIONS ==========
+# 	group = elf_tier_3_mortal
+# 	level = 3
 
-	opposites = {
-		celestial
-		seraphic_celestial
-		elf_tier_1
-		elf_tier_2
-		elf_tier_3
-		elf_tier_4
-		elf_tier_1_mortal
-		elf_tier_2_mortal
-		elf_tier_4_mortal
-	}
+# 	opposites = {
+# 		celestial
+# 		seraphic_celestial
+# 		elf_tier_1
+# 		elf_tier_2
+# 		elf_tier_3
+# 		elf_tier_4
+# 		elf_tier_1_mortal
+# 		elf_tier_2_mortal
+# 		elf_tier_4_mortal
+# 	}
 
-	compatibility = {
-	}
-}
+# 	compatibility = {
+# 	}
+# }
 
-## ===== Major Threshold =====
+# ## ===== Major Threshold =====
 
-maiar_mortal = {
-	icon = maiar.dds
-	shown_in_ruler_designer = no
-	shown_in_encyclopedia = no
+# maiar_mortal = {
+# 	icon = maiar.dds
+# 	shown_in_ruler_designer = no
+# 	shown_in_encyclopedia = no
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					debug_only = yes
-				}
-				desc = trait_maiar_mortal_debug
-			}
+# 	name = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {
+# 					debug_only = yes
+# 				}
+# 				desc = trait_maiar_mortal_debug
+# 			}
 
-			desc = trait_maiar_mortal
-		}
-	}
+# 			desc = trait_maiar_mortal
+# 		}
+# 	}
 
-	# ========== BONUSES ==========
-	# Stats
-	learning = learning_bonus_maiar
-	prowess = prowess_bonus_maiar
-	attraction_opinion = attraction_opinion_bonus_maiar
+# 	# ========== BONUSES ==========
+# 	# Stats
+# 	learning = learning_bonus_maiar
+# 	prowess = prowess_bonus_maiar
+# 	attraction_opinion = attraction_opinion_bonus_maiar
 	
-	# Mortality
-	immortal = no
-	no_prowess_loss_from_age = yes
-	life_expectancy = life_expectancy_bonus_maiar
-	health = health_bonus_maiar
+# 	# Mortality
+# 	immortal = no
+# 	no_prowess_loss_from_age = yes
+# 	life_expectancy = life_expectancy_bonus_maiar
+# 	health = health_bonus_maiar
 	
-	# Reproduction
-	fertility = fertility_penalty_maiar
-	years_of_fertility = years_of_fertility_bonus_maiar
-	inbreeding_chance = inbreeding_chance_bonus_maiar
-	# ========== GENETICS ==========
-	# Genetic
-	genetic = yes
-	good = yes
-	physical = yes
-	birth = 0
+# 	# Reproduction
+# 	fertility = fertility_penalty_maiar
+# 	years_of_fertility = years_of_fertility_bonus_maiar
+# 	inbreeding_chance = inbreeding_chance_bonus_maiar
+# 	# ========== GENETICS ==========
+# 	# Genetic
+# 	genetic = yes
+# 	good = yes
+# 	physical = yes
+# 	birth = 0
 
-	# ========== TRAIT RELATIONS ==========
-	group = elf_tier_4_mortal
-	level = 1
+# 	# ========== TRAIT RELATIONS ==========
+# 	group = elf_tier_4_mortal
+# 	level = 1
 
-	opposites = {
-		valar
-		aratar
-		elf_tier_1
-		elf_tier_2
-		elf_tier_3
-		elf_tier_4
-		elf_tier_1_mortal
-		elf_tier_2_mortal
-		elf_tier_3_mortal
-	}
+# 	opposites = {
+# 		valar
+# 		aratar
+# 		elf_tier_1
+# 		elf_tier_2
+# 		elf_tier_3
+# 		elf_tier_4
+# 		elf_tier_1_mortal
+# 		elf_tier_2_mortal
+# 		elf_tier_3_mortal
+# 	}
 
-	compatibility = {
-	}
-}
+# 	compatibility = {
+# 	}
+# }
 
-valar_mortal = {
-	icon = valar.dds
-	shown_in_ruler_designer = no
-	shown_in_encyclopedia = no
+# valar_mortal = {
+# 	icon = valar.dds
+# 	shown_in_ruler_designer = no
+# 	shown_in_encyclopedia = no
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					debug_only = yes
-				}
-				desc = trait_valar_mortal_debug
-			}
+# 	name = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {
+# 					debug_only = yes
+# 				}
+# 				desc = trait_valar_mortal_debug
+# 			}
 
-			desc = trait_valar_mortal
-		}
-	}
+# 			desc = trait_valar_mortal
+# 		}
+# 	}
 
-	# ========== BONUSES ==========
-	# Stats
-	learning = learning_bonus_valar
-	prowess = prowess_bonus_valar
-	attraction_opinion = attraction_opinion_bonus_valar
+# 	# ========== BONUSES ==========
+# 	# Stats
+# 	learning = learning_bonus_valar
+# 	prowess = prowess_bonus_valar
+# 	attraction_opinion = attraction_opinion_bonus_valar
 	
-	# Mortality
-	immortal = no
-	no_prowess_loss_from_age = yes
-	life_expectancy = life_expectancy_bonus_valar
-	health = health_bonus_valar
+# 	# Mortality
+# 	immortal = no
+# 	no_prowess_loss_from_age = yes
+# 	life_expectancy = life_expectancy_bonus_valar
+# 	health = health_bonus_valar
 	
-	# Reproduction
-	fertility = fertility_penalty_valar
-	years_of_fertility = years_of_fertility_bonus_valar
-	inbreeding_chance = inbreeding_chance_bonus_valar
+# 	# Reproduction
+# 	fertility = fertility_penalty_valar
+# 	years_of_fertility = years_of_fertility_bonus_valar
+# 	inbreeding_chance = inbreeding_chance_bonus_valar
 
-	# ========== GENETICS ==========
-	# Genetic
-	genetic = yes
-	good = yes
-	physical = yes
-	birth = 0
+# 	# ========== GENETICS ==========
+# 	# Genetic
+# 	genetic = yes
+# 	good = yes
+# 	physical = yes
+# 	birth = 0
 
-	# ========== TRAIT RELATIONS ==========
-	group = elf_tier_4_mortal
-	level = 2
+# 	# ========== TRAIT RELATIONS ==========
+# 	group = elf_tier_4_mortal
+# 	level = 2
 
-	opposites = {
-		maiar
-		aratar
-		elf_tier_1
-		elf_tier_2
-		elf_tier_3
-		elf_tier_4
-		elf_tier_1_mortal
-		elf_tier_2_mortal
-		elf_tier_3_mortal
-	}
+# 	opposites = {
+# 		maiar
+# 		aratar
+# 		elf_tier_1
+# 		elf_tier_2
+# 		elf_tier_3
+# 		elf_tier_4
+# 		elf_tier_1_mortal
+# 		elf_tier_2_mortal
+# 		elf_tier_3_mortal
+# 	}
 
-	compatibility = {
-	}
-}
+# 	compatibility = {
+# 	}
+# }
 
-aratar_mortal = {
-	icon = aratar.dds
-	shown_in_ruler_designer = no
-	shown_in_encyclopedia = no
+# aratar_mortal = {
+# 	icon = aratar.dds
+# 	shown_in_ruler_designer = no
+# 	shown_in_encyclopedia = no
 
-	name = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					debug_only = yes
-				}
-				desc = trait_aratar_mortal_debug
-			}
+# 	name = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {
+# 					debug_only = yes
+# 				}
+# 				desc = trait_aratar_mortal_debug
+# 			}
 
-			desc = trait_aratar_mortal
-		}
-	}
+# 			desc = trait_aratar_mortal
+# 		}
+# 	}
 
-	# ========== BONUSES ==========
-	# Stats
-	learning = learning_bonus_aratar
-	prowess = prowess_bonus_aratar
-	attraction_opinion = attraction_opinion_bonus_aratar
+# 	# ========== BONUSES ==========
+# 	# Stats
+# 	learning = learning_bonus_aratar
+# 	prowess = prowess_bonus_aratar
+# 	attraction_opinion = attraction_opinion_bonus_aratar
 	
-	# Mortality
-	immortal = no
-	no_prowess_loss_from_age = yes
-	life_expectancy = life_expectancy_bonus_aratar
-	health = health_bonus_aratar
+# 	# Mortality
+# 	immortal = no
+# 	no_prowess_loss_from_age = yes
+# 	life_expectancy = life_expectancy_bonus_aratar
+# 	health = health_bonus_aratar
 
-	# Reproduction
-	fertility = fertility_penalty_aratar
-	years_of_fertility = years_of_fertility_bonus_aratar
-	inbreeding_chance = inbreeding_chance_bonus_aratar
+# 	# Reproduction
+# 	fertility = fertility_penalty_aratar
+# 	years_of_fertility = years_of_fertility_bonus_aratar
+# 	inbreeding_chance = inbreeding_chance_bonus_aratar
 
-	# ========== GENETICS ==========
-	# Genetic
-	genetic = yes
-	good = yes
-	physical = yes
-	birth = 0
+# 	# ========== GENETICS ==========
+# 	# Genetic
+# 	genetic = yes
+# 	good = yes
+# 	physical = yes
+# 	birth = 0
 
-	# ========== TRAIT RELATIONS ==========
-	group = elf_tier_4_mortal
-	level = 3
+# 	# ========== TRAIT RELATIONS ==========
+# 	group = elf_tier_4_mortal
+# 	level = 3
 
-	opposites = {
-		maiar
-		valar
-		elf_tier_1
-		elf_tier_2
-		elf_tier_3
-		elf_tier_4
-		elf_tier_1_mortal
-		elf_tier_2_mortal
-		elf_tier_3_mortal
-	}
+# 	opposites = {
+# 		maiar
+# 		valar
+# 		elf_tier_1
+# 		elf_tier_2
+# 		elf_tier_3
+# 		elf_tier_4
+# 		elf_tier_1_mortal
+# 		elf_tier_2_mortal
+# 		elf_tier_3_mortal
+# 	}
 
-	compatibility = {
-	}
-}
+# 	compatibility = {
+# 	}
+# }
