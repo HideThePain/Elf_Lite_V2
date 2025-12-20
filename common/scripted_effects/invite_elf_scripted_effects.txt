@@ -106,55 +106,55 @@ elf_character_after_creation_effect_superior_normal = {
     elf_race_flag_effect_superior_normal = yes
 }
 
-# Random Education Traits
-elf_random_education_effect_superior_normal = {
-    if = {
-        limit = {
-            NOT = {
-                has_character_flag = creation_done
-            }
-        }
-        random_list = {
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_1 }
-                add_trait = education_nht_prowess_1
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_2 }
-                add_trait = education_nht_prowess_2
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_3 }
-                add_trait = education_nht_prowess_3
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_1 }
-                add_trait = education_nht_leadership_1
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_2 }
-                add_trait = education_nht_leadership_2
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_3 }
-                add_trait = education_nht_leadership_3
-            }
-            3 = { add_trait = education_martial_1 }
-            3 = { add_trait = education_martial_2 }
-            3 = { add_trait = education_martial_3 }
-            3 = { add_trait = education_intrigue_1 }
-            3 = { add_trait = education_intrigue_2 }
-            3 = { add_trait = education_intrigue_3 }
-            3 = { add_trait = education_diplomacy_1 }
-            3 = { add_trait = education_diplomacy_2 }
-            3 = { add_trait = education_diplomacy_3 }
-            3 = { add_trait = education_stewardship_1 }
-            3 = { add_trait = education_stewardship_2 }
-            3 = { add_trait = education_stewardship_3 }
-        }
-        add_character_flag = creation_done
-    }
-}
+# # Random Education Traits
+# elf_random_education_effect_superior_normal = {
+#     if = {
+#         limit = {
+#             NOT = {
+#                 has_character_flag = creation_done
+#             }
+#         }
+#         random_list = {
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_1 }
+#                 add_trait = education_nht_prowess_1
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_2 }
+#                 add_trait = education_nht_prowess_2
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_3 }
+#                 add_trait = education_nht_prowess_3
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_1 }
+#                 add_trait = education_nht_leadership_1
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_2 }
+#                 add_trait = education_nht_leadership_2
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_3 }
+#                 add_trait = education_nht_leadership_3
+#             }
+#             3 = { add_trait = education_martial_1 }
+#             3 = { add_trait = education_martial_2 }
+#             3 = { add_trait = education_martial_3 }
+#             3 = { add_trait = education_intrigue_1 }
+#             3 = { add_trait = education_intrigue_2 }
+#             3 = { add_trait = education_intrigue_3 }
+#             3 = { add_trait = education_diplomacy_1 }
+#             3 = { add_trait = education_diplomacy_2 }
+#             3 = { add_trait = education_diplomacy_3 }
+#             3 = { add_trait = education_stewardship_1 }
+#             3 = { add_trait = education_stewardship_2 }
+#             3 = { add_trait = education_stewardship_3 }
+#         }
+#         add_character_flag = creation_done
+#     }
+# }
 
 # Random Magic Talent
 elf_random_magic_talent_effect_superior_normal = {
@@ -378,59 +378,59 @@ elf_character_after_creation_effect_superior_portal = {
     elf_race_flag_effect_superior_portal = yes
 }
 
-# Random Education Traits
-elf_random_education_effect_superior_portal = {
+# # Random Education Traits
+# elf_random_education_effect_superior_portal = {
 
-    if = {
-        limit = {
-            NOT = {
-                has_character_flag = creation_done
-            }
-        }
-        random_list = {
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_2 }
-                add_trait = education_nht_prowess_2
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_3 }
-                add_trait = education_nht_prowess_3
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_4 }
-                add_trait = education_nht_prowess_4
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_2 }
-                add_trait = education_nht_leadership_2
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_3 }
-                add_trait = education_nht_leadership_3
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_4 }
-                add_trait = education_nht_leadership_4
-            }
-            3 = { add_trait = education_martial_2 }
-            3 = { add_trait = education_martial_3 }
-            3 = { add_trait = education_martial_4 }
-            3 = { add_trait = education_learning_2 }
-            3 = { add_trait = education_learning_3 }
-            3 = { add_trait = education_learning_4 }
-            3 = { add_trait = education_intrigue_2 }
-            3 = { add_trait = education_intrigue_3 }
-            3 = { add_trait = education_intrigue_4 }
-            3 = { add_trait = education_diplomacy_2 }
-            3 = { add_trait = education_diplomacy_3 }
-            3 = { add_trait = education_diplomacy_4 }
-            3 = { add_trait = education_stewardship_2 }
-            3 = { add_trait = education_stewardship_3 }
-            3 = { add_trait = education_stewardship_4 }
-        }
-        add_character_flag = creation_done
-    }
-}
+#     if = {
+#         limit = {
+#             NOT = {
+#                 has_character_flag = creation_done
+#             }
+#         }
+#         random_list = {
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_2 }
+#                 add_trait = education_nht_prowess_2
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_3 }
+#                 add_trait = education_nht_prowess_3
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_4 }
+#                 add_trait = education_nht_prowess_4
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_2 }
+#                 add_trait = education_nht_leadership_2
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_3 }
+#                 add_trait = education_nht_leadership_3
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_4 }
+#                 add_trait = education_nht_leadership_4
+#             }
+#             3 = { add_trait = education_martial_2 }
+#             3 = { add_trait = education_martial_3 }
+#             3 = { add_trait = education_martial_4 }
+#             3 = { add_trait = education_learning_2 }
+#             3 = { add_trait = education_learning_3 }
+#             3 = { add_trait = education_learning_4 }
+#             3 = { add_trait = education_intrigue_2 }
+#             3 = { add_trait = education_intrigue_3 }
+#             3 = { add_trait = education_intrigue_4 }
+#             3 = { add_trait = education_diplomacy_2 }
+#             3 = { add_trait = education_diplomacy_3 }
+#             3 = { add_trait = education_diplomacy_4 }
+#             3 = { add_trait = education_stewardship_2 }
+#             3 = { add_trait = education_stewardship_3 }
+#             3 = { add_trait = education_stewardship_4 }
+#         }
+#         add_character_flag = creation_done
+#     }
+# }
 
 # Random Magic Talent
 elf_random_magic_talent_effect_superior_portal = {
@@ -602,58 +602,58 @@ elf_character_after_creation_effect_heart_normal = {
     elf_race_flag_effect_heart_normal = yes
 }
 
-# Random Education Traits
-elf_random_education_effect_heart_normal = {
-    if = {
-        limit = {
-            NOT = {
-                has_character_flag = creation_done
-            }
-        }
-        random_list = {
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_2 }
-                add_trait = education_nht_prowess_2
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_3 }
-                add_trait = education_nht_prowess_3
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_4 }
-                add_trait = education_nht_prowess_4
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_2 }
-                add_trait = education_nht_leadership_2
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_3 }
-                add_trait = education_nht_leadership_3
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_4 }
-                add_trait = education_nht_leadership_4
-            }
-            3 = { add_trait = education_martial_2 }
-            3 = { add_trait = education_martial_3 }
-            3 = { add_trait = education_martial_4 }
-            3 = { add_trait = education_learning_2 }
-            3 = { add_trait = education_learning_3 }
-            3 = { add_trait = education_learning_4 }
-            3 = { add_trait = education_intrigue_2 }
-            3 = { add_trait = education_intrigue_3 }
-            3 = { add_trait = education_intrigue_4 }
-            3 = { add_trait = education_diplomacy_2 }
-            3 = { add_trait = education_diplomacy_3 }
-            3 = { add_trait = education_diplomacy_4 }
-            3 = { add_trait = education_stewardship_2 }
-            3 = { add_trait = education_stewardship_3 }
-            3 = { add_trait = education_stewardship_4 }
-        }
-        add_character_flag = creation_done
-    }
-}
+# # Random Education Traits
+# elf_random_education_effect_heart_normal = {
+#     if = {
+#         limit = {
+#             NOT = {
+#                 has_character_flag = creation_done
+#             }
+#         }
+#         random_list = {
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_2 }
+#                 add_trait = education_nht_prowess_2
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_3 }
+#                 add_trait = education_nht_prowess_3
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_4 }
+#                 add_trait = education_nht_prowess_4
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_2 }
+#                 add_trait = education_nht_leadership_2
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_3 }
+#                 add_trait = education_nht_leadership_3
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_4 }
+#                 add_trait = education_nht_leadership_4
+#             }
+#             3 = { add_trait = education_martial_2 }
+#             3 = { add_trait = education_martial_3 }
+#             3 = { add_trait = education_martial_4 }
+#             3 = { add_trait = education_learning_2 }
+#             3 = { add_trait = education_learning_3 }
+#             3 = { add_trait = education_learning_4 }
+#             3 = { add_trait = education_intrigue_2 }
+#             3 = { add_trait = education_intrigue_3 }
+#             3 = { add_trait = education_intrigue_4 }
+#             3 = { add_trait = education_diplomacy_2 }
+#             3 = { add_trait = education_diplomacy_3 }
+#             3 = { add_trait = education_diplomacy_4 }
+#             3 = { add_trait = education_stewardship_2 }
+#             3 = { add_trait = education_stewardship_3 }
+#             3 = { add_trait = education_stewardship_4 }
+#         }
+#         add_character_flag = creation_done
+#     }
+# }
 
 # Random Magic Talent
 elf_random_magic_talent_effect_heart_normal = {
@@ -815,58 +815,58 @@ elf_character_after_creation_effect_heart_portal = {
     elf_race_flag_effect_heart_portal = yes
 }
 
-# Random Education Traits
-elf_random_education_effect_heart_portal = {
-    if = {
-        limit = {
-            NOT = {
-                has_character_flag = creation_done
-            }
-        }
-        random_list = {
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_3 }
-                add_trait = education_nht_prowess_3
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_4 }
-                add_trait = education_nht_prowess_4
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_prowess_5 }
-                add_trait = education_nht_prowess_5
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_3 }
-                add_trait = education_nht_leadership_3
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_4 }
-                add_trait = education_nht_leadership_4
-            }
-            3 = {
-                trigger = { exists = trait:education_nht_leadership_5 }
-                add_trait = education_nht_leadership_5
-            }
-            3 = { add_trait = education_martial_3 }
-            3 = { add_trait = education_martial_4 }
-            3 = { add_trait = education_martial_5 }
-            3 = { add_trait = education_learning_3 }
-            3 = { add_trait = education_learning_4 }
-            3 = { add_trait = education_learning_5 }
-            3 = { add_trait = education_intrigue_3 }
-            3 = { add_trait = education_intrigue_4 }
-            3 = { add_trait = education_intrigue_5 }
-            3 = { add_trait = education_diplomacy_3 }
-            3 = { add_trait = education_diplomacy_4 }
-            3 = { add_trait = education_diplomacy_5 }
-            3 = { add_trait = education_stewardship_3 }
-            3 = { add_trait = education_stewardship_4 }
-            3 = { add_trait = education_stewardship_5 }
-        }
-        add_character_flag = creation_done
-    }
-}
+# # Random Education Traits
+# elf_random_education_effect_heart_portal = {
+#     if = {
+#         limit = {
+#             NOT = {
+#                 has_character_flag = creation_done
+#             }
+#         }
+#         random_list = {
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_3 }
+#                 add_trait = education_nht_prowess_3
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_4 }
+#                 add_trait = education_nht_prowess_4
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_prowess_5 }
+#                 add_trait = education_nht_prowess_5
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_3 }
+#                 add_trait = education_nht_leadership_3
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_4 }
+#                 add_trait = education_nht_leadership_4
+#             }
+#             3 = {
+#                 trigger = { exists = trait:education_nht_leadership_5 }
+#                 add_trait = education_nht_leadership_5
+#             }
+#             3 = { add_trait = education_martial_3 }
+#             3 = { add_trait = education_martial_4 }
+#             3 = { add_trait = education_martial_5 }
+#             3 = { add_trait = education_learning_3 }
+#             3 = { add_trait = education_learning_4 }
+#             3 = { add_trait = education_learning_5 }
+#             3 = { add_trait = education_intrigue_3 }
+#             3 = { add_trait = education_intrigue_4 }
+#             3 = { add_trait = education_intrigue_5 }
+#             3 = { add_trait = education_diplomacy_3 }
+#             3 = { add_trait = education_diplomacy_4 }
+#             3 = { add_trait = education_diplomacy_5 }
+#             3 = { add_trait = education_stewardship_3 }
+#             3 = { add_trait = education_stewardship_4 }
+#             3 = { add_trait = education_stewardship_5 }
+#         }
+#         add_character_flag = creation_done
+#     }
+# }
 
 # Random Magic Talent
 elf_random_magic_talent_effect_heart_portal = {
