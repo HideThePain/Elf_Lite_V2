@@ -20,38 +20,22 @@
 @provisions_cost_special_expensive = 18
 @provisions_cost_special_bankrupting = 24
 
-elven_shieldguard = {
+elven_spearguard = {
     type = pikemen
-    stack = 100
+    stack = 80
 
-    damage = 25
-    toughness = 60
+    damage = 40
+    toughness = 35
     pursuit = 0
-    screen = 60
+    screen = 40
 
     terrain_bonus = {
-        forest = { toughness = 20 damage = 10 pursuit = 10 screen = 15 }
-        taiga = { toughness = 20 damage = 10 pursuit = 10 screen = 15 }
-        jungle = { toughness = 20 damage = 10 pursuit = 10 screen = 15 }
-
-        plains = { toughness = 5 }
-        farmlands = { toughness = 10 screen = 5 }
-        hills = { toughness = 15 }
-        mountains = { toughness = 20 }
-
-        wetlands = { toughness = -15 screen = -10 }
-        floodplains = { toughness = -15 screen = -10 }
-        desert = { toughness = -10 damage = -10 }
-        desert_mountains = { toughness = -20 damage = -10 }
-
-        drylands = { toughness = 5 }
-        steppe = { toughness = 5 }
-        oasis = { toughness = 5 }
-    }
-
-    winter_bonus = {
-        normal_winter = { toughness = 10 screen = 10 }
-        harsh_winter = { toughness = 15 screen = 15 }
+        forest = { damage = 6 toughness = 12  pursuit = 5 screen = 20 }
+        taiga = { damage = 6 toughness = 12  pursuit = 5 screen = 20 }
+        jungle = { damage = 6 toughness = 12  pursuit = 5 screen = 20 }
+        mountains = { damage = 5 toughness = 12 }
+        desert_mountains = { damage = 5 toughness = 12 }
+        hills = { damage = 3 toughness = 8 }
     }
 
     counters = {
@@ -59,74 +43,67 @@ elven_shieldguard = {
         heavy_cavalry = 1
         camel_cavalry = 1
         elephant_cavalry = 1
-        skirmishers = 0.5
-        archers = 0.5
     }
 
     can_recruit = {
-        culture = { has_cultural_parameter = unlock_maa_elven_shieldguard }
+        is_any_elf_type = yes
     }
 
-    buy_cost = { gold = pikemen_recruitment_cost }
-    low_maintenance_cost = { gold = pikemen_low_maint_cost }
-    high_maintenance_cost = { gold = pikemen_high_maint_cost }
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        is_any_elf_type = yes
+    }
+
+    buy_cost = { gold = 110 }
+    low_maintenance_cost = { gold = 0.48 }
+    high_maintenance_cost = { gold = 1.44 }
     provision_cost = @provisions_cost_infantry_moderate
 
     ai_quality = { value = culture_ai_weight_pikemen }
-    icon = elven_shieldguard
+    icon = elven_spearguard
 }
 
 elven_swordguard = { # elven greatswords? hell yeah
     type = skirmishers
-    # icon = elven_swordguard
-    stack = 100 # default unit size
+    stack = 80
 
-    damage = 40 # big swords, decent damage
-    toughness = 15 # lightly armored, no shields
-    pursuit = 30 # limited chase ability
-    screen = 5 # poor at holding lines
+    damage = 75
+    toughness = 20
+    pursuit = 25
+    screen = 15
 
     terrain_bonus = {
-        forest = { damage = 20 toughness = 16 pursuit = 20 screen = 10 }
-        taiga = { damage = 20 toughness = 16 pursuit = 20 screen = 10 }
-        jungle = { damage = 20 toughness = 16 pursuit = 20 screen = 10 }
-
-        plains = { toughness = -5 }
-        farmlands = { toughness = -5 }
-
-        hills = { toughness = 16 }
-        mountains = { toughness = 24 }
-
-        wetlands = { toughness = -10 screen = -5 }
-        floodplains = { toughness = -10 screen = -5 }
-
-        desert = { toughness = -20 damage = -10 pursuit = -10 screen = -10 }
-        desert_mountains = { toughness = -30 damage = -10 pursuit = -10 screen = -10 }
-
-        drylands = { toughness = 0 }
-        steppe = { toughness = 0 }
-        oasis = { toughness = 0 }
-    }
-
-    winter_bonus = {
-        normal_winter = { toughness = 5 screen = 5 }
-        harsh_winter = { toughness = 10 screen = 10 damage = -5 }
+        forest = { damage = 12 toughness = 8 pursuit = 15 screen = 10 }
+        taiga = { damage = 12 toughness = 8 pursuit = 15 screen = 10 }
+        jungle = { ddamage = 12 toughness = 8 pursuit = 15 screen = 10 }
+        hills = { damage = 6 toughness = 4 }
     }
 
     counters = {
         heavy_infantry = 1
         pikemen = 1
-        # skirmishers = 1 # optional, off for now
-        archers = 0.5
     }
 
     can_recruit = {
-        culture = { has_cultural_parameter = unlock_maa_elven_swordguard }
+        is_any_elf_type = yes
     }
 
-    buy_cost = { gold = warband_ravagers_recruitment_cost }
-    low_maintenance_cost = { gold = warband_ravagers_low_maint_cost }
-    high_maintenance_cost = { gold = warband_ravagers_high_maint_cost }
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        is_any_elf_type = yes
+    }
+
+    buy_cost = { gold = 120 }
+    low_maintenance_cost = { gold = 0.49 }
+    high_maintenance_cost = { gold = 1.47 }
     provision_cost = @provisions_cost_infantry_cheap
 
     ai_quality = { value = culture_ai_weight_skirmishers }
@@ -134,105 +111,92 @@ elven_swordguard = { # elven greatswords? hell yeah
 }
 
 
-highguard_of_valor = {
+highguard = {
     type = heavy_infantry
-    stack = 50
+    stack = 80
 
-    damage = 100
-    toughness = 70
-    pursuit = 5
-    screen = 30
+    damage = 50
+    toughness = 32
+    pursuit = 10
+    screen = 20
 
     terrain_bonus = {
-        forest = { damage = 20 toughness = 16 pursuit = 20 screen = 10 }
-        taiga = { damage = 20 toughness = 16 pursuit = 20 screen = 10 }
-        jungle = { damage = 20 toughness = 16 pursuit = 20 screen = 10 }
-
-        plains = { toughness = 5 }
-        farmlands = { toughness = 5 }
-        hills = { toughness = 10 }
-        mountains = { toughness = 10 }
-
-        wetlands = { toughness = -16 screen = -10 }
-        floodplains = { toughness = -16 screen = -10 }
-        desert = { toughness = -10 damage = -10 }
-        desert_mountains = { toughness = -15 damage = -10 }
-
-        drylands = { toughness = 5 }
-        steppe = { toughness = 5 }
-        oasis = { toughness = 5 }
-    }
-
-    winter_bonus = {
-        normal_winter = { toughness = 10 screen = 10 }
-        harsh_winter = { toughness = 15 screen = 15 }
+        forest = { damage = 8 toughness = 10 pursuit = 10 screen = 20 }
+        taiga = { damage = 8 toughness = 10 pursuit = 10 screen = 20 }
+        jungle = { damage = 8 toughness = 10 pursuit = 10 screen = 20 }
+        plains = { damage = 4 toughness = 5  }
+        drylands = { damage = 4 toughness = 5 }
+        farmlands = { damage = 4 toughness = 5 }
+        hills = { damage = 4 toughness = 5 }
     }
 
     counters = {
-        archer_cavalry = 1
         pikemen = 1
-        light_cavalry = 1
         archers = 1
-        # heavy_infantry = 1 # Optional: uncomment if you want equal footing with heavy infantry
     }
 
     can_recruit = {
-        culture = { has_cultural_parameter = unlock_maa_highguard_of_valor }
+        is_any_elf_type = yes
     }
 
-    buy_cost = { gold = heavy_infantry_recruitment_cost }
-    low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
-    high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        is_any_elf_type = yes
+    }
+
+    buy_cost = { gold = 130 }
+    low_maintenance_cost = { gold = 0.5 }
+    high_maintenance_cost = { gold = 1.5 }
     provision_cost = @provisions_cost_infantry_bankrupting
 
     ai_quality = { value = culture_ai_weight_heavy_infantry }
-    icon = highguard_of_valor
+    icon = highguard
 }
 
-exalted_bear_highriders = {
+elven_bear_riders = {
     type = elephant_cavalry
-    stack = 50
+    stack = 30
 
-    damage = 150
-    toughness = 70
-    pursuit = 50
-    screen = 50
+    damage = 160
+    toughness = 55
+    pursuit = 30
+    screen = 20
+
+    siege_value = 0.1
 
     terrain_bonus = {
-        forest = { damage = 10 toughness = 16 pursuit = 10 screen = 10 }
-        taiga = { damage = 10 toughness = 16 pursuit = 10 screen = 10 }
-        jungle = { damage = 10 toughness = 16 pursuit = 10 screen = 10 }
-
-        plains = { damage = 5 pursuit = 10 }
-        farmlands = { damage = 5 pursuit = 10 }
-        hills = { damage = 5 toughness = 10 pursuit = 5 screen = 5 }
-        mountains = { damage = 10 toughness = 16 pursuit = 10 screen = 10 }
-
-        wetlands = { toughness = -16 screen = -10 }
-        floodplains = { toughness = -16 screen = -10 }
-        desert = { toughness = -16 screen = -10 }
-        desert_mountains = { toughness = -16 screen = -10 }
-
-        drylands = { toughness = 5 }
-        steppe = { toughness = 5 }
-        oasis = { toughness = 5 }
+        forest = { damage = 40 toughness = 10 pursuit = 20 screen = 20 }
+        taiga = { damage = 40 toughness = 10 pursuit = 20 screen = 20 }
+        jungle = { damage = 40 toughness = 10 pursuit = 20 screen = 20 }
     }
 
     winter_bonus = {
-        normal_winter = { toughness = 10 screen = 10 }
-        harsh_winter = { toughness = 15 screen = 15 pursuit = -5 }
+        normal_winter = { toughness = 30 screen = 20 }
+        harsh_winter = { toughness = 30 screen = 20 }
     }
 
     counters = {
-        heavy_cavalry = 2
+        heavy_cavalry = 1
         heavy_infantry = 1
         skirmishers = 1
-        pikemen = 0.5
-        elephant_cavalry = 0.5
+        light_cavalry = 1
     }
 
     can_recruit = {
-        culture = { has_cultural_parameter = unlock_maa_exalted_bear_highriders }
+        is_any_elf_type = yes
+    }
+
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        is_any_elf_type = yes
     }
 
     buy_cost = { gold = elf_very_heavy_cavalry_recruitment_cost }
@@ -241,52 +205,53 @@ exalted_bear_highriders = {
     provision_cost = @provisions_cost_cavalry_expensive
 
     ai_quality = { value = culture_ai_weight_heavy_cavalry }
-    icon = exalted_bear_highriders
+    icon = elven_bear_riders
 }
 
 griffin_knights = {
-    type = heavy_cavalry
-    stack = 50
+    type = flying_units
+    stack = 20
 
-    damage = 100
-    toughness = 40
-    pursuit = 90
-    screen = 20
+    damage = 250
+    toughness = 75
+    pursuit = 80
+    screen = 40
     siege_value = 0.2
 
     terrain_bonus = {
-        forest = { damage = -30 toughness = -10 screen = -10 }
-        taiga = { damage = -30 toughness = -10 screen = -10 }
-        jungle = { damage = -30 toughness = -10 screen = -10 }
-
-        plains = { damage = 20 }
-        farmlands = { damage = 20 }
-        floodplains = { damage = 20 }
-        wetlands = { damage = 20 }
-        hills = { damage = 10 }
-        mountains = { damage = -20 toughness = -10 screen = -10 }
-
-        desert = { toughness = -10 }
-        desert_mountains = { toughness = -15 }
-        drylands = { toughness = 5 }
-        steppe = { toughness = 5 }
-        oasis = { toughness = 5 }
-    }
-
-    winter_bonus = {
-        normal_winter = { toughness = 5 }
-        harsh_winter = { toughness = 10 pursuit = -5 }
+        forest = { damage = -50 }
+        taiga = { damage = -50 }
+        jungle = { damage = -50 }
+        plains = { pursuit = 40 screen = 20 }
+        drylands = { pursuit = 40 screen = 20 }
+        farmlands = { pursuit = 40 screen = 20 }
+        desert = { pursuit = 40 screen = 20 }
+        oasis = { pursuit = 40 screen = 20 }
+        floodplains = { pursuit = 40 screen = 20 }
+        hills = { damage = 20  toughness = 10 }
+        mountains = { damage = 50  toughness = 25 }
+        desert_mountains = { damage = 50  toughness = 25 }
     }
 
     counters = {
-        archers = 2
-        skirmishers = 1.5
-        pikemen = 0.5
-        heavy_infantry = 0.5
+        light_cavalry = 1
+        heavy_cavalry = 1
+        camel_cavalry = 1
+        elephant_cavalry = 1
+        archer_cavalry = 0.5
     }
 
     can_recruit = {
-        culture = { has_cultural_parameter = unlock_maa_griffin_knights }
+        is_any_elf_type = yes
+    }
+
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        is_any_elf_type = yes
     }
 
     buy_cost = { gold = elf_heavy_cavalry_recruitment_cost }
@@ -298,50 +263,106 @@ griffin_knights = {
     icon = griffin_knights
 }
 
-honored_drake_lancers = {
-    type = heavy_cavalry
-    stack = 25
+honored_drake_masters = {
+    type = flying_units
+    stack = 4
+    max = 1
 
-    damage = 200
-    toughness = 80
-    pursuit = 100
-    screen = 40
+    damage = 1600
+    toughness = 1000
+    pursuit = 80
+    screen = 20
+
+    siege_tier = 4
     siege_value = 0.5
 
     terrain_bonus = {
-        forest = { damage = -70 toughness = -20 screen = -20 }
-        taiga = { damage = -70 toughness = -20 screen = -20 }
-        jungle = { damage = -70 toughness = -20 screen = -20 }
-
-        plains = { damage = 40 }
-        farmlands = { damage = 40 }
-        floodplains = { damage = 40 }
-        wetlands = { damage = 40 }
-        hills = { damage = 20 }
-        mountains = { damage = 20 }
-
-        desert = { damage = -50 toughness = -20 }
-        desert_mountains = { toughness = -30 damage = -40 }
-
-        drylands = { toughness = 5 }
-        steppe = { toughness = 5 }
-        oasis = { toughness = 5 }
-    }
-
-    winter_bonus = {
-        normal_winter = { toughness = 10 }
-        harsh_winter = { toughness = 15 pursuit = -10 }
+        forest = { damage = -200 }
+        taiga = { damage = -200 }
+        jungle = { damage = -200 }
+        plains = { pursuit = 40 screen = 20 }
+        drylands = { pursuit = 40 screen = 20 }
+        farmlands = { pursuit = 40 screen = 20 }
+        desert = { pursuit = 40 screen = 20 }
+        oasis = { pursuit = 40 screen = 20 }
+        floodplains = { pursuit = 40 screen = 20 }
+        hills = { damage = 100  toughness = 50 }
+        mountains = { damage = 250  toughness = 125 }
+        desert_mountains = { damage = 250  toughness = 125 }
     }
 
     counters = {
-        heavy_infantry = 2
-        light_cavalry = 1.5
-        pikemen = 0.75
+        heavy_infantry = 1
+        pikemen = 1
+        skirmishers = 1
+        archers = 1
+        light_cavalry = 0.5
         heavy_cavalry = 0.5
+        camel_cavalry = 0.5
+        elephant_cavalry = 0.5
+        archer_cavalry = 0.5
     }
 
     can_recruit = {
-        culture = { has_cultural_parameter = unlock_maa_honored_drake_lancers }
+        is_any_elf_type = yes
+    }
+
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        is_any_elf_type = yes
+    }
+
+    buy_cost = { piety = 4000 }
+    low_maintenance_cost = { gold = 4 }
+    high_maintenance_cost = { gold = 8 }
+    provision_cost = @provisions_cost_cavalry_bankrupting
+
+    ai_quality = { value = culture_ai_weight_elephant_cavalry }
+    icon = honored_drake_masters
+}
+
+crescentglade_knights = {
+    type = archer_cavalry
+    stack = 40
+
+    damage = 120
+    toughness = 44
+    pursuit = 40
+    screen = 40
+
+    terrain_bonus = {
+        forest = { damage = 30 toughness = 16 pursuit = 20 screen = 20 }
+        taiga = { damage = 30 toughness = 16 pursuit = 20 screen = 20 }
+        jungle = { damage = 30 toughness = 16 pursuit = 20 screen = 20 }
+        steppe = { damage = 20 }
+        plains = { damage = 20 }
+        drylands = { damage = 20 }
+        mountains = { damage = -30 pursuit = -30 }
+        desert_mountains = { damage = -30 pursuit = -30 }
+        wetlands = { damage = -50 pursuit = -30 }
+    }
+
+    counters = {
+        skirmishers = 1
+        heavy_infantry = 1
+        archer_cavalry = 0.5
+    }
+
+    can_recruit = {
+        is_any_elf_type = yes
+    }
+
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        is_any_elf_type = yes
     }
 
     buy_cost = { gold = elf_very_heavy_cavalry_recruitment_cost }
@@ -349,6 +370,6 @@ honored_drake_lancers = {
     high_maintenance_cost = { gold = elf_very_heavy_cavalry_high_maint_cost }
     provision_cost = @provisions_cost_cavalry_expensive
 
-    ai_quality = { value = culture_ai_weight_elephant_cavalry }
-    icon = honored_drake_lancers
+    ai_quality = { value = culture_ai_weight_archer_cavalry }
+    icon = crescentglade_knights
 }

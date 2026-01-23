@@ -1,102 +1,106 @@
-﻿warriors_of_the_daelurin = {
+﻿️daelurin_whitevale_warriors = {
     type = heavy_infantry
-    stack = 100
+    stack = 50
 
-    damage = 75
-    toughness = 40
-    pursuit = 5
+    damage = 130
+    toughness = 60
+    pursuit = 10
     screen = 25
 
     terrain_bonus = {
-        mountains = { toughness = 25 damage = 15 }
-        hills = { toughness = 15 }
-        forest = { toughness = 20 damage = 15 pursuit = 10 screen = 15 }
-        taiga = { toughness = 20 damage = 15 pursuit = 10 screen = 15 }
-        jungle = { toughness = 20 damage = 15 pursuit = 10 screen = 15 }
-        desert = { toughness = -5 damage = -10 }
-        wetlands = { toughness = 10 screen = 10 }
-        plains = { toughness = 5 }
-        drylands = { toughness = 5 }
-        steppe = { toughness = 10 }
-        floodplains = { toughness = 10 }
-        oasis = { toughness = 5 }
-        farmlands = { toughness = 10 damage = 5 screen = 5 }
+        mountains = { damage = 20 toughness = 20 pursuit = 10 screen = 30 }
+        hills = { damage = 20 toughness = 20 pursuit = 10 screen = 30 }
+        desert_mountains = { damage = 20 toughness = 20 pursuit = 10 screen = 30 }
+
+        forest = { damage = 5 toughness = 5 }
+        taiga = { damage = 5 toughness = 5 }
+        jungle = { damage = 5 toughness = 5 }
+
     }
 
     winter_bonus = {
-        normal_winter = { toughness = 10 screen = 10 }
-        harsh_winter = { toughness = 15 screen = 15 damage = 5 }
+        normal_winter = { damage = 10 toughness = 10  pursuit = 10 screen = 10}
+        harsh_winter = { damage = 10 toughness = 10  pursuit = 10 screen = 10}
     }
 
     counters = {
-        heavy_infantry = 1
-        pikemen = 1.5
-        light_cavalry = 0.5
-        archers = 1
-        skirmishers = 1
+        heavy_infantry = 0.75
+        pikemen = 0.75
     }
 
     can_recruit = {
         has_trait = royal_elf_daelurin
+        is_any_elf_type = yes
     }
 
-    buy_cost = { gold = heavy_infantry_recruitment_cost }
-    low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
-    high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        has_trait = royal_elf_daelurin
+        is_any_elf_type = yes
+    }
+
+    buy_cost = { prestige = 2000 }
+    low_maintenance_cost = { gold = 1.5 }
+    high_maintenance_cost = { gold = 2.5 }
     provision_cost = @provisions_cost_infantry_expensive
 
     ai_quality = { value = @cultural_spark_maa_extra_ai_score }
-    icon = warriors_of_the_daelurin
+    icon = ️daelurin_whitevale_warriors
 }
 
 daelurin_wolf_riders = {
-    type = light_cavalry
-    stack = 100
+    type = heavy_cavalry
+    stack = 25
 
-    damage = 60
-    toughness = 35
-    pursuit = 75
-    screen = 20
+    damage = 230
+    toughness = 120
+    pursuit = 60
+    screen = 25
 
     terrain_bonus = {
-        forest = { damage = 20 pursuit = 35 screen = 15 }
-        taiga = { damage = 20 pursuit = 35 screen = 15 }
-        jungle = { damage = 20 pursuit = 35 screen = 15 }
+        forest = { damage = 20 pursuit = 20 screen = 20 }
+        taiga = { damage = 20 pursuit = 20 screen = 20 }
+        jungle = { damage = 20 pursuit = 20 screen = 20 }
 
-        mountains = { toughness = 10 damage = 10 pursuit = 15 screen = 10 }
-        hills = { pursuit = 10 screen = 10 }
-        plains = { pursuit = 10 screen = 10 }
-        farmlands = { pursuit = 20 screen = 15 damage = 5 }
-        steppe = { pursuit = 20 screen = 20 }
-        drylands = { pursuit = 10 screen = 10 }
-        oasis = { pursuit = 15 screen = 15 }
-        wetlands = { pursuit = 15 screen = 10 }
-        floodplains = { pursuit = 15 screen = 15 }
-
-        desert = { toughness = -10 damage = -15 pursuit = -20 screen = -20 }
-        desert_mountains = { toughness = -15 damage = -20 pursuit = -25 screen = -25 }
+        mountains = { damage = 15 toughness = 10 pursuit = 30 screen = 10 }
+        hills = { damage = 15 toughness = 10 pursuit = 30 screen = 10 }
+        desert_mountains = { damage = 15 toughness = 10 pursuit = 30 screen = 10 }
     }
 
     winter_bonus = {
-        normal_winter = { toughness = 5 screen = 5 }
-        harsh_winter = { toughness = 10 screen = 10 }
+        normal_winter = { damage = 50 toughness = 50 pursuit = 30 screen = 20  }
+        harsh_winter = { damage = 50 toughness = 50 pursuit = 30 screen = 20  }
     }
 
     counters = {
-        archers = 1
-        light_cavalry = 1.5
-        heavy_cavalry = 0.5
-        skirmishers = 2
+        archers = 0.75
+        light_cavalry = 0.75
+        skirmishers = 0.75
     }
 
     can_recruit = {
         has_trait = royal_elf_daelurin
+        is_any_elf_type = yes
     }
 
-    buy_cost = { gold = elf_horse_archers_recruitment_cost }
-    low_maintenance_cost = { gold = elf_horse_archers_low_maint_cost }
-    high_maintenance_cost = { gold = elf_horse_archers_high_maint_cost }
-    provision_cost = @provisions_cost_cavalry_cheap
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        has_trait = royal_elf_daelurin
+        is_any_elf_type = yes
+    }
+
+    buy_cost = { prestige = 2000 }
+    low_maintenance_cost = { gold = 1.8 }
+    high_maintenance_cost = { gold = 3 }
+    provision_cost = @provisions_cost_cavalry_expensive
 
     ai_quality = { value = @cultural_spark_maa_extra_ai_score }
     icon = daelurin_wolf_riders
@@ -104,54 +108,114 @@ daelurin_wolf_riders = {
 
 daelurin_highlanders = {
     type = skirmishers
-    stack = 100
+    stack = 50
 
-    damage = 33          # reduced from 45
-    toughness = 22       # reduced from 30
-    pursuit = 25         # reduced from 35
-    screen = 12          # reduced from 15
-
+    damage = 150
+    toughness = 50
+    pursuit = 30
+    screen = 20
     terrain_bonus = {
-        forest = { toughness = 18 damage = 10 pursuit = 5 }
-        taiga = { toughness = 18 damage = 10 pursuit = 5 }
-        jungle = { toughness = 18 damage = 10 pursuit = 5 }
+        mountains = { damage = 20 toughness = 15 pursuit = 20 screen = 10 }
+        hills = { damage = 20 toughness = 15 pursuit = 20 screen = 10 }
+        desert_mountains = { damage = 20 toughness = 15 pursuit = 20 screen = 10 }
 
-        hills = { toughness = 12 damage = 5 }
-        mountains = { toughness = 18 damage = 8 }
-
-        wetlands = { toughness = 6 screen = 5 }
-        floodplains = { toughness = 6 screen = 5 }
-        farmlands = { toughness = 6 damage = 3 }
-        oasis = { toughness = 3 }
-        plains = { toughness = 3 }
-        drylands = { toughness = 3 }
-        steppe = { toughness = 3 }
-
-        desert = { toughness = -12 damage = -8 }
-        desert_mountains = { toughness = -20 damage = -12 }
+        forest = { damage = 5 toughness = 10 pursuit = 10 }
+        taiga = { damage = 5 toughness = 10 pursuit = 10 }
+        jungle = { damage = 5 toughness = 10 pursuit = 10 }
     }
 
     winter_bonus = {
-        normal_winter = { toughness = 5 screen = 5 }
-        harsh_winter = { toughness = 8 screen = 8 damage = -4 }
+        normal_winter = { damage = 10 toughness = 10  pursuit = 10 screen = 10}
+        harsh_winter = { damage = 10 toughness = 10  pursuit = 10 screen = 10}
     }
 
     counters = {
-        archers = 1
-        light_cavalry = 1
-        skirmishers = 1.5
-        heavy_infantry = 0.5
+        skirmishers = 0.25
+        heavy_infantry = 0.75
+        heavy_cavalry = 0.75
     }
 
     can_recruit = {
         has_trait = royal_elf_daelurin
+        is_any_elf_type = yes
     }
 
-    buy_cost = { gold = warband_ravagers_recruitment_cost }
-    low_maintenance_cost = { gold = warband_ravagers_low_maint_cost }
-    high_maintenance_cost = { gold = warband_ravagers_high_maint_cost }
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        has_trait = royal_elf_daelurin
+        is_any_elf_type = yes
+    }
+
+    buy_cost = { prestige = 2000 }
+    low_maintenance_cost = { gold = 1.5 }
+    high_maintenance_cost = { gold = 2.5 }
     provision_cost = @provisions_cost_special_expensive
 
     ai_quality = { value = @cultural_spark_maa_extra_ai_score }
     icon = daelurin_highlanders
+}
+
+fendaer_wolf_champions = {   #ultimate unit for daelurin
+    type = heavy_cavalry
+    stack = 10
+    max = 1
+
+    damage = 900
+    toughness = 300
+    pursuit = 100
+    screen = 40
+
+    terrain_bonus = {
+        forest = { damage = 50 pursuit = 50 screen = 50 }
+        taiga = { damage = 50 pursuit = 50 screen = 50 }
+        jungle = { damage = 50 pursuit = 50 screen = 50 }
+
+        mountains = { damage = 40 toughness = 40 pursuit = 75 screen = 25 }
+        hills = { damage = 40 toughness = 40 pursuit = 75 screen = 25 }
+        desert_mountains = { damage = 40 toughness = 40 pursuit = 75 screen = 25 }
+    }
+
+    winter_bonus = {
+        normal_winter = { damage = 125 toughness = 125 pursuit = 30 screen = 20  }
+        harsh_winter = { damage = 125 toughness = 125 pursuit = 30 screen = 20  }
+    }
+
+    counters = {
+        heavy_infantry = 1.25
+        pikemen = 1.25
+        skirmishers = 1.25
+        archers = 1.25
+        light_cavalry = 1.25
+        heavy_cavalry = 1.25
+        camel_cavalry = 1.25
+        elephant_cavalry = 1.25
+        archer_cavalry = 1.25
+		spark_wielders = 1.25
+    }
+    can_recruit = {
+        has_trait = royal_elf_daelurin
+        is_any_elf_type = yes
+    }
+
+    should_show_when_unavailable = {
+        government_allows = subject_men_at_arms
+        is_any_elf_type = yes
+    }
+
+    access_through_subject = {
+        has_trait = royal_elf_daelurin
+        is_any_elf_type = yes
+    }
+
+    buy_cost = { piety = 4000 }
+    low_maintenance_cost = { gold = 4 }
+    high_maintenance_cost = { gold = 8 }
+    provision_cost = @provisions_cost_cavalry_bankrupting
+
+    ai_quality = { value = culture_ai_weight_heavy_cavalry }
+    icon = fendaer_wolf_champions
 }
