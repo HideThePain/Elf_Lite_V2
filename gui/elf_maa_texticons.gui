@@ -217,9 +217,9 @@ texticon = {
 }
 
 texticon = {
-    icon = honored_drake_lancers_icon
+    icon = honored_drake_masters_icon
     iconsize = {
-        texture = "gfx/interface/icons/regimenttypes/honored_drake_lancers.dds"
+        texture = "gfx/interface/icons/regimenttypes/honored_drake_masters.dds"
         size = { 25 25 }
         offset = { 0 6 }
         fontsize = 16

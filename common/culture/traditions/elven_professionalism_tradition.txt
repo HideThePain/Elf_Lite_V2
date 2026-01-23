@@ -67,7 +67,7 @@ tradition_knights_of_the_sky = {
 
 	parameters = {
 		unlock_maa_griffin_knights = yes
-		unlock_maa_honored_drake_lancers = yes
+		unlock_maa_honored_drake_masters = yes
 	}
 
 	cost = {
