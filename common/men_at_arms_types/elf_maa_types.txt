@@ -388,7 +388,7 @@ feywind_cavaliers = {
     provision_cost = @provisions_cost_cavalry_expensive
 
     ai_quality = { value = culture_ai_weight_elephant_cavalry }
-    icon = feywind_cavaliers
+    icon = feywind_cavaliers # [6] PLACEHOLDER - needs DDS file
 }
 
 # abyssal_guardians = {

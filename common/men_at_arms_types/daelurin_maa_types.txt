@@ -217,5 +217,5 @@ fendaer_wolf_champions = {   #ultimate unit for daelurin
     provision_cost = @provisions_cost_cavalry_bankrupting
 
     ai_quality = { value = culture_ai_weight_heavy_cavalry }
-    icon = fendaer_wolf_champions
+    icon = fendaer_wolf_champions # [1] PLACEHOLDER - needs DDS file
 }

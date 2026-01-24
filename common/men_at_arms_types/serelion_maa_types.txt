@@ -209,5 +209,5 @@ basilisk_enchantress = {   #land dragon type for serelion
     provision_cost = @provisions_cost_cavalry_bankrupting
 
     ai_quality = { value = culture_ai_weight_elephant_cavalry }
-    icon = basilisk_enchantress
+    icon = basilisk_enchantress # [3] PLACEHOLDER - needs DDS file
 }

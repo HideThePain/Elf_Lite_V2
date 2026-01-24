@@ -201,5 +201,5 @@ ancients_of_the_forest = {   #ultimate unit for gwynthorn
     provision_cost = @provisions_cost_cavalry_bankrupting
 
     ai_quality = { value = culture_ai_weight_light_cavalry }
-    icon = ancients_of_the_forest
+    icon = ancients_of_the_forest # [2] PLACEHOLDER - needs DDS file
 }

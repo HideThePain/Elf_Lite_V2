@@ -371,5 +371,5 @@ crescentglade_knights = {
     provision_cost = @provisions_cost_cavalry_expensive
 
     ai_quality = { value = culture_ai_weight_archer_cavalry }
-    icon = crescentglade_knights
+    icon = crescentglade_knights # [7] PLACEHOLDER - needs DDS file
 }

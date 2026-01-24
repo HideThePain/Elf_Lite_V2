@@ -196,5 +196,5 @@ unicorn_maidens = {   #ultimate unit for valerith
     provision_cost = @provisions_cost_cavalry_bankrupting
 
     ai_quality = { value = culture_ai_weight_light_cavalry }
-    icon = unicorn_maidens
+    icon = unicorn_maidens # [5] PLACEHOLDER - needs DDS file
 }

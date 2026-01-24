@@ -223,5 +223,5 @@ phoenix_magi = {   #actually cryophoenix, shoots ice, better in water
     provision_cost = @provisions_cost_cavalry_bankrupting
 
     ai_quality = { value = culture_ai_weight_elephant_cavalry }
-    icon = phoenix_magi
+    icon = phoenix_magi # [4] PLACEHOLDER - needs DDS file
 }
