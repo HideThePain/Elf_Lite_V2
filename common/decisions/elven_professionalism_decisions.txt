@@ -7,6 +7,7 @@
 	desc = adopt_elven_professionalism_decision_desc
 	selection_tooltip = adopt_elven_professionalism_decision_tooltip
 	ai_goal = no
+	ai_check_interval = 60
 
 	sort_order = 500
 
@@ -63,6 +64,7 @@ adopt_elven_legion = { # elven legionary system for emperors
 	desc = adopt_elven_professionalism_decision_desc
 	selection_tooltip = adopt_elven_legion_decision_tooltip
 	ai_goal = no
+	ai_check_interval = 60
 
 	sort_order = 500
 
@@ -120,6 +122,7 @@ revoke_elven_professionalism = { # reverse elven professionalism/legion for king
 	desc = revoke_elven_professionalism_decision_desc
 	selection_tooltip = revoke_elven_professionalism_decision_tooltip
 	ai_goal = no
+	ai_check_interval = 60
 
 	sort_order = 500
 
