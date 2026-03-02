@@ -2,21 +2,21 @@
  tradition_elven_professionalism_name:0 "Ancient Elven War Tactics"
  tradition_elven_professionalism_desc:0 "This culture has adopted standardized equipment and training to field armies of professional soldiers, but refuses to raise levies."
  
- culture_parameter_unlock_maa_elven_shieldguard:0 "[GetMaA('elven_shieldguard').GetName] as [men_at_arms|E]"
- elven_shieldguard:1 "Elven Shieldguard"
- elven_shieldguard_flavor:1 "The Elven Shieldguard are the elite heavy infantry of the elven culture's army, wielding large shields and spears. They are trained to hold the line against any foe, and are known for their unbreakable discipline and unwavering loyalty to their commanders."
+ culture_parameter_unlock_maa_elven_spearguard:0 "[GetMaA('elven_spearguard').GetName] as [men_at_arms|E]"
+ elven_spearguard:1 "Elven Spearguard"
+ elven_spearguard_flavor:1 "The Elven Spearguard are the elite heavy infantry of the elven culture's army, wielding large spears and shields. They are trained to hold the line against any foe, and are known for their unbreakable discipline and unwavering loyalty to their commanders."
  
  culture_parameter_unlock_maa_elven_swordguard:0 "[GetMaA('elven_swordguard').GetName] as [men_at_arms|E]"
  elven_swordguard:1 "Elven Swordguard"
  elven_swordguard_flavor:1 "The Elven Swordguard are the vanguard of the elven culture's army. Lightly armored and wielding greatswords, they are trained to strike quickly and decisively, cutting through enemy lines with ease."
  
- culture_parameter_unlock_maa_highguard_of_valor:0 "[GetMaA('highguard_of_valor').GetName] as [men_at_arms|E]"
- highguard_of_valor:1 "Highguard of Valor"
- highguard_of_valor_flavor:1 "The Highguard of Valor are the elite infantry of the elven culture's army. Clad in heavy armor and wielding the best equipment they can muster, they are the ideal image of discipline and martial mastery."
+ culture_parameter_unlock_maa_highguard:0 "[GetMaA('highguard').GetName] as [men_at_arms|E]"
+ highguard:1 "Highguard"
+ highguard_flavor:1 "The Highguard are the elite infantry of the elven culture's army. Clad in heavy armor and wielding the best equipment they can muster, they are the ideal image of discipline and martial mastery."
  
- culture_parameter_unlock_maa_exalted_bear_highriders:0 "[GetMaA('exalted_bear_highriders').GetName] as [men_at_arms|E]"
- exalted_bear_highriders:1 "Exalted Bear Highriders"
- exalted_bear_highriders_flavor:1 "The Exalted Bear Highriders are the elite cavalry of more... rustic elven culture armies. Riding into battle on the backs of massive bears, they can terrify even the most stalwart foe."
+ culture_parameter_unlock_maa_elven_bear_riders:0 "[GetMaA('elven_bear_riders').GetName] as [men_at_arms|E]"
+ elven_bear_riders:1 "Elven Bear Riders"
+ elven_bear_riders_flavor:1 "The Elven Bear Riders are the elite cavalry of more... rustic elven culture armies. Riding into battle on the backs of massive bears, they can terrify even the most stalwart foe."
  
  culture_parameter_unlock_maa_griffin_knights:0 "[GetMaA('griffin_knights').GetName] as [men_at_arms|E]"
  griffin_knights:1 "Griffin Knights"
@@ -54,4 +54,15 @@
  
  tradition_knights_kesselrine:0 "Knights of the Kesselrine"
  tradition_knights_kesselrine_desc:0 "The Knights of house Kesselrine"
- 
+
+ warband_ravagers:0 "Ravagers"
+ warband_ravagers_flavor:0 "The Ravagers are a warband of elite mercenaries that can be hired by elven culture armies. They are known for their brutal tactics and their willingness to take on any job, no matter how dangerous or morally questionable."
+
+ warband_vanguards:0 "Vanguards"
+ warband_vanguards_flavor:0 "The Vanguards are a warband of elite mercenaries that can be hired by elven culture armies. They are known for their disciplined tactics and their unwavering loyalty to their employers, often serving as the backbone of elven armies in times of war."
+
+ feywind_cavaliers:0 "Feywind Cavaliers"
+ feywind_cavaliers_flavor:0 "The Feywind Cavaliers are a warband of elite mercenaries that can be hired by elven culture armies. They are known for their chivalrous code of conduct and their prowess in mounted combat, often serving as the vanguard of elven forces in battle.""
+
+ crescentglade_knights:0 "Crescentglade Knights"
+ crescentglade_knights_flavor:0 "The Crescentglade Knights are a warband of elite mercenaries that can be hired by elven culture armies. They are known for their swift and agile tactics, often utilizing hit-and-run strategies to outmaneuver their enemies on the battlefield."
