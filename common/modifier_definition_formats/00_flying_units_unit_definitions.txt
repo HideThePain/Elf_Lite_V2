@@ -1,4 +1,4 @@
-flying_units_damage_add = {
+﻿flying_units_damage_add = {
 	prefix = MOD_DAMAGE_PREFIX
 	decimals = 0
 }

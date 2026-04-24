@@ -325,51 +325,51 @@ honored_drake_masters = {
     icon = honored_drake_masters
 }
 
-crescentglade_knights = {
-    type = archer_cavalry
-    stack = 40
+# crescentglade_knights = {
+#     type = archer_cavalry
+#     stack = 40
 
-    damage = 120
-    toughness = 44
-    pursuit = 40
-    screen = 40
+#     damage = 120
+#     toughness = 44
+#     pursuit = 40
+#     screen = 40
 
-    terrain_bonus = {
-        forest = { damage = 30 toughness = 16 pursuit = 20 screen = 20 }
-        taiga = { damage = 30 toughness = 16 pursuit = 20 screen = 20 }
-        jungle = { damage = 30 toughness = 16 pursuit = 20 screen = 20 }
-        steppe = { damage = 20 }
-        plains = { damage = 20 }
-        drylands = { damage = 20 }
-        mountains = { damage = -30 pursuit = -30 }
-        desert_mountains = { damage = -30 pursuit = -30 }
-        wetlands = { damage = -50 pursuit = -30 }
-    }
+#     terrain_bonus = {
+#         forest = { damage = 30 toughness = 16 pursuit = 20 screen = 20 }
+#         taiga = { damage = 30 toughness = 16 pursuit = 20 screen = 20 }
+#         jungle = { damage = 30 toughness = 16 pursuit = 20 screen = 20 }
+#         steppe = { damage = 20 }
+#         plains = { damage = 20 }
+#         drylands = { damage = 20 }
+#         mountains = { damage = -30 pursuit = -30 }
+#         desert_mountains = { damage = -30 pursuit = -30 }
+#         wetlands = { damage = -50 pursuit = -30 }
+#     }
 
-    counters = {
-        skirmishers = 1
-        heavy_infantry = 1
-        archer_cavalry = 0.5
-    }
+#     counters = {
+#         skirmishers = 1
+#         heavy_infantry = 1
+#         archer_cavalry = 0.5
+#     }
 
-    can_recruit = {
-        is_any_elf_type = yes
-    }
+#     can_recruit = {
+#         is_any_elf_type = yes
+#     }
 
-    should_show_when_unavailable = {
-        government_allows = subject_men_at_arms
-        is_any_elf_type = yes
-    }
+#     should_show_when_unavailable = {
+#         government_allows = subject_men_at_arms
+#         is_any_elf_type = yes
+#     }
 
-    access_through_subject = {
-        is_any_elf_type = yes
-    }
+#     access_through_subject = {
+#         is_any_elf_type = yes
+#     }
 
-    buy_cost = { gold = elf_very_heavy_cavalry_recruitment_cost }
-    low_maintenance_cost = { gold = elf_very_heavy_cavalry_low_maint_cost }
-    high_maintenance_cost = { gold = elf_very_heavy_cavalry_high_maint_cost }
-    provision_cost = @provisions_cost_cavalry_expensive
+#     buy_cost = { gold = elf_very_heavy_cavalry_recruitment_cost }
+#     low_maintenance_cost = { gold = elf_very_heavy_cavalry_low_maint_cost }
+#     high_maintenance_cost = { gold = elf_very_heavy_cavalry_high_maint_cost }
+#     provision_cost = @provisions_cost_cavalry_expensive
 
-    ai_quality = { value = culture_ai_weight_archer_cavalry }
-    icon = crescentglade_knights # [7] PLACEHOLDER - needs DDS file
-}
+#     ai_quality = { value = culture_ai_weight_archer_cavalry }
+#     icon = crescentglade_knights # [7] PLACEHOLDER - needs DDS file
+# }

@@ -1,4 +1,4 @@
-find_realm_lord_sigil_decision = {
+﻿find_realm_lord_sigil_decision = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_find_realm_lord_sigil.dds"
     }

@@ -25,9 +25,9 @@ tradition_elven_professionalism = {
 	parameters = {
 		elven_professionalism_decision = yes # can pick the decision to juice MAA and nuke levies
 		# Below are MAA that are unlocked by this tradition
-		unlock_maa_elven_shieldguard = yes
+		unlock_maa_elven_spearguard = yes
 		unlock_maa_elven_swordguard = yes
-		unlock_maa_highguard_of_valor = yes
+		unlock_maa_highguard = yes
 		unlock_maa_elven_bear_riders = yes
 	}
 

@@ -58,8 +58,8 @@
  warband_ravagers:0 "Ravagers"
  warband_ravagers_flavor:0 "The Ravagers are a warband of elite mercenaries that can be hired by elven culture armies. They are known for their brutal tactics and their willingness to take on any job, no matter how dangerous or morally questionable."
 
- warband_vanguards:0 "Vanguards"
- warband_vanguards_flavor:0 "The Vanguards are a warband of elite mercenaries that can be hired by elven culture armies. They are known for their disciplined tactics and their unwavering loyalty to their employers, often serving as the backbone of elven armies in times of war."
+ warband_vanguard:0 "Vanguards"
+ warband_vanguard_flavor:0 "The Vanguards are a warband of elite mercenaries that can be hired by elven culture armies. They are known for their disciplined tactics and their unwavering loyalty to their employers, often serving as the backbone of elven armies in times of war."
 
  feywind_cavaliers:0 "Feywind Cavaliers"
  feywind_cavaliers_flavor:0 "The Feywind Cavaliers are a warband of elite mercenaries that can be hired by elven culture armies. They are known for their chivalrous code of conduct and their prowess in mounted combat, often serving as the vanguard of elven forces in battle.""

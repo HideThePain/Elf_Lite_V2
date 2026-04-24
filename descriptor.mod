@@ -5,5 +5,5 @@ tags={
 	"Alternative History"
 }
 name="Elf Destiny Lite V2"
-supported_version="1.18*"
+supported_version="1.19*"
 remote_file_id="3565952052"

@@ -14,7 +14,9 @@ tradition_the_old_ways = {
 		}
 	}
 	can_pick = {
-		is_any_elf_type = yes
+		any_player = {
+			is_any_elf_type = yes
+		}
 	}
 
 	
@@ -61,7 +63,9 @@ tradition_guardians_of_the_abyss = {
 		}
 	}
 	can_pick = {
-		is_any_elf_type = yes
+		any_player = {
+			is_any_elf_type = yes
+		}
 	}
 
 	parameters = {
@@ -106,7 +110,9 @@ tradition_elf_craftsmanship = {
 		}
 	}
 	can_pick = {
-		is_any_elf_type = yes
+		any_player = {
+			is_any_elf_type = yes
+		}
 	}
 
 	parameters = {
@@ -426,7 +432,9 @@ tradition_beast_tamers = {
 		}
 	}
 	can_pick = {
-		is_any_elf_type = yes
+		any_player = {
+			is_any_elf_type = yes
+		}
 	}
 
 	# Grants Wolf Riders
@@ -540,7 +548,9 @@ tradition_people_of_the_bow = {
 		}
 	}
 	can_pick = {
-		is_any_elf_type = yes
+		any_player = {
+			is_any_elf_type = yes
+		}
 	}
 
 	parameters = {
