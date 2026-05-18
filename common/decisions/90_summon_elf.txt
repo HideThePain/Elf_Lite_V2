@@ -8,6 +8,11 @@
     desc = summon_all_elfs_decision_desc
     selection_tooltip = summon_all_elfs_decision_tooltip
 
+    ai_will_do = {
+        base = 0
+    }
+
+    ai_check_interval = 0
 
     is_shown = {
         is_ruler = yes

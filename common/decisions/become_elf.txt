@@ -8,9 +8,6 @@
     selection_tooltip = find_realm_lord_sigil_decision_tooltip
 
     ai_goal = no
-    ai_will_do = {
-        value = 0
-    }
 
     ai_check_interval = 0
 

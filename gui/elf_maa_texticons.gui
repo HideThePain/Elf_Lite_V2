@@ -1,5 +1,5 @@
 ﻿texticon = {
-    icon = alfar_tribal_climbers_icon
+    icon = alfar_tribal_outriders_icon
     iconsize = {
         texture = "gfx/interface/icons/regimenttypes/alfar_tribal_climbers.dds"
         size = { 25 25 }
@@ -57,9 +57,9 @@ texticon = {
     }
 }
 texticon = {
-    icon = cavalrymen_of_the_serelions_icon
+    icon = serelion_paladins_icon
     iconsize = {
-        texture = "gfx/interface/icons/regimenttypes/cavalrymen_of_the_serelions.dds"
+        texture = "gfx/interface/icons/regimenttypes/serelion_paladins.dds"
         size = { 25 25 }
         offset = { 0 6 }
         fontsize = 16
@@ -127,9 +127,9 @@ texticon = {
 }
 
 texticon = {
-    icon = elven_shieldguard_icon
+    icon = elven_spearguard_icon
     iconsize = {
-        texture = "gfx/interface/icons/regimenttypes/elven_shieldguard.dds"
+        texture = "gfx/interface/icons/regimenttypes/elven_spearguard.dds"
         size = { 25 25 }
         offset = { 0 6 }
         fontsize = 16
@@ -197,9 +197,9 @@ texticon = {
 }
 
 texticon = {
-    icon = gwynthorn_warriors_icon
+    icon = gwynthorn_axeguard_icon
     iconsize = {
-        texture = "gfx/interface/icons/regimenttypes/gwynthorn_warriors.dds"
+        texture = "gfx/interface/icons/regimenttypes/gwynthorn_axeguard.dds"
         size = { 25 25 }
         offset = { 0 6 }
         fontsize = 16
@@ -329,9 +329,9 @@ texticon = {
 
 
 texticon = {
-    icon = romaviri_palatines_icon
+    icon = romaviri_palatini_icon
     iconsize = {
-        texture = "gfx/interface/icons/regimenttypes/romaviri_palatines.dds"
+        texture = "gfx/interface/icons/regimenttypes/romaviri_palatini.dds"
         size = { 25 25 }
         offset = { 0 6 }
         fontsize = 16
@@ -349,9 +349,9 @@ texticon = {
 }
 
 texticon = {
-    icon = romaviri_turms_icon
+    icon = romaviri_turmae_icon
     iconsize = {
-        texture = "gfx/interface/icons/regimenttypes/romaviri_turms.dds"
+        texture = "gfx/interface/icons/regimenttypes/romaviri_turmae.dds"
         size = { 25 25 }
         offset = { 0 6 }
         fontsize = 16
@@ -449,16 +449,6 @@ texticon = {
 }
 
 texticon = {
-    icon = romaviri_palatines_icon
-    iconsize = {
-        texture = "gfx/interface/icons/regimenttypes/romaviri_palatines.dds"
-        size = { 25 25 }
-        offset = { 0 6 }
-        fontsize = 16
-    }
-}
-
-texticon = {
     icon = tuathan_seelie_archons_icon
     iconsize = {
         texture = "gfx/interface/icons/regimenttypes/tuathan_seelie_archons.dds"
@@ -509,9 +499,9 @@ texticon = {
 }
 
 texticon = {
-    icon = ️daelurin_whitevale_warriors_icon
+    icon = daelurin_whitevale_warriors_icon
     iconsize = {
-        texture = "gfx/interface/icons/regimenttypes/️daelurin_whitevale_warriors.dds"
+        texture = "gfx/interface/icons/regimenttypes/daelurin_whitevale_warriors.dds"
         size = { 25 25 }
         offset = { 0 6 }
         fontsize = 16

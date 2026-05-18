@@ -10,9 +10,3 @@
  no_elf.0001.desc:0 "No Elfs for you goofy."
  summon_all_elfs.0001.a:0 "Invite [target1.GetFirstName], the most worthy elf."
  no_elf.0001.a:0 "No Elf for you."
-
- rule_using_has_lormelis:0 "#R;medium_glow Elf Destiny#!: Bloodline Compatch"
- setting_using_has_lormelis_yes:0 "Using"
- setting_using_has_lormelis_yes_desc:0 "Elf Destiny - Atlantis is active, you can now invite elfs/elfesses with the Lormelis bloodline."
- setting_not_using_has_lormelis:0 "Not Using"
- setting_not_using_has_lormelis_desc:0 "Elf Destiny - Atlantis is inactive, you can't invite elfs/elfesses with the Lormelis bloodline."

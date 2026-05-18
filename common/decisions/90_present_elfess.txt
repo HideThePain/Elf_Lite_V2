@@ -8,6 +8,12 @@
     desc = make_present_elfess_decision_desc
     selection_tooltip = make_present_elfess_decision_tooltip
 
+    ai_will_do = {
+        base = 0
+    }
+
+    ai_check_interval = 0
+
     is_shown = {
         is_ruler = yes
         is_any_elf_type = yes
