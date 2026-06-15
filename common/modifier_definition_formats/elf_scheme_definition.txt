@@ -1,4 +1,4 @@
-seduce_scheme_power_add = {
+﻿seduce_scheme_power_add = {
 	decimals = 0
 }
 

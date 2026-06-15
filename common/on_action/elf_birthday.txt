@@ -42,18 +42,18 @@ handle_older_adult_elf_reached = {
 				is_high_elf = yes
 				age = 45
 			}
-			AND = {
-				is_true_elf = yes
-				age = 60
-			}
-			AND = {
-				is_fae = yes
-				age = 90
-			}
-			AND = {
-				is_fae_radiant = yes
-				age = 105
-			}
+			# AND = {
+			# 	is_true_elf = yes
+			# 	age = 60
+			# }
+			# AND = {
+			# 	is_fae = yes
+			# 	age = 90
+			# }
+			# AND = {
+			# 	is_fae_radiant = yes
+			# 	age = 105
+			# }
 		}
 	}
 
@@ -77,18 +77,18 @@ handle_middle_age_elf_reached = {
 				is_high_elf = yes
 				age = 65
 			}
-			AND = {
-				is_true_elf = yes
-				age = 90
-			}
-			AND = {
-				is_fae = yes
-				age = 130
-			}
-			AND = {
-				is_fae_radiant = yes
-				age = 150
-			}
+			# AND = {
+			# 	is_true_elf = yes
+			# 	age = 90
+			# }
+			# AND = {
+			# 	is_fae = yes
+			# 	age = 130
+			# }
+			# AND = {
+			# 	is_fae_radiant = yes
+			# 	age = 150
+			# }
 		}
 	}
 
@@ -112,18 +112,18 @@ handle_older_middle_age_elf_reached = {
 				is_high_elf = yes
 				age = 75
 			}
-			AND = {
-				is_true_elf = yes
-				age = 115
-			}
-			AND = {
-				is_fae = yes
-				age = 160
-			}
-			AND = {
-				is_fae_radiant = yes
-				age = 200
-			}
+			# AND = {
+			# 	is_true_elf = yes
+			# 	age = 115
+			# }
+			# AND = {
+			# 	is_fae = yes
+			# 	age = 160
+			# }
+			# AND = {
+			# 	is_fae_radiant = yes
+			# 	age = 200
+			# }
 		}
 	}
 
@@ -147,18 +147,18 @@ handle_elder_age_elf_reached = {
 				is_high_elf = yes
 				age = 90
 			}
-			AND = {
-				is_true_elf = yes
-				age = 140
-			}
-			AND = {
-				is_fae = yes
-				age = 200
-			}
-			AND = {
-				is_fae_radiant = yes
-				age = 260
-			}
+			# AND = {
+			# 	is_true_elf = yes
+			# 	age = 140
+			# }
+			# AND = {
+			# 	is_fae = yes
+			# 	age = 200
+			# }
+			# AND = {
+			# 	is_fae_radiant = yes
+			# 	age = 260
+			# }
 		}
 	}
 
@@ -182,18 +182,18 @@ handle_elf_end_of_life_reached = {
 				is_high_elf = yes
 				age = life_expectancy_high_elf
 			}
-			AND = {
-				is_true_elf = yes
-				age = life_expectancy_true_elf
-			}
-			AND = {
-				is_fae = yes
-				age = life_expectancy_fae
-			}
-			AND = {
-				is_fae_radiant = yes
-				age = life_expectancy_fae_radiant
-			}
+			# AND = {
+			# 	is_true_elf = yes
+			# 	age = life_expectancy_true_elf
+			# }
+			# AND = {
+			# 	is_fae = yes
+			# 	age = life_expectancy_fae
+			# }
+			# AND = {
+			# 	is_fae_radiant = yes
+			# 	age = life_expectancy_fae_radiant
+			# }
 		}
 	}
 

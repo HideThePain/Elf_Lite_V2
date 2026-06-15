@@ -9,12 +9,12 @@ tradition_the_old_ways = {
 	}
 
 	is_shown = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
 	can_pick = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
@@ -58,12 +58,12 @@ tradition_guardians_of_the_abyss = {
 	}
 
 	is_shown = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
 	can_pick = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
@@ -105,12 +105,12 @@ tradition_elf_craftsmanship = {
 	}
 
 	is_shown = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
 	can_pick = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
@@ -424,15 +424,14 @@ tradition_beast_tamers = {
 		1 = pattern_elf_1.dds
 		4 = tradition_beast_tamers_item.dds
 	}
-
 	
 	is_shown = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
 	can_pick = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
@@ -543,12 +542,12 @@ tradition_people_of_the_bow = {
 	}
 
 	is_shown = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
 	can_pick = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}

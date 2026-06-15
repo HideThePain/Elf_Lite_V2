@@ -14,12 +14,14 @@ tradition_elven_professionalism = {
 	}
 
 	is_shown = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
 	can_pick = {
-
+		scope:character = {
+			is_any_elf_type = yes
+		}
 	}
 
 	parameters = {
@@ -57,12 +59,14 @@ tradition_knights_of_the_sky = {
 	}
 
 	is_shown = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
 	can_pick = {
-		
+		scope:character = {
+			is_any_elf_type = yes
+		}
 	}
 
 	parameters = {

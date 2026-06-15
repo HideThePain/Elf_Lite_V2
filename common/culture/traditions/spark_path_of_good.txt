@@ -15,14 +15,20 @@ tradition_open_hearted = {
 	}
 
 	is_shown = {
-		any_player = {
+		scope:character = {
 			is_any_elf_type = yes
 		}
 	}
 	can_pick = {
+		scope:character = {
+			is_any_elf_type = yes
+		}
 		NOT = {
 			has_cultural_tradition = tradition_elf_superiority
 		}
+	}
+	can_pick = {
+
 	}
 
 	parameters = {
