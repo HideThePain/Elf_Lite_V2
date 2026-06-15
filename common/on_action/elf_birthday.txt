@@ -6,14 +6,18 @@
 }
 
 handle_elf_immortality = {
-	first_valid_on_action = {
-		handle_age_of_immortality_reached
-		handle_older_adult_elf_reached
-		handle_middle_age_elf_reached
-		handle_older_middle_age_elf_reached
-		handle_elder_age_elf_reached
-		handle_elf_end_of_life_reached
-	}
+    trigger = {
+        is_any_elf_type = yes
+    }
+
+    on_actions = {
+        handle_age_of_immortality_reached
+        handle_older_adult_elf_reached
+        handle_middle_age_elf_reached
+        handle_older_middle_age_elf_reached
+        handle_elder_age_elf_reached
+        handle_elf_end_of_life_reached
+    }
 }
 
 handle_age_of_immortality_reached = {

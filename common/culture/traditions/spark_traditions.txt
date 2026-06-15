@@ -19,8 +19,6 @@ tradition_the_old_ways = {
 		}
 	}
 
-	
-
 	parameters = {
 		# Grants Fey Archers
 		unlock_maa_fey_archers = yes
