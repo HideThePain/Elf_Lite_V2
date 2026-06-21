@@ -202,4 +202,4 @@
   culture_parameter_unlock_maa_abyssal_guardians:0 "Can recruit [GetMaA('abyssal_guardians').GetName] as [men_at_arms|E]"
   
   abyssal_guardians:1 "Abyssal Guardians"
-  abyssal_guardians_flavor:1 "#F Perfectly The $abyssal_guardians$ are elite, defensive-focused pikemen adorned in ornate blue armor, excelling in coastal and wetland terrains with a formidable resilience and mastery of tridents.#!"
+  abyssal_guardians_flavor:1 "#F The $abyssal_guardians$ are elite, defensive-focused pikemen adorned in ornate blue armor, excelling in coastal and wetland terrains with a formidable resilience and mastery of tridents.#!"

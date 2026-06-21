@@ -1,7 +1,7 @@
 ﻿l_english:
   # What is an archeologist?
   find_realm_lord_sigil_decision:0 "The Old Tales Must be True!"
-  find_realm_lord_sigil_decision_desc:0 "Your steward approaches you, a concerned look on their face. \n\n\"My [ROOT.Char.GetLadyLord|U], an odd woman has arrived seeking an audience with you; She claims that she is a trained 'archeologist', but I am fairly sure that she's made that title up.\n\n"You both glance over as the self-proclaimed expert knocks over a vase. \n\nYour steward shakes their head and continues. \"She has apparently found a great discovery relating to the 'Elves'. As far as I'm concerned they're nothing more than a children's fairytale, but seeing as how insistent she was, I thought it best to bring her to you. What shall I tell her?\""
+  find_realm_lord_sigil_decision_desc:0 "Your steward approaches you, a concerned look on their face. \n\n\"My [ROOT.Char.GetLadyLord|U], an odd woman has arrived seeking an audience with you; She claims that she is a trained 'archeologist', but I am fairly sure that she's made that title up.\n\n\"You both glance over as the self-proclaimed expert knocks over a vase. \n\nYour steward shakes their head and continues. \"She has apparently found a great discovery relating to the 'Elves'. As far as I'm concerned they're nothing more than a children's fairytale, but seeing as how insistent she was, I thought it best to bring her to you. What shall I tell her?\""
   find_realm_lord_sigil_decision_tooltip:0 "Begin your journey into the heart of the Elven mystery."
   find_realm_lord_sigil_decision_confirm:0 "I would know the truth of this, see her in!"
 
